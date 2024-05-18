@@ -1,0 +1,182 @@
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #fff;
+  height: 80px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+  .navbtn {
+    background-color: #1f6599;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbaricon {
+    color: #fff;
+    font-size: 25px;
+  }
+
+  .user {
+    width: 150px;
+    height: auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .clock {
+    font-size: 12px;
+    font-weight: 400;
+    color: #1f6599;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  .usericoncontainer {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f6599;
+    border-radius: 100%;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .usericon {
+    font-size: 35px;
+    color: #fff;
+  }
+}
+
+#offcanvasNavbar {
+  background-color: #1f6599;
+  width: 70%;
+}
+
+.offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.offcanvas-header h5 {
+  color: #fff;
+  font-size: 10px;
+}
+
+.component {
+  width: 100%;
+  display: flex;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    height: 15vh;
+    width: 100vw;
+    background-color: #fff;
+    background-image: linear-gradient(to left, #1f649938, #1f6499c0, #1f6599);
+    border-radius: 10px;
+    margin-top: 100px;
+
+    #currentDate {
+      font-size: 12px;
+      position: relative;
+      top: 5px;
+      left: 5px;
+    }
+
+    .welcome {
+      font-size: 25px;
+      position: relative;
+      top: 15px;
+      left: 5px;
+    }
+
+    .always {
+      font-size: 12px;
+      position: relative;
+      top: -5px;
+      left: 5px;
+    }
+  }
+}
+
+.dashboard {
+  width: 100%;
+  background-color: #fff;
+  height: 30vh;
+  border-bottom: 1px solid #1f649938;
+
+  .dash {
+    color: #1f6599;
+    font-size: 14px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+  }
+
+  .announcement {
+    color: #1f6599;
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+    left: 10px;
+  }
+}
+
+.dailynotice {
+  width: 100%;
+  background-color: #fff;
+  height: 30vh;
+  border-bottom: 1px solid #1f649938;
+
+  .daily {
+    color: #1f6599;
+    font-size: 14px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+  }
+
+  .activities {
+    color: #1f6599;
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+    left: 10px;
+  }
+}
+
+.footer {
+  background-color: #1f6599;
+  color: #fff;
+  font-size: 12px;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
