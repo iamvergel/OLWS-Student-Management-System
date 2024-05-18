@@ -10771,6 +10771,10 @@ textarea.form-control-lg {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fff;
+}
+
 .header {
   background-color: #fff;
   height: 80px;
@@ -10917,11 +10921,73 @@ textarea.form-control-lg {
   left: 10px;
 }
 
+.card {
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
 .footer {
   background-color: #1f6599;
   color: #fff;
   font-size: 12px;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100vw;
+}
+
+.calendar {
+  background-color: #fff;
+  border: 1px solid #1f6599;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.calendar .calendar-header {
+  background-color: #1f6599;
+  color: #fff;
+  padding: 1rem;
+}
+.calendar .calendar-header button {
+  background-color: #fff;
+  color: #1f6599;
+  font-weight: 900;
+  border: 1px solid #6c757d;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.calendar .calendar-header h2, .calendar .calendar-header .h2 {
+  font-weight: 600;
+  font-size: 16px;
+}
+.calendar .calendar-body .row {
+  text-align: center;
+  font-size: 12px;
+  color: #1f6599;
+  width: 100%;
+  margin-left: 0;
+}
+.calendar .calendar-body .row .col {
+  border: 0.5px solid #1f6599;
+  padding: 10px;
+}
+.calendar .calendar-body .row .empty {
+  background-color: rgba(31, 100, 153, 0.2666666667);
+}
+.calendar .calendar-body .row .today {
+  background-color: #1f6599;
+  color: #fff;
+  font-weight: bold;
 }/*# sourceMappingURL=index.css.map */

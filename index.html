@@ -61,6 +61,18 @@
               Our Lady of Walsingham School, Inc.
             </h5>
           </div>
+          <div class="offcanvas-account">
+            <div class="container">
+              <div class="card mt-5 mx-auto" style="max-width: 400px;">
+                <div class="card-body text-center">
+                  <i class="bi bi-person-circle"></i>
+                  <h5 class="Username">UserExample</h5>
+                  <p class="gs">Grade / Section</p>
+                  <i class="bi bi-bell-fill"></i>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="offcanvas-body">
             <!---->
           </div>
@@ -89,6 +101,36 @@
         <p class="fw-normal daily">Daily notice</p>
         <p class="fw-bold activities">Upcoming School Sctivities</p>
       </ul>
+    </div>
+
+    <div class="container my-5">
+      <div class="calendar">
+        <div class="calendar-header d-flex justify-content-between align-items-center">
+          <button id="prevMonth" class="btn">&lt;</button>
+          <h2 id="monthYear" class="m-0">May 2024</h2>
+          <button id="nextMonth" class="btn">&gt;</button>
+        </div>
+        <div class="calendar-body mt-3">
+          <div class="row">
+            <div class="col text-danger">Sun</div>
+            <div class="col">Mon</div>
+            <div class="col">Tue</div>
+            <div class="col">Wed</div>
+            <div class="col">Thu</div>
+            <div class="col">Fri</div>
+            <div class="col">Sat</div>
+          </div>
+          <div id="calendarDays" class="row">
+            <div class="col empty"></div>
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+            <div class="col">5</div>
+            <div class="col">6</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer class="text-left py-4 footer">
