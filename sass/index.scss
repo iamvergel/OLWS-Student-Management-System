@@ -13,7 +13,6 @@
 }
 body {
   background-color: #fff;
-  overflow: scroll;
 }
 
 .header {
@@ -202,12 +201,13 @@ body {
 
 .calendar {
   background-color: #fff;
-  border: 1px solid #1f649988;
+  border: 1px solid #1f649967;
   border-radius: 0.25rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 350px;
+  margin-bottom: 100px;
 
   .calendar-header {
     background-color: #1f6599;
@@ -215,14 +215,16 @@ body {
     padding: 1rem;
 
     button {
-      background-color: #fff;
-      color: #1f6599;
+      background-color: #236ea8;
+      color: #ffffff;
       font-weight: 900;
-      border: 1px solid #6c757d;
-      border-radius: 100%;
-      width: 40px;
-      height: 40px;
-      text-align: center;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     h2 {
@@ -241,12 +243,11 @@ body {
       margin-left: 0;
 
       .col {
-        border: 1px solid #1f6499b0;;
         padding: 10px;
       }
 
       .empty {
-        background-color: #1f649927;
+        background-color: transparent;
       }
 
       .today {

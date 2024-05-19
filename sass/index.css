@@ -10773,7 +10773,6 @@ textarea.form-control-lg {
 
 body {
   background-color: #fff;
-  overflow: scroll;
 }
 
 .header {
@@ -10947,12 +10946,13 @@ body {
 
 .calendar {
   background-color: #fff;
-  border: 1px solid rgba(31, 100, 153, 0.5333333333);
+  border: 1px solid rgba(31, 100, 153, 0.4039215686);
   border-radius: 0.25rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 350px;
+  margin-bottom: 100px;
 }
 .calendar .calendar-header {
   background-color: #1f6599;
@@ -10960,14 +10960,16 @@ body {
   padding: 1rem;
 }
 .calendar .calendar-header button {
-  background-color: #fff;
-  color: #1f6599;
+  background-color: #236ea8;
+  color: #ffffff;
   font-weight: 900;
-  border: 1px solid #6c757d;
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .calendar .calendar-header h2, .calendar .calendar-header .h2 {
   font-weight: 600;
@@ -10981,11 +10983,10 @@ body {
   margin-left: 0;
 }
 .calendar .calendar-body .row .col {
-  border: 1px solid rgba(31, 100, 153, 0.6901960784);
   padding: 10px;
 }
 .calendar .calendar-body .row .empty {
-  background-color: rgba(31, 100, 153, 0.1529411765);
+  background-color: transparent;
 }
 .calendar .calendar-body .row .today {
   background-color: #1f6599;
