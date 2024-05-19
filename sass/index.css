@@ -10773,6 +10773,7 @@ textarea.form-control-lg {
 
 body {
   background-color: #fff;
+  overflow: scroll;
 }
 
 .header {
@@ -10946,12 +10947,12 @@ body {
 
 .calendar {
   background-color: #fff;
-  border: 1px solid #1f6599;
+  border: 1px solid rgba(31, 100, 153, 0.5333333333);
   border-radius: 0.25rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 300px;
 }
 .calendar .calendar-header {
   background-color: #1f6599;
@@ -10980,11 +10981,11 @@ body {
   margin-left: 0;
 }
 .calendar .calendar-body .row .col {
-  border: 0.5px solid #1f6599;
+  border: 1px solid rgba(31, 100, 153, 0.6901960784);
   padding: 10px;
 }
 .calendar .calendar-body .row .empty {
-  background-color: rgba(31, 100, 153, 0.2666666667);
+  background-color: rgba(31, 100, 153, 0.1529411765);
 }
 .calendar .calendar-body .row .today {
   background-color: #1f6599;
