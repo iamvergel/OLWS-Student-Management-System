@@ -1,0 +1,135 @@
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  width: 100vw;
+  height: 35vh;
+  display: inline-block;
+  text-align: center;
+  line-height: 0.5;
+
+  p {
+    color: #1f6599;
+  }
+
+  p:nth-child(3) {
+    font-size: 12px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+}
+}
+
+.loginForm {
+  display: inline;
+
+  p {
+    color: #1f6599;
+  }
+
+  p:nth-child(2) {
+    font-size: 12px;
+  }
+
+  .form-outline {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    input {
+      width: 80%;
+      height: 20px;
+      border: 1px solid #1f6599;
+      border-radius: 0;
+      font-size: 12px;
+      color: #1f6599;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+  }
+
+  .button {
+    height: 100px;
+    width: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    label {
+      color: #1f6599;
+      font-size: 12px;
+    }
+
+    .input {
+      color: #1f6599;
+      background-color: #1f6599;
+      border-radius: 0;
+    }
+
+    button {
+      font-weight: 700;
+      height: 30px;
+      width: 100px;
+      background-color: #1f6599;
+      border: none;
+      border-radius: 0;
+      box-shadow: 0 3px 5px #0000006e;
+
+      p {
+        letter-spacing: 2px;
+        font-size: 15px;
+        color: #fff;
+        position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      }
+    }
+
+    button:active {
+      background-color: #287fc2;
+    }
+  }
+}
+
+.footer {
+  height: 20%;
+
+  p {
+    color: #1f6599;
+  }
+
+  p:nth-child(1) {
+    font-size: 13px;
+  }
+
+  p:nth-child(2) {
+    font-size: 10px;
+  }
+
+  p:nth-child(3) {
+    font-size: 10px;
+  }
+
+  i {
+    color: #1f6599;
+    font-size: 12px;
+  }
+}
+

@@ -10772,258 +10772,103 @@ textarea.form-control-lg {
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  background-color: #fff;
-}
-
 .header {
-  background-color: #fff;
-  height: 80px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-}
-.header .navbtn {
-  background-color: #1f6599;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  margin-left: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header .navbaricon {
-  color: #fff;
-  font-size: 25px;
-}
-.header .user {
-  width: 150px;
-  height: auto;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-}
-.header .clock {
-  font-size: 12px;
-  font-weight: 400;
-  color: #1f6599;
-  position: relative;
-  margin-right: 10px;
-}
-.header .usericoncontainer {
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1f6599;
-  border-radius: 100%;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
-}
-.header .usericon {
-  font-size: 40px;
-  color: #fff;
-}
-
-#offcanvasNavbar {
-  background-color: #1f6599;
-  width: 70%;
-}
-
-.offcanvas-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.offcanvas-header h5, .offcanvas-header .h5 {
-  color: #fff;
-  font-size: 10px;
-}
-
-.component {
-  width: 100%;
-  display: flex;
-  height: 30vh;
-  justify-content: center;
-  align-items: center;
-}
-.component .container {
-  height: 15vh;
   width: 100vw;
-  background-color: #fff;
-  background-image: linear-gradient(to left, rgba(31, 100, 153, 0.2196078431), rgba(31, 100, 153, 0.7529411765), #1f6599);
-  border-radius: 10px;
-  margin-top: 100px;
-}
-.component .container #currentDate {
-  font-size: 12px;
-  position: relative;
-  top: 5px;
-  left: 5px;
-}
-.component .container .welcome {
-  font-size: 25px;
-  position: relative;
-  top: 15px;
-  left: 5px;
-}
-.component .container .always {
-  font-size: 12px;
-  position: relative;
-  top: -5px;
-  left: 5px;
-}
-
-.dashboard {
-  width: 100%;
-  background-color: #fff;
-  height: 30vh;
-  border-bottom: 1px solid rgba(31, 100, 153, 0.2196078431);
-}
-.dashboard .dash {
-  color: #1f6599;
-  font-size: 14px;
-  position: relative;
-  top: 5px;
-  left: 10px;
-}
-.dashboard .announcement {
-  color: #1f6599;
-  font-size: 15px;
-  position: relative;
-  top: -10px;
-  left: 10px;
-}
-
-.dailynotice {
-  width: 100%;
-  background-color: #fff;
-  height: 30vh;
-  border-bottom: 1px solid rgba(31, 100, 153, 0.2196078431);
-}
-.dailynotice .daily {
-  color: #1f6599;
-  font-size: 14px;
-  position: relative;
-  top: 5px;
-  left: 10px;
-}
-.dailynotice .activities {
-  color: #1f6599;
-  font-size: 15px;
-  position: relative;
-  top: -10px;
-  left: 10px;
-}
-
-.container-Account {
+  height: 35vh;
+  display: inline-block;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  line-height: 0.5;
+}
+.header p {
+  color: #1f6599;
+}
+.header p:nth-child(3) {
+  font-size: 12px;
+}
+.header img {
+  width: 100px;
+  height: 100px;
+}
+
+.loginForm {
+  display: inline;
+}
+.loginForm p {
+  color: #1f6599;
+}
+.loginForm p:nth-child(2) {
+  font-size: 12px;
+}
+.loginForm .form-outline {
+  height: 70px;
   width: 100%;
-}
-.container-Account .card {
-  background-color: transparent;
-  border: none;
-  border-radius: 10px;
-}
-.container-Account .card .userAccount {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #1f6599;
-  margin-bottom: 20px;
-  margin-left: 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.container-Account .card .userAccount .bi-person-circle {
-  color: #ffffff;
-  font-size: 50px;
+.loginForm .form-outline input {
+  width: 80%;
+  height: 20px;
+  border: 1px solid #1f6599;
+  border-radius: 0;
+  font-size: 12px;
+  color: #1f6599;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.container-Account .card .userAccount .bi-bell-fill {
-  color: #fff;
-  position: absolute;
-  top: 10px;
-  right: 30px;
-  font-size: 20px;
+.loginForm .button {
+  height: 100px;
+  width: 80%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.container-Account .card h5, .container-Account .card .h5 {
+.loginForm .button label {
+  color: #1f6599;
+  font-size: 12px;
+}
+.loginForm .button .input {
+  color: #1f6599;
+  background-color: #1f6599;
+  border-radius: 0;
+}
+.loginForm .button button {
+  font-weight: 700;
+  height: 30px;
+  width: 100px;
+  background-color: #1f6599;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.431372549);
+}
+.loginForm .button button p {
   letter-spacing: 2px;
   font-size: 15px;
-  font-weight: 600;
   color: #fff;
-  margin-top: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.container-Account .card p {
-  font-size: 12px;
-  font-weight: 300;
-  color: #fff;
+.loginForm .button button:active {
+  background-color: #287fc2;
 }
 
 .footer {
-  background-color: #1f6599;
-  color: #fff;
-  font-size: 12px;
-  position: relative;
-  bottom: 0;
-  width: 100vw;
+  height: 20%;
 }
-
-.calendar {
-  background-color: #fff;
-  border: 1px solid rgba(31, 100, 153, 0.4039215686);
-  border-radius: 0.25rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  justify-content: center;
-  align-items: center;
-  height: 350px;
-  margin-bottom: 100px;
-}
-.calendar .calendar-header {
-  background-color: #1f6599;
-  color: #fff;
-  padding: 1rem;
-}
-.calendar .calendar-header button {
-  background-color: #236ea8;
-  color: #ffffff;
-  font-weight: 900;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.calendar .calendar-header h2, .calendar .calendar-header .h2 {
-  font-weight: 600;
-  font-size: 16px;
-}
-.calendar .calendar-body .row {
-  text-align: center;
-  font-size: 12px;
+.footer p {
   color: #1f6599;
-  width: 100%;
-  margin-left: 0;
 }
-.calendar .calendar-body .row .col {
-  padding: 10px;
+.footer p:nth-child(1) {
+  font-size: 13px;
 }
-.calendar .calendar-body .row .empty {
-  background-color: transparent;
+.footer p:nth-child(2) {
+  font-size: 10px;
 }
-.calendar .calendar-body .row .today {
-  background-color: #1f6599;
-  color: #fff;
-  font-weight: bold;
-}/*# sourceMappingURL=index.css.map */
+.footer p:nth-child(3) {
+  font-size: 10px;
+}
+.footer i {
+  color: #1f6599;
+  font-size: 12px;
+}/*# sourceMappingURL=login.css.map */
