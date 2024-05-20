@@ -27,7 +27,7 @@
     />
   </head>
   <body>
-    <section class="vh-100">
+    <section class="vh-100 section">
       <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-md-9 col-lg-6 col-xl-5 header">
@@ -47,7 +47,7 @@
             />
           </div>
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-            <form method="post" action="dashboard.html" class="loginForm">
+            <div class="loginForm">
               <div class="divider d-inline my-4">
                 <p class="text-left fs-3 ml-4 mt-5 fw-bold mx-3 mb-0">LOGIN</p>
                 <p class="text-left mx-3 ml-4 mb-0">
@@ -56,7 +56,7 @@
               </div>
 
               <!-- Username input -->
-              <div class="form-outline mb-2">
+              <div class="form-outline mb-4 mt-2">
                 <input
                   type="text"
                   name="username"
@@ -68,7 +68,7 @@
             </div>
             
             <!-- Password input -->
-            <div class="form-outline mb-3">
+            <div class="form-outline mb-0">
                 <input
                   type="password"
                   name="password"
@@ -78,6 +78,8 @@
                   required
                 />
             </div>
+
+            <p class="alert">*alert</p>
             
             <div class="d-flex justify-content-between align-items-center mb-4 button">
                 <!-- Checkbox -->
@@ -94,11 +96,11 @@
                 </div>
             
                 <!-- Login button -->
-                <button onclick="login()" class="btn btn-primary btn-lg">
+                <button class="btn btn-primary btn-lg login">
                     <p class="m-0">Login</p>
                 </button>            
               </div>
-            </form>
+            </div><!---->
           </div>
         </div>
       </div>
@@ -129,6 +131,10 @@
         </div>
       </div>
     </section>
+
+    <div class="loader position-fixed">
+      <img src="assets\images\logo\olwsLogo.png" alt="...">
+    </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
