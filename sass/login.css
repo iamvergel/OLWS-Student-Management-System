@@ -10772,41 +10772,52 @@ textarea.form-control-lg {
   font-family: "Poppins", sans-serif;
 }
 
-.header {
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+section {
+  overflow: hidden;
+}
+section .header {
   width: 100vw;
   height: 20%;
   display: inline-block;
   text-align: center;
   line-height: 0.3;
 }
-.header p {
+section .header p {
   color: #1f6599;
 }
-.header p:nth-child(3) {
+section .header p:nth-child(3) {
   font-size: 12px;
 }
-.header img {
+section .header img {
   width: 80px;
   height: auto;
 }
-
-.form .loginForm {
+section .form {
+  background-color: #FF0000;
+  height: 20%;
+}
+section .form .loginForm {
   display: inline;
 }
-.form .loginForm p {
+section .form .loginForm p {
   color: #1f6599;
 }
-.form .loginForm p:nth-child(2) {
+section .form .loginForm p:nth-child(2) {
   font-size: 8px;
 }
-.form .loginForm .form-outline {
+section .form .loginForm .form-outline {
   height: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.form .loginForm .form-outline input {
+section .form .loginForm .form-outline input {
   width: 80%;
   height: 20px;
   border: 1px solid #1f6599;
@@ -10815,7 +10826,7 @@ textarea.form-control-lg {
   color: #1f6599;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.form .loginForm .alert {
+section .form .loginForm .alert {
   font-size: 8px;
   color: #FF0000;
   opacity: 0;
@@ -10825,7 +10836,7 @@ textarea.form-control-lg {
   justify-content: center;
   align-items: center;
 }
-.form .loginForm .button {
+section .form .loginForm .button {
   height: 10vh;
   width: 80%;
   position: relative;
@@ -10833,18 +10844,18 @@ textarea.form-control-lg {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.form .loginForm .button .form-check-input:checked {
+section .form .loginForm .button .form-check-input:checked {
   background-color: #287fc2;
   border-color: #1f6599;
 }
-.form .loginForm .button .form-check-input:focus {
+section .form .loginForm .button .form-check-input:focus {
   box-shadow: 0 0 0 0.25rem rgba(31, 101, 153, 0.3);
 }
-.form .loginForm .button label {
+section .form .loginForm .button label {
   color: #1f6599;
   font-size: 12px;
 }
-.form .loginForm .button button {
+section .form .loginForm .button button {
   font-weight: 700;
   height: 30px;
   width: 100px;
@@ -10853,7 +10864,7 @@ textarea.form-control-lg {
   border-radius: 0;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.431372549);
 }
-.form .loginForm .button button p {
+section .form .loginForm .button button p {
   letter-spacing: 2px;
   font-size: 12px;
   color: #fff;
@@ -10862,7 +10873,7 @@ textarea.form-control-lg {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.form .loginForm .button button:active {
+section .form .loginForm .button button:active {
   background-color: #287fc2;
 }
 
