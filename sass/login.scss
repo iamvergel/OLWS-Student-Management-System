@@ -13,12 +13,15 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  overflow: hidden;
+}
+
 .header {
   width: 100vw;
   height: 20%;
   display: inline-block;
   text-align: center;
-  background-color: aqua;
   line-height: 0.3;
 
   p {
@@ -32,94 +35,88 @@
   img {
     width: 100px;
     height: 100px;
-}
+  }
 }
 
 .form {
-  background-color: aquamarine;
-  width: 100vw;
-  height: 40%;
+  .loginForm {
+    display: inline;
 
-.loginForm {
-  display: inline;
-
-  p {
-    color: #1f6599;
-  }
-
-  p:nth-child(2) {
-    font-size: 12px;
-  }
-
-  .form-outline {
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: aqua;
-
-    input {
-      width: 80%;
-      height: 20px;
-      border: 1px solid #1f6599;
-      border-radius: 0;
-      font-size: 12px;
+    p {
       color: #1f6599;
-      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }
 
-  }
-
-  .button {
-    height: 100px;
-    width: 80%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    label {
-      color: #1f6599;
+    p:nth-child(2) {
       font-size: 12px;
     }
 
-    .input {
-      color: #1f6599;
-      background-color: #1f6599;
-      border-radius: 0;
-    }
-
-    button {
-      font-weight: 700;
+    .form-outline {
       height: 30px;
-      width: 100px;
-      background-color: #1f6599;
-      border: none;
-      border-radius: 0;
-      box-shadow: 0 3px 5px #0000006e;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      p {
-        letter-spacing: 2px;
-        font-size: 15px;
-        color: #fff;
-        position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+      input {
+        width: 80%;
+        height: 20px;
+        border: 1px solid #1f6599;
+        border-radius: 0;
+        font-size: 12px;
+        color: #1f6599;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       }
     }
 
-    button:active {
-      background-color: #287fc2;
+    .button {
+      height: 100px;
+      width: 80%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      label {
+        color: #1f6599;
+        font-size: 12px;
+      }
+
+      .input {
+        color: #1f6599;
+        background-color: #1f6599;
+        border-radius: 0;
+      }
+
+      button {
+        font-weight: 700;
+        height: 30px;
+        width: 100px;
+        background-color: #1f6599;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 3px 5px #0000006e;
+
+        p {
+          letter-spacing: 2px;
+          font-size: 15px;
+          color: #fff;
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      button:active {
+        background-color: #287fc2;
+      }
     }
   }
-}
 }
 
 .footer {
   height: 20%;
-  background-color: aquamarine;
-  
+
   p {
     color: #1f6599;
   }
@@ -141,4 +138,3 @@
     font-size: 12px;
   }
 }
-

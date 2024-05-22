@@ -10772,12 +10772,15 @@ textarea.form-control-lg {
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  overflow: hidden;
+}
+
 .header {
   width: 100vw;
   height: 20%;
   display: inline-block;
   text-align: center;
-  background-color: aqua;
   line-height: 0.3;
 }
 .header p {
@@ -10791,11 +10794,6 @@ textarea.form-control-lg {
   height: 100px;
 }
 
-.form {
-  background-color: aquamarine;
-  width: 100vw;
-  height: 40%;
-}
 .form .loginForm {
   display: inline;
 }
@@ -10806,11 +10804,11 @@ textarea.form-control-lg {
   font-size: 12px;
 }
 .form .loginForm .form-outline {
-  height: 70px;
+  height: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: aqua;
+  align-items: center;
 }
 .form .loginForm .form-outline input {
   width: 80%;
@@ -10862,7 +10860,6 @@ textarea.form-control-lg {
 
 .footer {
   height: 20%;
-  background-color: aquamarine;
 }
 .footer p {
   color: #1f6599;
