@@ -10772,10 +10772,6 @@ textarea.form-control-lg {
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  overflow: hidden;
-}
-
 .header {
   width: 100vw;
   height: 20%;
@@ -10790,8 +10786,8 @@ body {
   font-size: 12px;
 }
 .header img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: auto;
 }
 
 .form .loginForm {
@@ -10801,7 +10797,7 @@ body {
   color: #1f6599;
 }
 .form .loginForm p:nth-child(2) {
-  font-size: 12px;
+  font-size: 8px;
 }
 .form .loginForm .form-outline {
   height: 50px;
@@ -10815,12 +10811,12 @@ body {
   height: 20px;
   border: 1px solid #1f6599;
   border-radius: 0;
-  font-size: 12px;
+  font-size: 10px;
   color: #1f6599;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .form .loginForm .alert {
-  font-size: 10px;
+  font-size: 8px;
   color: #FF0000;
   opacity: 0;
   margin-left: 10px;
@@ -10871,19 +10867,19 @@ body {
 }
 
 .footer {
-  height: 20%;
+  height: 15%;
 }
 .footer p {
   color: #1f6599;
 }
 .footer p:nth-child(1) {
-  font-size: 12px;
+  font-size: 10px;
 }
 .footer p:nth-child(2) {
-  font-size: 10px;
+  font-size: 8px;
 }
 .footer p:nth-child(3) {
-  font-size: 10px;
+  font-size: 8px;
 }
 .footer i {
   color: #1f6599;
