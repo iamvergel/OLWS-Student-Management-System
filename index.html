@@ -47,16 +47,16 @@
             />
           </div>
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 form">
-            <form class="loginForm">
+            <form class="loginForm" method="POST" href="dashboard">
               <div class="divider d-inline my-4">
-                <p class="text-left fs-5 ml-4 mt-4 fw-bold mx-3 mb-0">LOGIN</p>
+                <p class="text-left fs-5 ml-4 mt-5 fw-bold mx-3 mb-0">LOGIN</p>
                 <p class="text-left mx-3 ml-4 mb-0">
                   Enter your account details
                 </p>
               </div>
 
               <!-- Username input -->
-              <div class="form-outline mt-4 mb-3">
+              <div class="form-outline mt-4 mb-4">
                 <input
                   type="text"
                   name="username"
@@ -80,12 +80,12 @@
               </div>
 
               <div
-                class="d-flex justify-content-between align-items-center mb-4 button"
+                class="d-flex justify-content-between align-items-center button"
               >
                 <!-- Checkbox -->
-                <div class="form-check">
+                <div class="form-check me-3">
                   <input
-                    class="form-check-input me-2"
+                    class="form-check-input"
                     type="checkbox"
                     value=""
                     id="form2Example3"
@@ -96,7 +96,7 @@
                 </div>
 
                 <!-- Login button -->
-                <button onclick="login()" class="btn btn-primary btn-lg">
+                <button onclick="login()" class="btn btn-primary btn-lg me-0">
                   <p class="m-0">Login</p>
                 </button>
               </div>
@@ -108,7 +108,7 @@
 
     <div
       id="component"
-      class="container-fluid py-2 d-inline fixed-bottom footer"
+      class="container-fluid py-4 d-inline fixed-bottom footer"
     >
       <p class="text-center fw-semibold mb-0 py-2">
         Unit 1C Mangga St. Corner Lawaan Amparo Subdivision, Caloocan,
