@@ -10772,12 +10772,16 @@ textarea.form-control-lg {
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  overflow: hidden;
+}
+
 .header {
   width: 100vw;
-  height: 35vh;
+  height: 20%;
   display: inline-block;
   text-align: center;
-  line-height: 0.5;
+  line-height: 0.3;
 }
 .header p {
   color: #1f6599;
@@ -10790,24 +10794,23 @@ textarea.form-control-lg {
   height: 100px;
 }
 
-.loginForm {
+.form .loginForm {
   display: inline;
-  text-align: center;
 }
-.loginForm p {
+.form .loginForm p {
   color: #1f6599;
 }
-.loginForm p:nth-child(2) {
+.form .loginForm p:nth-child(2) {
   font-size: 12px;
 }
-.loginForm .form-outline {
-  height: 55px;
+.form .loginForm .form-outline {
+  height: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
-.loginForm .form-outline input {
+.form .loginForm .form-outline input {
   width: 80%;
   height: 20px;
   border: 1px solid #1f6599;
@@ -10816,29 +10819,36 @@ textarea.form-control-lg {
   color: #1f6599;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.loginForm .alert {
-  font-size: 12px;
+.form .loginForm .alert {
+  font-size: 10px;
   color: #FF0000;
   opacity: 0;
+  margin-left: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.loginForm .button {
-  height: 100px;
+.form .loginForm .button {
+  height: 10vh;
   width: 80%;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.loginForm .button label {
+.form .loginForm .button .form-check-input:checked {
+  background-color: #287fc2;
+  border-color: #1f6599;
+}
+.form .loginForm .button .form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(31, 101, 153, 0.3);
+}
+.form .loginForm .button label {
   color: #1f6599;
   font-size: 12px;
 }
-.loginForm .button .input {
-  color: #1f6599;
-  background-color: #1f6599;
-  border-radius: 0;
-}
-.loginForm .button button {
+.form .loginForm .button button {
   font-weight: 700;
   height: 30px;
   width: 100px;
@@ -10847,7 +10857,7 @@ textarea.form-control-lg {
   border-radius: 0;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.431372549);
 }
-.loginForm .button button p {
+.form .loginForm .button button p {
   letter-spacing: 2px;
   font-size: 15px;
   color: #fff;
@@ -10856,7 +10866,7 @@ textarea.form-control-lg {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.loginForm .button button:active {
+.form .loginForm .button button:active {
   background-color: #287fc2;
 }
 
