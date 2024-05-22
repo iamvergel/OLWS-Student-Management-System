@@ -10797,10 +10797,6 @@ section .header img {
   width: 80px;
   height: auto;
 }
-section .form {
-  background-color: #FF0000;
-  height: 20%;
-}
 section .form .loginForm {
   display: inline;
 }
