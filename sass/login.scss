@@ -15,10 +15,11 @@
 
 .header {
   width: 100vw;
-  height: 35vh;
+  height: 20%;
   display: inline-block;
   text-align: center;
-  line-height: 0.5;
+  background-color: aqua;
+  line-height: 0.3;
 
   p {
     color: #1f6599;
@@ -34,9 +35,13 @@
 }
 }
 
+.form {
+  background-color: aquamarine;
+  width: 100vw;
+  height: 40%;
+
 .loginForm {
   display: inline;
-  text-align: center;
 
   p {
     color: #1f6599;
@@ -47,11 +52,11 @@
   }
 
   .form-outline {
-    height: 55px;
+    height: 70px;
     width: 100%;
     display: flex;
     justify-content: center;
-    text-align: center;
+    background-color: aqua;
 
     input {
       width: 80%;
@@ -62,12 +67,7 @@
       color: #1f6599;
       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }
-  }
 
-  .alert {
-    font-size: 12px;
-    color: #FF0000;
-    opacity: 0;
   }
 
   .button {
@@ -114,9 +114,11 @@
     }
   }
 }
+}
 
 .footer {
   height: 20%;
+  background-color: aquamarine;
 
   p {
     color: #1f6599;
@@ -140,19 +142,3 @@
   }
 }
 
-.loader {
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #1f6599;
-  display: none;
-
-  img {
-    width: 150px;
-    height: 150px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}

@@ -10774,10 +10774,11 @@ textarea.form-control-lg {
 
 .header {
   width: 100vw;
-  height: 35vh;
+  height: 20%;
   display: inline-block;
   text-align: center;
-  line-height: 0.5;
+  background-color: aqua;
+  line-height: 0.3;
 }
 .header p {
   color: #1f6599;
@@ -10790,24 +10791,28 @@ textarea.form-control-lg {
   height: 100px;
 }
 
-.loginForm {
-  display: inline;
-  text-align: center;
+.form {
+  background-color: aquamarine;
+  width: 100vw;
+  height: 40%;
 }
-.loginForm p {
+.form .loginForm {
+  display: inline;
+}
+.form .loginForm p {
   color: #1f6599;
 }
-.loginForm p:nth-child(2) {
+.form .loginForm p:nth-child(2) {
   font-size: 12px;
 }
-.loginForm .form-outline {
-  height: 55px;
+.form .loginForm .form-outline {
+  height: 70px;
   width: 100%;
   display: flex;
   justify-content: center;
-  text-align: center;
+  background-color: aqua;
 }
-.loginForm .form-outline input {
+.form .loginForm .form-outline input {
   width: 80%;
   height: 20px;
   border: 1px solid #1f6599;
@@ -10816,12 +10821,7 @@ textarea.form-control-lg {
   color: #1f6599;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.loginForm .alert {
-  font-size: 12px;
-  color: #FF0000;
-  opacity: 0;
-}
-.loginForm .button {
+.form .loginForm .button {
   height: 100px;
   width: 80%;
   position: relative;
@@ -10829,16 +10829,16 @@ textarea.form-control-lg {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.loginForm .button label {
+.form .loginForm .button label {
   color: #1f6599;
   font-size: 12px;
 }
-.loginForm .button .input {
+.form .loginForm .button .input {
   color: #1f6599;
   background-color: #1f6599;
   border-radius: 0;
 }
-.loginForm .button button {
+.form .loginForm .button button {
   font-weight: 700;
   height: 30px;
   width: 100px;
@@ -10847,7 +10847,7 @@ textarea.form-control-lg {
   border-radius: 0;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.431372549);
 }
-.loginForm .button button p {
+.form .loginForm .button button p {
   letter-spacing: 2px;
   font-size: 15px;
   color: #fff;
@@ -10856,12 +10856,13 @@ textarea.form-control-lg {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.loginForm .button button:active {
+.form .loginForm .button button:active {
   background-color: #287fc2;
 }
 
 .footer {
   height: 20%;
+  background-color: aquamarine;
 }
 .footer p {
   color: #1f6599;
@@ -10878,20 +10879,4 @@ textarea.form-control-lg {
 .footer i {
   color: #1f6599;
   font-size: 12px;
-}
-
-.loader {
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #1f6599;
-  display: none;
-}
-.loader img {
-  width: 150px;
-  height: 150px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=login.css.map */
