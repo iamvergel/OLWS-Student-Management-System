@@ -122,3 +122,49 @@ passWord.addEventListener("click", () => {
   passWord.style.border = "1px solid #193867";
   alertPassword.style.opacity = "0";
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const usernameInput = document.getElementById('username');
+  const passwordInput = document.getElementById('password');
+  const rememberMeCheckbox = document.getElementById('form2Example3');
+  const toggleIcon = document.getElementById('togglePasswordIcon');
+
+  // Load saved username and password from local storage
+  const savedUsername = localStorage.getItem('rememberedUsername');
+  const savedPassword = localStorage.getItem('rememberedPassword');
+  if (savedUsername && savedPassword) {
+      usernameInput.value = savedUsername;
+      passwordInput.value = savedPassword;
+      rememberMeCheckbox.checked = true;
+  }
+
+  // Show/Hide Password functionality
+  function togglePasswordVisibility() {
+      if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          toggleIcon.classList.remove('bi-eye');
+          toggleIcon.classList.add('bi-eye-slash');
+      } else {
+          passwordInput.type = 'password';
+          toggleIcon.classList.remove('bi-eye-slash');
+          toggleIcon.classList.add('bi-eye');
+      }
+  }
+
+  document.querySelector('.password-toggle').addEventListener('click', togglePasswordVisibility);
+
+  // Remember me functionality
+  document.querySelector('.login').addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent actual form submission for demonstration
+
+      if (rememberMeCheckbox.checked) {
+          // Save username and password to local storage
+          localStorage.setItem('rememberedUsername', usernameInput.value);
+          localStorage.setItem('rememberedPassword', passwordInput.value);
+      } else {
+          // Remove username and password from local storage
+          localStorage.removeItem('rememberedUsername');
+          localStorage.removeItem('rememberedPassword');
+      }
+      });
+});

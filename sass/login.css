@@ -10823,6 +10823,12 @@ section .form .loginForm .form-outline input {
   color: #1f6599;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+section .form .loginForm .form-outline .password-toggle {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #1f6599;
+}
 section .form .loginForm .alert {
   font-size: 8px;
   color: #FF0000;

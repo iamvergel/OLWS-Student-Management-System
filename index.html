@@ -68,16 +68,19 @@
             </div>
             
             <!-- Password input -->
-            <div class="form-outline mb-0">
-                <input
+            <div class="form-outline mb-0 position-relative">
+              <input
                   type="password"
                   name="password"
                   id="password"
                   class="form-control form-control-lg"
                   placeholder="Password :"
                   required
-                />
-            </div>
+              />
+              <span class="password-toggle position-absolute top-50 end-0 translate-middle-y me-5">
+                  <i id="togglePasswordIcon" class="bi bi-eye"></i>
+              </span>
+          </div>
 
             <p class="alert">*alert</p>
             
@@ -140,5 +143,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="script\index.js"></script>
+
+    <script>
+      
+    </script>
 </body>
 </html>

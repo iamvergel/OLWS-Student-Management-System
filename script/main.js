@@ -8,6 +8,7 @@ document.addEventListener("click", function (event) {
     offcanvas.hide();
   }
 });
+
 function updateTime() {
   const clock = document.getElementById("clock");
   const now = new Date();
@@ -29,45 +30,61 @@ document.addEventListener("DOMContentLoaded", function () {
   dateElement.textContent = today;
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const monthNames = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-  
+document.addEventListener("DOMContentLoaded", function () {
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   const today = new Date();
   let currentMonth = today.getMonth();
   let currentYear = today.getFullYear();
   const currentDate = today.getDate();
 
-  const monthYear = document.getElementById('monthYear');
-  const calendarDays = document.getElementById('calendarDays');
-  const prevMonthBtn = document.getElementById('prevMonth');
-  const nextMonthBtn = document.getElementById('nextMonth');
+  const monthYear = document.getElementById("monthYear");
+  const calendarDays = document.getElementById("calendarDays");
+  const prevMonthBtn = document.getElementById("prevMonth");
+  const nextMonthBtn = document.getElementById("nextMonth");
 
   function renderCalendar(month, year) {
-    calendarDays.innerHTML = '';
+    calendarDays.innerHTML = "";
     monthYear.textContent = `${monthNames[month]} ${year}`;
 
-    const firstDay = (new Date(year, month)).getDay();
+    const firstDay = new Date(year, month).getDay();
     const daysInMonth = 32 - new Date(year, month, 32).getDate();
 
     let date = 1;
     for (let i = 0; i < 6; i++) {
-      let row = document.createElement('div');
-      row.className = 'row';
+      let row = document.createElement("div");
+      row.className = "row";
 
       for (let j = 0; j < 7; j++) {
-        let cell = document.createElement('div');
-        cell.className = 'col';
-        
+        let cell = document.createElement("div");
+        cell.className = "col";
+
         if (i === 0 && j < firstDay) {
-          cell.classList.add('empty');
-          cell.innerHTML = '';
+          cell.classList.add("empty");
+          cell.innerHTML = "";
         } else if (date > daysInMonth) {
-          cell.classList.add('empty');
-          cell.innerHTML = '';
+          cell.classList.add("empty");
+          cell.innerHTML = "";
         } else {
-          if (date === currentDate && month === today.getMonth() && year === today.getFullYear()) {
-            cell.classList.add('today');
+          if (
+            date === currentDate &&
+            month === today.getMonth() &&
+            year === today.getFullYear()
+          ) {
+            cell.classList.add("today");
           }
           cell.innerHTML = date;
           date++;
@@ -98,8 +115,21 @@ document.addEventListener('DOMContentLoaded', function() {
     renderCalendar(currentMonth, currentYear);
   }
 
-  prevMonthBtn.addEventListener('click', prevMonth);
-  nextMonthBtn.addEventListener('click', nextMonth);
+  prevMonthBtn.addEventListener("click", prevMonth);
+  nextMonthBtn.addEventListener("click", nextMonth);
 
   renderCalendar(currentMonth, currentYear);
+});
+
+let logOut = document.querySelector(".logout");
+let loader = document.querySelector(".loader");
+let header = document.querySelector(".header");
+logOut.addEventListener("click", () => {
+  loader.style.display = "block";
+  header.style.opacity = "0";
+
+  setTimeout(() => {
+    window.location.href = "index.html"; 
+}, 2000);
+
 });

@@ -1,0 +1,161 @@
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+#dashboard {
+    background-color: #1f6599;
+}
+
+.component {
+    width: 100%;
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+  
+    .container {
+      height: 15vh;
+      width: 100vw;
+      background-color: #fff;
+      background-image: linear-gradient(to left, #1f649938, #1f6499c0, #1f6599);
+      border-radius: 10px;
+      margin-top: 100px;
+  
+      #currentDate {
+        font-size: 12px;
+        position: relative;
+        top: 5px;
+        left: 5px;
+      }
+  
+      .welcome {
+        font-size: 25px;
+        position: relative;
+        top: 15px;
+        left: 5px;
+      }
+  
+      .always {
+        font-size: 12px;
+        position: relative;
+        top: -5px;
+        left: 5px;
+      }
+    }
+  }
+  
+  .dashboard {
+    width: 100%;
+    background-color: #fff;
+    height: 30vh;
+    border-bottom: 1px solid #1f649938;
+  
+    .dash {
+      color: #1f6599;
+      font-size: 14px;
+      position: relative;
+      top: 5px;
+      left: 10px;
+    }
+  
+    .announcement {
+      color: #1f6599;
+      font-size: 15px;
+      position: relative;
+      top: -10px;
+      left: 10px;
+    }
+  }
+  
+  .dailynotice {
+    width: 100%;
+    background-color: #fff;
+    height: 30vh;
+    border-bottom: 1px solid #1f649938;
+  
+    .daily {
+      color: #1f6599;
+      font-size: 14px;
+      position: relative;
+      top: 5px;
+      left: 10px;
+    }
+  
+    .activities {
+      color: #1f6599;
+      font-size: 15px;
+      position: relative;
+      top: -10px;
+      left: 10px;
+    }
+  }
+  
+  .calendar {
+    background-color: #fff;
+    border: 1px solid #1f649967;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    margin-bottom: 100px;
+  
+    .calendar-header {
+      background-color: #1f6599;
+      color: #fff;
+      padding: 1rem;
+  
+      button {
+        background-color: #236ea8;
+        color: #ffffff;
+        font-weight: 900;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      h2 {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+  
+    .calendar-body {
+      .row {
+        text-align: center;
+        font-size: 12px;
+        color: #1f6599;
+        width: 100%;
+        margin-left: 0;
+  
+        .col {
+          padding: 10px;
+        }
+  
+        .empty {
+          background-color: transparent;
+        }
+  
+        .today {
+          background-color: #1f6599;
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+    }
+  }

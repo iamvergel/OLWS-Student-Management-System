@@ -71,6 +71,11 @@ section {
         color: #1f6599;
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       }
+
+      .password-toggle {
+        user-select: none;
+        color: #1f6599;
+      }
     }
 
     .alert {

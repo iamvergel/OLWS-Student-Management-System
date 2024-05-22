@@ -27,6 +27,10 @@
     />
   </head>
   <body>
+    <div class="loader position-fixed fixed-center">
+      <img src="\assets\images\logo\olwsLogo.png" alt="..." />
+    </div>
+
     <nav class="navbar bg-body-tertiary fixed-top header">
       <div class="container-fluid">
         <button
@@ -68,17 +72,64 @@
                 <div class="card-body">
                   <div class="userAccount">
                     <i class="bi bi-person-circle"></i>
-                    <i class="bi bi-bell-fill"></i>
                   </div>
-                  <h5 class="Username">Marvin Gonzales</h5>
-                  <p class="gs">3rd year / 3A</p>
                 </div>
+                <span
+                  class="password-toggle position-absolute top-0 end-0 translate-middle-x me-1"
+                >
+                  <i class="bi bi-bell-fill"></i>
+                </span>
+                <h5 class="Username mt-1">Marvin Gonzales</h5>
+                <p class="gs">3rd year / 3A</p>
               </div>
             </div>
 
             <div class="offcanvas-body">
-              <!---->
+              <div class="list-group">
+                <a
+                  href="#dashboard"
+                  class="list-group-item list-group-item-action"
+                  data-target="dashboard.xml"
+                >
+                  <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+                <a
+                  href="#profile"
+                  class="list-group-item list-group-item-action"
+                  data-target="src\xml\dashboard.xml3"
+                >
+                  <i class="bi bi-person me-2"></i> Student Profile
+                </a>
+                <a
+                  href="#grades"
+                  class="list-group-item list-group-item-action"
+                  data-target="grades.xml"
+                >
+                  <i class="bi bi-book me-2"></i> Grades
+                </a>
+                <a
+                  href="#enrollment"
+                  class="list-group-item list-group-item-action"
+                  data-target="enrollment.xml"
+                >
+                  <i class="bi bi-person-plus me-2"></i> Enrollment
+                </a>
+                <a
+                  href="#payment"
+                  class="list-group-item list-group-item-action"
+                  data-target="payment.xml"
+                >
+                  <i class="bi bi-credit-card me-2"></i> Payment
+                </a>
+                <button
+                  class="list-group-item list-group-item-action mt-5 logout"
+                >
+                  <i class="bi bi-box-arrow-right me-2"></i> Logout
+                </button>
+              </div>
             </div>
+
+            <div id="content"></div>
           </div>
         </div>
 
@@ -90,57 +141,58 @@
       </div>
     </nav>
 
-    <div class="container-fluid py-3 component">
-      <div class="position-relative container">
+    <div id="dashboard">
+      <div class="container-fluid py-3 component">
+        <div class="position-relative container">
+          <ul class="list-unstyled">
+            <span id="currentDate" class="text-white fw-normal"></span>
+            <p class="text-white fw-bold welcome">WELCOME, Marvin!</p>
+            <p class="text-white fw-normal always">
+              Always stay updated in your student portal
+            </p>
+          </ul>
+        </div>
+      </div>
+      <div class="container-fluid py-3 dashboard">
         <ul class="list-unstyled">
-          <span id="currentDate" class="text-white fw-normal"></span>
-          <p class="text-white fw-bold welcome">WELCOME, Marvin!</p>
-          <p class="text-white fw-normal always">
-            Always stay updated in your student portal
-          </p>
+          <p class="fw-normal dash">Dashboard</p>
+          <p class="fw-bold announcement">Announcement</p>
         </ul>
       </div>
-    </div>
-    <div class="container-fluid py-3 dashboard">
-      <ul class="list-unstyled">
-        <p class="fw-normal dash">Dashboard</p>
-        <p class="fw-bold announcement">Announcement</p>
-      </ul>
-    </div>
-    <div class="container-fluid py-3 dailynotice">
-      <ul class="list-unstyled">
-        <p class="fw-normal daily">Daily notice</p>
-        <p class="fw-bold activities">Upcoming School Activities</p>
-      </ul>
-    </div>
-
-    <div class="container my-3">
-      <div class="calendar">
-        <div
-          class="calendar-header d-flex justify-content-between align-items-center"
-        >
-          <button id="prevMonth" class="btn">&lt;</button>
-          <h2 id="monthYear" class="m-0"></h2>
-          <button id="nextMonth" class="btn">&gt;</button>
-        </div>
-        <div class="calendar-body mt-0">
-          <div class="row fw-bold">
-            <div class="col text-danger">Sun</div>
-            <div class="col">Mon</div>
-            <div class="col">Tue</div>
-            <div class="col">Wed</div>
-            <div class="col">Thu</div>
-            <div class="col">Fri</div>
-            <div class="col">Sat</div>
+      <div class="container-fluid py-3 dailynotice">
+        <ul class="list-unstyled">
+          <p class="fw-normal daily">Daily notice</p>
+          <p class="fw-bold activities">Upcoming School Activities</p>
+        </ul>
+      </div>
+      <div class="container my-3">
+        <div class="calendar">
+          <div
+            class="calendar-header d-flex justify-content-between align-items-center"
+          >
+            <button id="prevMonth" class="btn">&lt;</button>
+            <h2 id="monthYear" class="m-0"></h2>
+            <button id="nextMonth" class="btn">&gt;</button>
           </div>
-          <div id="calendarDays">
-            <div class="col empty"></div>
-            <div class="col">1</div>
-            <div class="col">2</div>
-            <div class="col">3</div>
-            <div class="col">4</div>
-            <div class="col">5</div>
-            <div class="col">6</div>
+          <div class="calendar-body mt-0">
+            <div class="row fw-bold">
+              <div class="col text-danger">Sun</div>
+              <div class="col">Mon</div>
+              <div class="col">Tue</div>
+              <div class="col">Wed</div>
+              <div class="col">Thu</div>
+              <div class="col">Fri</div>
+              <div class="col">Sat</div>
+            </div>
+            <div id="calendarDays">
+              <div class="col empty"></div>
+              <div class="col">1</div>
+              <div class="col">2</div>
+              <div class="col">3</div>
+              <div class="col">4</div>
+              <div class="col">5</div>
+              <div class="col">6</div>
+            </div>
           </div>
         </div>
       </div>
