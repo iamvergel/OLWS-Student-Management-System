@@ -10779,6 +10779,7 @@ body {
 
 section {
   overflow: hidden;
+  height: 85%;
 }
 section .header {
   width: 100vw;
