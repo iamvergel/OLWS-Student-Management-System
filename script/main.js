@@ -130,6 +130,6 @@ logOut.addEventListener("click", () => {
 
   setTimeout(() => {
     window.location.href = "index.html"; 
-}, 2000);
+ }, 2000);
 
 });
