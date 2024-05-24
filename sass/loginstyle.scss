@@ -1,0 +1,186 @@
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  height: 100vh;
+
+.header {
+  width: 100vw;
+  height: 20%;
+  display: inline-block;
+  text-align: center;
+  line-height: 0.3;
+
+  p {
+    color: #1f6599;
+  }
+
+  p:nth-child(3) {
+    font-size: 12px;
+  }
+
+  img {
+    width: 80px;
+    height: auto;
+  }
+}
+
+.form {
+  .loginForm {
+    display: inline;
+
+    p {
+      color: #1f6599;
+    }
+
+    p:nth-child(2) {
+      font-size: 8px;
+    }
+
+    .form-outline {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 80%;
+        height: 20px;
+        border: 1px solid #1f6599;
+        border-radius: 0;
+        font-size: 10px;
+        color: #1f6599;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .password-toggle {
+        margin-right: 2.3rem;
+        user-select: none;
+        color: #1f6599;
+      }
+    }
+
+    .alert {
+      font-size: 8px;
+      color: #FF0000;
+      margin-left: 10px;
+      height: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button {
+      height: 10vh;
+      width: 80%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .form-check-input:checked {
+        background-color: #287fc2;
+        border-color: #1f6599; 
+      }
+      .form-check-input:focus {
+        box-shadow: 0 0 0 0.25rem rgba(31, 101, 153, 0.30);
+      }
+
+      label {
+        color: #1f6599;
+        font-size: 12px;
+      }
+
+      button {
+        font-weight: 700;
+        height: 30px;
+        width: 100px;
+        background-color: #1f6599;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 3px 5px #0000006e;
+
+        p {
+          letter-spacing: 2px;
+          font-size: 12px;
+          color: #fff;
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      button:active {
+        background-color: #287fc2;
+      }
+    }
+  }
+}
+}
+
+.footer {
+  height: 15%;
+
+  p {
+    color: #1f6599;
+  }
+
+  p:nth-child(1) {
+    font-size: 10px;
+  }
+
+  p:nth-child(2) {
+    font-size: 8px;
+  }
+
+  p:nth-child(3) {
+    font-size: 8px;
+  }
+
+  i {
+    color: #1f6599;
+    font-size: 12px;
+  }
+}
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+.loader {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1f6599;
+  display: none;
+
+  img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

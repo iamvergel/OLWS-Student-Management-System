@@ -6,7 +6,7 @@
     <title>OLWS Ins.</title>
     <link rel="icon" type="image/png" href="assets/images/logo/olwsLogo.png" />
 
-    <link rel="stylesheet" href="/sass/login.css" />
+    <link rel="stylesheet" href="sass\loginstyle.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -27,8 +27,8 @@
     />
   </head>
   <body>
-    <section class="fixed-top section">
-      <div class="container-fluid h-custom">
+    <section class="section h-100">
+      <div class="container h-100" style="background-color: aquamarine;">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-md-9 col-lg-6 col-xl-5 header">
             <p class="text-center mt-4 fs- px-3 fw-bold py-1 welcome">
@@ -77,12 +77,12 @@
                   placeholder="Password :"
                   required
               />
-              <span class="password-toggle position-absolute top-50 end-0 translate-middle-y me-5">
+              <span class="password-toggle position-absolute top-50 end-0 translate-middle-y">
                   <i id="togglePasswordIcon" class="bi bi-eye"></i>
               </span>
           </div>
 
-            <p class="alert">*alert</p>
+            <p class="alert"></p>
             
             <div class="d-flex justify-content-between align-items-center mt-4 button">
                 <!-- Checkbox -->
@@ -106,19 +106,16 @@
             </div><!---->
           </div>
         </div>
-      </div>
-    </section>
-
-    <div
+        <div
         id="component"
-        class="container-fluid py-2 d-inline fixed-bottom footer"
+        class="container-fluid py-2 d-inline footer"
       >
         <p class="text-center fw-semibold mt-3 mb-0 py-0">
           Unit 1C Mangga St. Corner Lawaan Amparo Subdivision, Caloocan,
           Philippines
         </p>
 
-        <div class="d-flex justify-content-center align-items-center email fixed-bottom py-2">
+        <div class="d-flex justify-content-center align-items-center email py-2">
           <div class="email d-flex align-items-center justify-content-between mt-1">
             <p
               class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1"
@@ -133,6 +130,8 @@
           </div>
         </div>
       </div>
+      </div>
+    </section>
 
     <div class="loader position-fixed">
       <img src="assets\images\logo\olwsLogo.png" alt="...">
