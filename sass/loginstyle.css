@@ -10806,7 +10806,7 @@ section .form .loginForm p {
   color: #1f6599;
 }
 section .form .loginForm p:nth-child(2) {
-  font-size: 8px;
+  font-size: 10px;
 }
 section .form .loginForm .form-outline {
   height: 50px;
@@ -10831,7 +10831,7 @@ section .form .loginForm .form-outline .password-toggle {
   color: #1f6599;
 }
 section .form .loginForm .alert {
-  font-size: 8px;
+  font-size: 10px;
   color: #FF0000;
   margin-left: 10px;
   height: 10px;
@@ -10856,7 +10856,7 @@ section .form .loginForm .button .form-check-input:focus {
 }
 section .form .loginForm .button label {
   color: #1f6599;
-  font-size: 12px;
+  font-size: 10px;
 }
 section .form .loginForm .button button {
   font-weight: 700;
