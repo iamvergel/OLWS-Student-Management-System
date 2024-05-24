@@ -6,7 +6,7 @@
     <title>OLWS Ins.</title>
     <link rel="icon" type="image/png" href="assets/images/logo/olwsLogo.png" />
 
-    <link rel="stylesheet" href="sass\loginstyle.css" />
+    <link rel="stylesheet" href="sass/loginstyle.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -28,7 +28,7 @@
   </head>
   <body>
     <section class="section h-100">
-      <div class="container h-100" style="background-color: aquamarine;">
+      <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-md-9 col-lg-6 col-xl-5 header">
             <p class="text-center mt-4 fs- px-3 fw-bold py-1 welcome">
@@ -65,76 +65,86 @@
                   placeholder="Username :"
                   required
                 />
-            </div>
-            
-            <!-- Password input -->
-            <div class="form-outline mb-0 position-relative">
-              <input
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-0 position-relative">
+                <input
                   type="password"
                   name="password"
                   id="password"
                   class="form-control form-control-lg"
                   placeholder="Password :"
                   required
-              />
-              <span class="password-toggle position-absolute top-50 end-0 translate-middle-y">
+                />
+                <span
+                  class="password-toggle position-absolute top-50 end-0 translate-middle-y me-2"
+                >
                   <i id="togglePasswordIcon" class="bi bi-eye"></i>
-              </span>
-          </div>
+                </span>
+              </div>
 
-            <p class="alert"></p>
-            
-            <div class="d-flex justify-content-between align-items-center mt-4 button">
+              <p class="alert"></p>
+
+              <div
+                class="d-flex justify-content-between align-items-center mt-4 button"
+              >
                 <!-- Checkbox -->
                 <div class="form-check">
-                    <input
-                      class="form-check-input me-2"
-                      type="checkbox"
-                      value=""
-                      id="form2Example3"
-                    />
-                    <label class="form-check-label" for="form2Example3">
-                        Remember me
-                    </label>
+                  <input
+                    class="form-check-input me-2"
+                    type="checkbox"
+                    value=""
+                    id="form2Example3"
+                  />
+                  <label class="form-check-label" for="form2Example3">
+                    Remember me
+                  </label>
                 </div>
-            
+
                 <!-- Login button -->
                 <button class="btn btn-primary btn-lg login">
-                    <p class="m-0">Login</p>
-                </button>            
+                  <p class="m-0">Login</p>
+                </button>
               </div>
-            </div><!---->
+            </div>
           </div>
         </div>
-        <div
-        id="component"
-        class="container-fluid py-2 d-inline footer"
-      >
-        <p class="text-center fw-semibold mt-3 mb-0 py-0">
-          Unit 1C Mangga St. Corner Lawaan Amparo Subdivision, Caloocan,
-          Philippines
-        </p>
+        <div id="component" class="container-fluid py-2 d-inline footer">
+          <p class="text-center fw-semibold mt-3 mb-0 py-0">
+            Unit 1C Mangga St. Corner Lawaan Amparo Subdivision, Caloocan,
+            Philippines
+          </p>
 
-        <div class="d-flex justify-content-center align-items-center email py-2">
-          <div class="email d-flex align-items-center justify-content-between mt-1">
-            <p
-              class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1"
-            > <i class="bi bi-envelope me-1"></i>
-              olwsacademic@gmail.com
-            </p>
-          </div>
-          <div class="contact d-flex align-items-center justify-content-between">
-            <p class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1">
-              <i class="bi bi-telephone-fill me-1"></i>+639453174980
-            </p>
+          <div
+            class="d-flex justify-content-center align-items-center email py-2"
+          >
+            <div
+              class="email d-flex align-items-center justify-content-between mt-1"
+            >
+              <p
+                class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1"
+              >
+                <i class="bi bi-envelope me-1"></i>
+                olwsacademic@gmail.com
+              </p>
+            </div>
+            <div
+              class="contact d-flex align-items-center justify-content-between"
+            >
+              <p
+                class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1"
+              >
+                <i class="bi bi-telephone-fill me-1"></i>+639453174980
+              </p>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
 
     <div class="loader position-fixed">
-      <img src="assets\images\logo\olwsLogo.png" alt="...">
+      <img src="assets\images\logo\olwsLogo.png" alt="..." />
     </div>
 
     <!-- Bootstrap JS and dependencies -->
@@ -143,8 +153,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="script\index.js"></script>
 
-    <script>
-      
-    </script>
-</body>
+    <script></script>
+  </body>
 </html>

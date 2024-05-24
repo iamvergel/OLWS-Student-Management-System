@@ -10772,8 +10772,15 @@ textarea.form-control-lg {
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
 section {
-  height: 100vh;
+  overflow: hidden;
+  height: 100%;
 }
 section .header {
   width: 100vw;
@@ -10818,7 +10825,6 @@ section .form .loginForm .form-outline input {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 section .form .loginForm .form-outline .password-toggle {
-  margin-right: 2.3rem;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
