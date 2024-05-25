@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OLWS Ins.</title>
-    <link rel="icon" type="image/png" href="assets/images/logo/olwsLogo.png" />
+    <link rel="icon" type="image/png" href="/assets/images/logo/olwsLogo.png" />
 
-    <link rel="stylesheet" href="sass\loginstyle.css" />
+    <link rel="stylesheet" href="\sass\loginstyle.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -38,26 +38,26 @@
   <body>
     <section class="h-100 gradient-form">
       <div class="container-fluid h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="row d-flex justify-content-top align-items-top h-100">
           <div class="col-xl-12 h-100">
-            <div class="containe-fluid rounded-0 text-black h-100 border-0">
+            <div class="containe-fluid ml-0 h-100 border-0">
               <div class="row g-0 h-100">
                 <div
-                  class="col-lg-6 h-100 d-flex align-items-center justify-content-center"
+                  class="col-lg-6 col-sm-12 h-100 d-flex align-items-center justify-content-top"
                 >
                   <div
-                    class="containe-fluid p-0 m-0 d-flex flex-column justify-content-top h-100 w-100"
+                    class="container-fluid p-0 m-0 d-flex flex-column justify-content-center h-100"
                   >
                     <div
-                      class="text-center fw-normal d-block d-lg-none m-0 p-0 header"
+                      class="container-fluid text-center fw-normal d-block d-lg-none m-0 p-0 header"
                     >
-                      <p class="fs-3 px-3 mb-0 fw-bold py-0 mt-5 welcome">
+                      <p class="fs-3 px-3 mb-0 fw-bold py-0 mt-1 welcome">
                         WELCOME TO
                       </p>
                       <p class="fs-6 mt-0 py-0 fw-semibold py-0">
                         Our Lady of Walsingham School
                       </p>
-                      <p class="fw-normal mb-5 p-0 py-0 loginText">
+                      <p class="fw-normal mb-3 p-0 py-0 loginText">
                         Login to access your account
                       </p>
                       <img
@@ -66,21 +66,21 @@
                       />
                     </div>
 
-                    <form class="form mt-lg-5">
-                      <div class="loginForm my-5">
+                    <form class="form mt-lg-5 mt-0 mt-md-5">
+                      <div class="loginForm my-3">
                         <div
-                          class="divider d-inline text-left text-md-center text-lg-left"
+                          class="divider d-inline text-start text-md-center text-lg-start text-xl-start"
                         >
-                          <p class="ml-4 mt-md-0 mt-1 fw-bold mx-3 mb-0">
+                          <p class="mt-md-0 mt-0 fw-bold mx-3 mx-lg-5 mb-0">
                             LOGIN
                           </p>
-                          <p class="mx-3 ml-4 mb-0">
+                          <p class="mx-3 mx-lg-5 ml-4 mb-0">
                             Enter your account details
                           </p>
                         </div>
 
                         <!-- Username input -->
-                        <div class="form-outline mb-1 mt-4 mt-md-5">
+                        <div class="form-outline mb-1 mt-2 mt-md-5">
                           <input
                             type="text"
                             name="username"
@@ -127,18 +127,15 @@
                           </div>
 
                           <!-- Login button -->
-                          <button class="btn btn-lg login">
+                          <button type="button" class="btn btn-lg login">
                             <p class="m-0">Login</p>
                           </button>
                         </div>
                       </div>
 
-                      <div
-                        id="component"
-                        class="d-inline d-block d-lg-none footer"
-                      >
+                      <div id="component" class="d-block d-lg-none mt-0 footer">
                         <p
-                          class="text-center fw-semibold mt-3 mt-md-0 mb-0 py-0"
+                          class="text-center fw-semibold mt-0 mt-md-0 mb-0 py-0"
                         >
                           Unit 1C Mangga St. Corner Lawaan Amparo Subdivision,
                           Caloocan, Philippines
@@ -172,6 +169,7 @@
                     </form>
                   </div>
                 </div>
+
                 <div
                   class="text-center d-flex flex-column align-items-center justify-content-top col-lg-6 d-block d-sm-none s-md-none d-lg-block logoform"
                 >
@@ -190,14 +188,14 @@
                     class="mb-5"
                   />
 
-                  <div id="component" class="footer01">
+                  <div id="component" class="footer01 py-5">
                     <p class="text-center fw-semibold mt-5 mb-0 py-0">
                       Unit 1C Mangga St. Corner Lawaan Amparo Subdivision,
                       Caloocan, Philippines
                     </p>
 
                     <div
-                      class="d-flex justify-content-center align-items-center email py-0 mt-5"
+                      class="d-flex justify-content-center align-items-center email py-0 mt-3"
                     >
                       <div
                         class="email d-flex align-items-center justify-content-between mt-1"
@@ -228,7 +226,11 @@
       </div>
     </section>
 
-    <script src="script/index.js"></script>
+    <div class="loader position-fixed">
+      <img src="\assets\images\logo\olwsLogo.png" alt="..." />
+    </div>
+
+    <script src="\script\index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

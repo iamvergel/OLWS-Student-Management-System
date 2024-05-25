@@ -1,39 +1,22 @@
 let userName = document.querySelector("#username");
 let passWord = document.querySelector("#password");
 
-let section = document.querySelector(".section");
+let section = document.querySelector("section");
 let loader = document.querySelector(".loader");
 
 let alertPassword = document.querySelector(".alert");
 
 let userAccount = [
-  {
-    user: "2021-0448",
-    pass: "Macayan",
-  },
-  {
-    user: "2021-0605",
-    pass: "Javier",
-  },
-  {
-    user: "2021-0604",
-    pass: "Kiskisan",
-  },
-  {
-    user: "2021-0924",
-    pass: "Kadusale",
-  },
-  {
-    user: "2021-1126",
-    pass: "Hermosa",
-  },
-  {
-    user: "2021-1680",
-    pass: "Gonzales",
-  },
+  { user: "2021-0448", pass: "Macayan" },
+  { user: "2021-0605", pass: "Javier" },
+  { user: "2021-0604", pass: "Kiskisan" },
+  { user: "2021-0924", pass: "Kadusale" },
+  { user: "2021-1126", pass: "Hermosa" },
+  { user: "2021-1680", pass: "Gonzales" },
 ];
 
 let logIn = document.querySelector(".login");
+
 logIn.addEventListener("click", () => {
   for (let i = 0; i < userAccount.length; i++) {
     if (
@@ -111,18 +94,6 @@ logIn.addEventListener("click", () => {
   }
 });
 
-userName.addEventListener("click", () => {
-  userName.style.border = "1px solid #193867";
-  passWord.style.border = "1px solid #193867";
-  alertPassword.style.opacity = "0";
-});
-
-passWord.addEventListener("click", () => {
-  userName.style.border = "1px solid #193867";
-  passWord.style.border = "1px solid #193867";
-  alertPassword.style.opacity = "0";
-});
-
 document.addEventListener('DOMContentLoaded', function () {
   const usernameInput = document.getElementById('username');
   const passwordInput = document.getElementById('password');
@@ -166,5 +137,5 @@ document.addEventListener('DOMContentLoaded', function () {
           localStorage.removeItem('rememberedUsername');
           localStorage.removeItem('rememberedPassword');
       }
-      });
+  });
 });
