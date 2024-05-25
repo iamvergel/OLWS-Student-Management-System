@@ -6,7 +6,7 @@
     <title>OLWS Ins.</title>
     <link rel="icon" type="image/png" href="assets/images/logo/olwsLogo.png" />
 
-    <link rel="stylesheet" href="sass/loginstyle.css" />
+    <link rel="stylesheet" href="samplesass\sample.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -25,142 +25,224 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
       rel="stylesheet"
     />
+
+    <style></style>
   </head>
   <body>
-    <section class="section h-100">
-      <div class="container h-100">
+    <section class="h-100 gradient-form">
+      <div class="container-fluid h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-md-9 col-lg-6 col-xl-5 header">
-            <p class="text-center mt-4 fs- px-3 fw-bold py-1 welcome">
-              WELCOME TO
-            </p>
-            <p class="text-center fs-6 m-0 px-3 fw-semibold py-0">
-              Our Lady of Walsingham School
-            </p>
-            <p class="text-center fw-normal mb-1 px-3 py-4 loginText">
-              Login to access your account
-            </p>
-            <img
-              src="/assets/images/logo/olwsLogo.png"
-              class="img-fluid"
-              alt="Sample image"
-            />
-          </div>
-          <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 form">
-            <div class="loginForm">
-              <div class="divider d-inline my-4">
-                <p class="text-left fs-6 ml-4 mt-5 fw-bold mx-3 mb-0">LOGIN</p>
-                <p class="text-left mx-3 ml-4 mb-0">
-                  Enter your account details
-                </p>
-              </div>
-
-              <!-- Username input -->
-              <div class="form-outline mb-1 mt-4">
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  class="form-control form-control-lg"
-                  placeholder="Username :"
-                  required
-                />
-              </div>
-
-              <!-- Password input -->
-              <div class="form-outline mb-0 position-relative">
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  class="form-control form-control-lg"
-                  placeholder="Password :"
-                  required
-                />
-                <span
-                  class="password-toggle position-absolute top-50 end-0 translate-middle-y me-2"
+          <div class="col-xl-12 h-100">
+            <div class="containe-fluid rounded-0 text-black h-100 border-0">
+              <div class="row g-0 h-100">
+                <div
+                  class="col-lg-6 h-100 d-flex align-items-center justify-content-center"
                 >
-                  <i id="togglePasswordIcon" class="bi bi-eye"></i>
-                </span>
-              </div>
+                  <div
+                    class="containe-fluid p-0 m-0 d-flex flex-column justify-content-top h-100 w-100"
+                  >
+                    <div
+                      class="text-center fw-normal d-block d-lg-none m-0 p-0 header"
+                    >
+                      <p
+                        class="fs-3 px-3 mb-0 fw-bold py-0 mt-5 welcome"
+                      >
+                        WELCOME TO
+                      </p>
+                      <p
+                        class="fs-6 mt-0 py-0 fw-semibold py-0"
+                      >
+                        Our Lady of Walsingham School
+                      </p>
+                      <p
+                        class="fw-normal mb-5 p-0 py-0 loginText"
+                      >
+                        Login to access your account
+                      </p>
+                      <img
+                        src="/assets/images/logo/olwsLogo.png"
+                        alt="Sample image"
+                      />
+                    </div>
 
-              <p class="alert"></p>
+                    <form class="form mt-lg-5">
+                      <div class="loginForm my-5">
+                        <div
+                          class="divider d-inline text-left text-md-center text-lg-left"
+                        >
+                          <p class="ml-4 mt-md-0 mt-1 fw-bold mx-3 mb-0">
+                            LOGIN
+                          </p>
+                          <p class="mx-3 ml-4 mb-0">
+                            Enter your account details
+                          </p>
+                        </div>
 
-              <div
-                class="d-flex justify-content-between align-items-center mt-4 button"
-              >
-                <!-- Checkbox -->
-                <div class="form-check ml-1">
-                  <input
-                    class="form-check-input me-2"
-                    type="checkbox"
-                    value=""
-                    id="form2Example3"
-                  />
-                  <label class="form-check-label" for="form2Example3">
-                    Remember me
-                  </label>
+                        <!-- Username input -->
+                        <div class="form-outline mb-1 mt-4 mt-md-5">
+                          <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            class="form-control form-control-lg"
+                            placeholder="Username :"
+                            required
+                          />
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-0 mt-md-3 position-relative">
+                          <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            class="form-control form-control-lg ml-4"
+                            placeholder="Password :"
+                            required
+                          />
+                          <span class="password-toggle ml-2">
+                            <i id="togglePasswordIcon" class="bi bi-eye"></i>
+                          </span>
+                        </div>
+
+                        <p class="alert mt-md-3"></p>
+
+                        <div
+                          class="d-flex justify-content-between align-items-center mt-4 mt-md-3 mt-lg-5 button"
+                        >
+                          <!-- Checkbox -->
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="form2Example3"
+                            />
+                            <label class="form-check-label" for="form2Example3">
+                              Remember me
+                            </label>
+                          </div>
+
+                          <!-- Login button -->
+                          <button class="btn btn-lg login">
+                            <p class="m-0">Login</p>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div id="component" class="d-inline d-block d-lg-none footer">
+                        <p
+                          class="text-center fw-semibold mt-3 mt-md-0 mb-0 py-0"
+                        >
+                          Unit 1C Mangga St. Corner Lawaan Amparo Subdivision,
+                          Caloocan, Philippines
+                        </p>
+
+                        <div
+                          class="d-flex justify-content-center align-items-center email py-2"
+                        >
+                          <div
+                            class="email d-flex align-items-center justify-content-between mt-1"
+                          >
+                            <p
+                              class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1"
+                            >
+                              <i class="bi bi-envelope me-1"></i>
+                              olwsacademic@gmail.com
+                            </p>
+                          </div>
+                          <div
+                            class="contact d-flex align-items-center justify-content-between"
+                          >
+                            <p
+                              class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1"
+                            >
+                              <i class="bi bi-telephone-fill me-1"></i
+                              >+639453174980
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-
-                <!-- Login button -->
-                <button class="btn btn-primary btn-lg login">
-                  <p class="m-0">Login</p>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div id="component" class="container-fluid py-3 d-inline footer">
-            <p class="text-center fw-semibold mt-3 mb-0 py-0">
-              Unit 1C Mangga St. Corner Lawaan Amparo Subdivision, Caloocan,
-              Philippines
-            </p>
-  
-            <div
-              class="d-flex justify-content-center align-items-center email py-2"
-            >
-              <div
-                class="email d-flex align-items-center justify-content-between mt-1"
-              >
-                <p
-                  class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1"
+                <div
+                  class="text-center d-flex flex-column align-items-center justify-content-top col-lg-6 d-block d-sm-none s-md-none d-lg-block logoform"
                 >
-                  <i class="bi bi-envelope me-1"></i>
-                  olwsacademic@gmail.com
-                </p>
-              </div>
-              <div
-                class="contact d-flex align-items-center justify-content-between"
-              >
-                <p
-                  class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1"
-                >
-                  <i class="bi bi-telephone-fill me-1"></i>+639453174980
-                </p>
+                      <p
+                        class="fs-1 d-block px-0 fw-bold py-0 mt-5 welcome"
+                      >
+                        WELCOME TO
+                      </p>
+                      <p
+                        class="fs-3 d-block m-0 p-0 fw-semibold py-0"
+                      >
+                        Our Lady of Walsingham School
+                      </p>
+                      <p
+                        class="fw-normal d-block mb-5 p-0 py-5 loginText"
+                      >
+                        Login to access your account
+                      </p>
+                      <img
+                        src="/assets/images/logo/olwsLogo.png"
+                        alt="Sample image"
+                        class="mb-5"
+                      />
+
+                      <div id="component" class="footer01">
+                        <p
+                          class="text-center fw-semibold mt-5 mb-0 py-0"
+                        >
+                          Unit 1C Mangga St. Corner Lawaan Amparo Subdivision,
+                          Caloocan, Philippines
+                        </p>
+
+                        <div
+                          class="d-flex justify-content-center align-items-center email py-0 mt-5"
+                        >
+                          <div
+                            class="email d-flex align-items-center justify-content-between mt-1"
+                          >
+                            <p
+                              class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1"
+                            >
+                              <i class="bi bi-envelope me-1"></i>
+                              olwsacademic@gmail.com
+                            </p>
+                          </div>
+                          <div
+                            class="contact d-flex align-items-center justify-content-between"
+                          >
+                            <p
+                              class="d-flex align-items-center justify-content-between col-11 m-0 px-3 py-1"
+                            >
+                              <i class="bi bi-telephone-fill me-1"></i
+                              >+639453174980
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 d-flex align-items-center gradient-custom-2 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-none">
-          <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-            <h4 class="mb-4">We are more than just a company</h4>
-            <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
       </div>
     </section>
 
-    <div class="loader position-fixed">
-      <img src="assets\images\logo\olwsLogo.png" alt="..." />
-    </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="script\index.js"></script>
-
-    <script></script>
+    <script src="script/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

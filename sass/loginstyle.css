@@ -10772,22 +10772,14 @@ textarea.form-control-lg {
   font-family: "Poppins", sans-serif;
 }
 
-body {
+html, body {
   overflow: hidden;
   height: 100%;
-  width: 100%;
+  margin: 0;
 }
 
 section {
   overflow: hidden;
-  height: 100%;
-}
-section .header {
-  width: 100vw;
-  height: 20%;
-  display: inline-block;
-  text-align: center;
-  line-height: 0.3;
 }
 section .header p {
   color: #1f6599;
@@ -10796,17 +10788,59 @@ section .header p:nth-child(3) {
   font-size: 12px;
 }
 section .header img {
-  width: 80px;
-  height: auto;
+  width: auto;
+  height: 80px;
 }
-section .form .loginForm {
-  display: inline;
+@media (min-width: 576px) {
+  section .header img {
+    width: auto;
+    height: 150px;
+  }
+}
+@media (min-width: 768px) {
+  section .header img {
+    width: auto;
+    height: 200px;
+  }
+}
+@media (min-width: 992px) {
+  section .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 70%;
+  }
 }
 section .form .loginForm p {
   color: #1f6599;
 }
+section .form .loginForm p:nth-child(1) {
+  font-size: 15px;
+}
+@media (min-width: 768px) {
+  section .form .loginForm p:nth-child(1) {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  section .form .loginForm p:nth-child(1) {
+    font-size: 25px;
+  }
+}
 section .form .loginForm p:nth-child(2) {
-  font-size: 10px;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  section .form .loginForm p:nth-child(2) {
+    font-size: 15px;
+  }
+}
+@media (min-width: 992px) {
+  section .form .loginForm p:nth-child(2) {
+    font-size: 15px;
+  }
 }
 section .form .loginForm .form-outline {
   height: 50px;
@@ -10823,6 +10857,17 @@ section .form .loginForm .form-outline input {
   font-size: 10px;
   color: #1f6599;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (min-width: 768px) {
+  section .form .loginForm .form-outline input {
+    width: 60%;
+    height: 40px;
+  }
+}
+@media (min-width: 992px) {
+  section .form .loginForm .form-outline input {
+    width: 80%;
+  }
 }
 section .form .loginForm .form-outline .password-toggle {
   -webkit-user-select: none;
@@ -10846,6 +10891,16 @@ section .form .loginForm .button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  section .form .loginForm .button {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  section .form .loginForm .button {
+    width: 80%;
+  }
 }
 section .form .loginForm .button .form-check-input:checked {
   background-color: #287fc2;
@@ -10881,7 +10936,7 @@ section .form .loginForm .button button:active {
 }
 
 .footer {
-  height: 15%;
+  width: 100%;
 }
 .footer p {
   color: #1f6599;
@@ -10900,12 +10955,54 @@ section .form .loginForm .button button:active {
   font-size: 12px;
 }
 
-.gradient-custom-2 {
-  /* fallback for old browsers */
-  background: #fccb90;
-  /* Chrome 10-25, Safari 5.1-6 */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+.logoform {
+  background: rgb(31, 101, 144);
+  background: linear-gradient(277deg, rgba(31, 101, 144, 0.7679446779) 0%, rgb(31, 101, 144) 50%, rgb(31, 84, 144) 100%);
+}
+.logoform p {
+  color: #fff;
+}
+.logoform p:nth-child(3) {
+  font-size: 20px;
+}
+.logoform img {
+  width: auto;
+  height: 80px;
+}
+@media (min-width: 576px) {
+  .logoform img {
+    width: auto;
+    height: 150px;
+  }
+}
+@media (min-width: 768px) {
+  .logoform img {
+    width: auto;
+    height: 200px;
+  }
+}
+.logoform .footer01 {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logoform .footer01 p {
+  color: #fff;
+}
+.logoform .footer01 p:nth-child(1) {
+  font-size: 12px;
+}
+.logoform .footer01 p:nth-child(2) {
+  font-size: 12px;
+}
+.logoform .footer01 p:nth-child(3) {
+  font-size: 12px;
+}
+.logoform .footer01 i {
+  color: #fff;
+  font-size: 15px;
 }
 
 .loader {

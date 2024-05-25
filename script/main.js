@@ -129,7 +129,9 @@ logOut.addEventListener("click", () => {
   header.style.opacity = "0";
 
   setTimeout(() => {
-    window.location.href = "index.html"; 
+    window.location.href = "index.php"; 
  }, 2000);
 
 });
+
+
