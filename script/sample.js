@@ -131,50 +131,30 @@ function updateTime() {
   });
   
   let logOut = document.querySelector(".logout");
-  let logOut2 = document.querySelector(".logout2");
-  let smsidenav = document.querySelector(".smsidenav");
   let loader = document.querySelector(".loader");
   let header = document.querySelector(".header");
-  let footer = document.querySelector(".footer");
   logOut.addEventListener("click", () => {
-    let result = confirm("Do you want to Logout ?");
-
-// Check user's choice
-if (result) {
-  loader.style.display = "block";
-    footer.style.opacity = "0";
+    loader.style.display = "block";
     header.style.opacity = "0";
   
     setTimeout(() => {
-      window.location.href = "index.html"; 
+      window.location.href = "/src/index.html"; 
    }, 2000);
   
-  
-} else {
-    
-}
-    });
-
-  logOut2.addEventListener("click", () => {
-
-let result = confirm("Do you want to Logout ?");
-
-// Check user's choice
-if (result) {
-  loader.style.display = "block";
-  footer.style.opacity = "0";
-  header.style.opacity = "0";
-  smsidenav.style.display = "none";
-
-  setTimeout(() => {
-    window.location.href = "index.html"; 
- }, 2000);
-} else {
-    
-}
   });
   
+  document.addEventListener("DOMContentLoaded", function() {
+    const navbar = document.getElementById("navbar");
+    const toggleButton = document.getElementById("toggleButton1");
+    const mainContent = document.getElementById("main-content");
   
+    toggleButton.addEventListener("click", function() {
+        if (window.innerWidth >= 768) {
+            navbar.classList.toggle("small");
+            mainContent.classList.toggle("small");
+        }
+    });
+  });
   
   
   

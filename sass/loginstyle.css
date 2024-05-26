@@ -10966,19 +10966,7 @@ section .form .loginForm .button button:active {
 }
 .logoform img {
   width: auto;
-  height: 80px;
-}
-@media (min-width: 576px) {
-  .logoform img {
-    width: auto;
-    height: 150px;
-  }
-}
-@media (min-width: 768px) {
-  .logoform img {
-    width: auto;
-    height: 200px;
-  }
+  height: 170px;
 }
 .logoform .footer01 {
   width: 100%;

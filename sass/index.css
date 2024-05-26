@@ -10774,43 +10774,183 @@ textarea.form-control-lg {
 
 body {
   background-color: #fff;
+  overflow: hidden;
 }
 
-.header {
+.sidebar {
+  position: absolute;
+  left: -20%;
+  height: 100%;
+  width: 20%;
+  background: #1f6599;
+  padding: 15px;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+@media (min-width: 0) {
+  .sidebar {
+    display: none;
+  }
+}
+@media (min-width: 991px) {
+  .sidebar {
+    left: -20;
+  }
+}
+
+.smsidenav {
+  display: block;
+}
+.smsidenav #offcanvasNavbar {
+  opacity: 1;
+  background-color: #1f6599;
+  width: 70%;
+}
+@media (min-width: 768px) {
+  .smsidenav #offcanvasNavbar {
+    width: 50%;
+  }
+}
+.smsidenav .offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.smsidenav .logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.smsidenav .offcanvas-header h5, .smsidenav .offcanvas-header .h5 {
+  color: #fff;
+  font-size: 10px;
+}
+.smsidenav .container-Account {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 100%;
+}
+.smsidenav .container-Account .card {
+  background-color: transparent;
+  border: none;
+  align-items: center;
+}
+.smsidenav .container-Account .card .card-body {
+  border: none;
+  border-radius: 10px;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+}
+.smsidenav .container-Account .card .card-body .userAccount {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #1f6599;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.smsidenav .container-Account .card .card-body .userAccount .bi-person-circle {
+  color: #ffffff;
+  font-size: 80px;
+}
+.smsidenav .container-Account .card .bi-bell-fill {
+  color: #fff;
+  font-size: 15px;
+}
+.smsidenav .container-Account .card h5, .smsidenav .container-Account .card .h5 {
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 0.5;
+}
+.smsidenav .container-Account .card p {
+  font-size: 12px;
+  font-weight: 300;
+  color: #fff;
+}
+.smsidenav .offcanvas-body {
+  padding: 0;
+  width: 100%;
+}
+.smsidenav .offcanvas-body .list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.smsidenav .offcanvas-body .list-group-item {
+  border-radius: 0;
+  background-color: #1f6599;
+  color: rgba(255, 255, 255, 0.7725490196);
+  font-size: 12px;
+  border: none;
+}
+.smsidenav .offcanvas-body .list-group-item:hover {
+  background-color: #236ea8;
+  color: #fff;
+}
+
+.main {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  width: 100%;
+  transition: all 0.3s ease;
+  height: 100vh;
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .main {
+    left: 0;
+    width: 100%;
+  }
+}
+.main .navbar {
   background-color: #fff;
   height: 80px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
-.header .navbtn {
+.main .navbar .navbtn {
   background-color: #1f6599;
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  margin-left: 5px;
+  margin-left: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
-.header .navbaricon {
+.main .navbar .navbtn i {
   color: #fff;
   font-size: 25px;
 }
-.header .user {
+@media (min-width: 0px) {
+  .main .navbar #sidebar-close {
+    display: none;
+  }
+}
+.main .navbar .user {
   width: 150px;
   height: auto;
   display: flex;
   justify-content: right;
   align-items: center;
 }
-.header .clock {
+.main .navbar .clock {
   font-size: 12px;
   font-weight: 400;
   color: #1f6599;
   position: relative;
   margin-right: 10px;
 }
-.header .usericoncontainer {
+.main .navbar .usericoncontainer {
   height: 40px;
   width: 40px;
   display: flex;
@@ -10820,181 +10960,67 @@ body {
   border-radius: 100%;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
 }
-.header .usericon {
+.main .navbar .usericon {
   font-size: 40px;
   color: #fff;
 }
-
-#offcanvasNavbar {
-  background-color: #1f6599;
-  width: 70%;
-}
-
-.offcanvas-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.offcanvas-header h5, .offcanvas-header .h5 {
-  color: #fff;
-  font-size: 10px;
-}
-
-.container-Account {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  width: 100%;
-}
-.container-Account .card {
-  background-color: transparent;
-  border: none;
-  align-items: center;
-}
-.container-Account .card .card-body {
-  border: none;
-  border-radius: 10px;
-  display: inline;
-  justify-content: center;
-  align-items: center;
-}
-.container-Account .card .card-body .userAccount {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #1f6599;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container-Account .card .card-body .userAccount .bi-person-circle {
-  color: #ffffff;
-  font-size: 100px;
-}
-.container-Account .card .bi-bell-fill {
-  color: #fff;
-  font-size: 20px;
-}
-.container-Account .card h5, .container-Account .card .h5 {
-  letter-spacing: 2px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #fff;
-  margin-top: 0;
-}
-.container-Account .card p {
-  font-size: 12px;
-  font-weight: 300;
-  color: #fff;
-}
-
-.offcanvas-body {
-  padding: 0;
-  width: 100%;
-}
-.offcanvas-body .list-group {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.offcanvas-body .list-group-item {
-  border-radius: 0;
-  background-color: #1f6599;
-  color: rgba(255, 255, 255, 0.7725490196);
-  font-size: 12px;
-  border: none;
-}
-.offcanvas-body .list-group-item:hover {
-  background-color: #236ea8;
-  color: #fff;
-}
-
-.component {
-  width: 100%;
+.main .component {
+  width: 90%;
   display: flex;
   height: 30vh;
   justify-content: center;
   align-items: center;
 }
-.component .container {
-  height: 15vh;
+.main .component .container {
+  height: 20vh;
   width: 100vw;
   background-color: #fff;
   background-image: linear-gradient(to left, rgba(31, 100, 153, 0.2196078431), rgba(31, 100, 153, 0.7529411765), #1f6599);
   border-radius: 10px;
-  margin-top: 100px;
 }
-.component .container #currentDate {
+.main .component .container #currentDate {
   font-size: 12px;
   position: relative;
-  top: 5px;
+  top: 10px;
   left: 5px;
 }
-.component .container .welcome {
+.main .component .container .welcome {
   font-size: 25px;
   position: relative;
-  top: 15px;
+  top: 20px;
   left: 5px;
 }
-.component .container .always {
-  font-size: 12px;
-  position: relative;
-  top: -5px;
-  left: 5px;
-}
-
-.dashboard {
-  width: 100%;
-  background-color: #fff;
-  height: 30vh;
-  border-bottom: 1px solid rgba(31, 100, 153, 0.2196078431);
-}
-.dashboard .dash {
-  color: #1f6599;
+.main .component .container .always {
   font-size: 14px;
   position: relative;
   top: 5px;
-  left: 10px;
+  left: 5px;
 }
-.dashboard .announcement {
-  color: #1f6599;
-  font-size: 15px;
-  position: relative;
-  top: -10px;
-  left: 10px;
-}
-
-.dailynotice {
-  width: 100%;
+.main .dashboard {
   background-color: #fff;
-  height: 30vh;
   border-bottom: 1px solid rgba(31, 100, 153, 0.2196078431);
 }
-.dailynotice .daily {
+.main .dashboard .dash {
   color: #1f6599;
   font-size: 14px;
-  position: relative;
-  top: 5px;
-  left: 10px;
 }
-.dailynotice .activities {
+.main .dashboard .announcement {
   color: #1f6599;
   font-size: 15px;
-  position: relative;
-  top: -10px;
-  left: 10px;
 }
-
-.calendar {
+.main .dailynotice {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(31, 100, 153, 0.2196078431);
+}
+.main .dailynotice .daily {
+  color: #1f6599;
+  font-size: 14px;
+}
+.main .dailynotice .activities {
+  color: #1f6599;
+  font-size: 15px;
+}
+.main .calendar {
   background-color: #fff;
   border: 1px solid rgba(31, 100, 153, 0.4039215686);
   border-radius: 0.25rem;
@@ -11004,12 +11030,12 @@ body {
   height: 350px;
   margin-bottom: 100px;
 }
-.calendar .calendar-header {
+.main .calendar .calendar-header {
   background-color: #1f6599;
   color: #fff;
   padding: 1rem;
 }
-.calendar .calendar-header button {
+.main .calendar .calendar-header button {
   background-color: #236ea8;
   color: #ffffff;
   font-weight: 900;
@@ -11021,24 +11047,24 @@ body {
   align-items: center;
   justify-content: center;
 }
-.calendar .calendar-header h2, .calendar .calendar-header .h2 {
+.main .calendar .calendar-header h2, .main .calendar .calendar-header .h2 {
   font-weight: 600;
   font-size: 16px;
 }
-.calendar .calendar-body .row {
+.main .calendar .calendar-body .row {
   text-align: center;
   font-size: 12px;
   color: #1f6599;
   width: 100%;
   margin-left: 0;
 }
-.calendar .calendar-body .row .col {
+.main .calendar .calendar-body .row .col {
   padding: 10px;
 }
-.calendar .calendar-body .row .empty {
+.main .calendar .calendar-body .row .empty {
   background-color: transparent;
 }
-.calendar .calendar-body .row .today {
+.main .calendar .calendar-body .row .today {
   background-color: #1f6599;
   color: #fff;
   font-weight: bold;
@@ -11048,9 +11074,8 @@ body {
   background-color: #1f6599;
   color: #fff;
   font-size: 12px;
-  position: relative;
-  bottom: 0;
-  width: 100vw;
+  width: 100%;
+  opacity: 1;
 }
 
 .loader {
@@ -11058,7 +11083,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #1f6599;
-  z-index: 5;
+  z-index: 100;
   display: none;
 }
 .loader img {

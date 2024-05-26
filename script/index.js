@@ -13,6 +13,7 @@ let userAccount = [
   { user: "2021-0924", pass: "Kadusale" },
   { user: "2021-1126", pass: "Hermosa" },
   { user: "2021-1680", pass: "Gonzales" },
+  { user: "Sample", pass: "Sample" },
 ];
 
 let logIn = document.querySelector(".login");
@@ -66,6 +67,14 @@ logIn.addEventListener("click", () => {
           window.location.href = "/src/GonzalesMarvin.html";
         }, 2000);
       } 
+      else if (userName.value === "Sample") {
+        section.style.display = "none";
+        loader.style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = "dashboard.html";
+        }, 2000);
+      } 
 
       alertPassword.style.opacity = "0";
     } else if (userName.value === "" && passWord.value === "") {
@@ -92,6 +101,18 @@ logIn.addEventListener("click", () => {
       alertPassword.innerHTML = "*This Account is not registered";
     }
   }
+});
+
+userName.addEventListener("click", () => {
+  userName.style.border = "1px solid #193867";
+  passWord.style.border = "1px solid #193867";
+  alertPassword.style.opacity = "0";
+});
+
+passWord.addEventListener("click", () => {
+  userName.style.border = "1px solid #193867";
+  passWord.style.border = "1px solid #193867";
+  alertPassword.style.opacity = "0";
 });
 
 document.addEventListener('DOMContentLoaded', function () {

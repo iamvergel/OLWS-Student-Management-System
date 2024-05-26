@@ -15,9 +15,161 @@
 
 body {
   background-color: #fff;
+  overflow: hidden;
 }
 
-.header {
+.sidebar {
+  position: absolute;
+  left: -20%;
+  height: 100%;
+  width: 20%;
+  background: #1f6599;
+  padding: 15px;
+  z-index: 0;
+  transition: all 0.3s ease;
+
+  @media (min-width: 0) {
+    display: none;
+  }
+
+  @media (min-width: 991px) {
+    left: -20;
+  }
+}
+
+.smsidenav {
+  display: block;
+
+  #offcanvasNavbar {
+    opacity: 1;
+    background-color: #1f6599;
+    width: 70%;
+
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+  
+  .offcanvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .offcanvas-header h5 {
+    color: #fff;
+    font-size: 10px;
+  }
+  
+  .container-Account {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    width: 100%;
+  
+    .card {
+      background-color: transparent;
+      border: none;
+      align-items: center;
+
+      .card-body {
+        border: none;
+        border-radius: 10px;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+  
+        .userAccount {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background-color: #1f6599;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          .bi-person-circle {
+            color: #ffffff;
+            font-size: 80px;
+          }
+        }
+      }
+      .bi-bell-fill {
+        color: #fff;
+        font-size: 15px;
+      }
+  
+      h5 {
+        letter-spacing: 2px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 0.5;
+      }
+  
+      p {
+        font-size: 12px;
+        font-weight: 300;
+        color: #fff;
+      }
+    }
+  }
+  
+  // Define variables
+  $offcanvas-padding: 0;
+  $link-gap: 15px;
+  $link-bg-color: #1f6599;
+  $link-hover-bg-color: #236ea8;
+  
+  .offcanvas-body {
+    padding: $offcanvas-padding;
+    width: 100%;
+  
+    .list-group {
+      display: flex;
+      flex-direction: column;
+      gap: $link-gap; // Adjust the gap between links
+    }
+    
+    .list-group-item {
+      border-radius: 0;
+      background-color: $link-bg-color;
+      color: #ffffffc5;
+      font-size: 12px;
+      border: none;
+  
+      
+      &:hover {
+        background-color: $link-hover-bg-color;
+        color: #fff; // Change the background color on hover
+      }
+    }
+  }
+}
+
+.main {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  width: 100%;
+  transition: all 0.3s ease;
+  height: 100vh;
+  background: #fff;
+
+  @media (min-width: 768px) {
+    left: 0;
+    width: 100%;
+  }
+
+.navbar {
   background-color: #fff;
   height: 80px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
@@ -28,15 +180,22 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    margin-left: 5px;
+    margin-left: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+
+    i {
+      color: #fff;
+      font-size: 25px;
+    }
   }
 
-  .navbaricon {
-    color: #fff;
-    font-size: 25px;
+  #sidebar-close {
+    @media (min-width: 0px) {
+      display: none;
+    }
   }
 
   .user {
@@ -72,197 +231,70 @@ body {
   }
 }
 
-#offcanvasNavbar {
-  background-color: #1f6599;
-  width: 70%;
-}
-
-.offcanvas-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.offcanvas-header h5 {
-  color: #fff;
-  font-size: 10px;
-}
-
-.container-Account {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  width: 100%;
-
-  .card {
-    background-color: transparent;
-    border: none;
-    align-items: center;
-
-    .card-body {
-      border: none;
-      border-radius: 10px;
-      display: inline;
-      justify-content: center;
-      align-items: center;
-
-      .userAccount {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: #1f6599;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .bi-person-circle {
-          color: #ffffff;
-          font-size: 100px;
-        }
-      }
-    }
-    .bi-bell-fill {
-      color: #fff;
-      font-size: 20px;
-    }
-
-    h5 {
-      letter-spacing: 2px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #fff;
-      margin-top: 0;
-    }
-
-    p {
-      font-size: 12px;
-      font-weight: 300;
-      color: #fff;
-    }
-  }
-}
-
-// Define variables
-$offcanvas-padding: 0;
-$link-gap: 15px;
-$link-bg-color: #1f6599;
-$link-hover-bg-color: #236ea8;
-
-.offcanvas-body {
-  padding: $offcanvas-padding;
-  width: 100%;
-
-  .list-group {
-    display: flex;
-    flex-direction: column;
-    gap: $link-gap; // Adjust the gap between links
-  }
-  
-  .list-group-item {
-    border-radius: 0;
-    background-color: $link-bg-color;
-    color: #ffffffc5;
-    font-size: 12px;
-    border: none;
-
-    
-    &:hover {
-      background-color: $link-hover-bg-color;
-      color: #fff; // Change the background color on hover
-    }
-  }
-}
-
-
 .component {
-  width: 100%;
+  width: 90%;
   display: flex;
   height: 30vh;
   justify-content: center;
   align-items: center;
 
   .container {
-    height: 15vh;
+    height: 20vh;
     width: 100vw;
     background-color: #fff;
     background-image: linear-gradient(to left, #1f649938, #1f6499c0, #1f6599);
     border-radius: 10px;
-    margin-top: 100px;
 
     #currentDate {
       font-size: 12px;
       position: relative;
-      top: 5px;
+      top: 10px;
       left: 5px;
     }
 
     .welcome {
       font-size: 25px;
       position: relative;
-      top: 15px;
+      top: 20px;
       left: 5px;
     }
 
     .always {
-      font-size: 12px;
+      font-size: 14px;
       position: relative;
-      top: -5px;
+      top: 5px;
       left: 5px;
     }
   }
 }
 
 .dashboard {
-  width: 100%;
   background-color: #fff;
-  height: 30vh;
   border-bottom: 1px solid #1f649938;
 
   .dash {
     color: #1f6599;
     font-size: 14px;
-    position: relative;
-    top: 5px;
-    left: 10px;
   }
 
   .announcement {
     color: #1f6599;
     font-size: 15px;
-    position: relative;
-    top: -10px;
-    left: 10px;
   }
 }
 
 .dailynotice {
-  width: 100%;
   background-color: #fff;
-  height: 30vh;
   border-bottom: 1px solid #1f649938;
 
   .daily {
     color: #1f6599;
     font-size: 14px;
-    position: relative;
-    top: 5px;
-    left: 10px;
   }
 
   .activities {
     color: #1f6599;
     font-size: 15px;
-    position: relative;
-    top: -10px;
-    left: 10px;
   }
 }
 
@@ -324,14 +356,14 @@ $link-hover-bg-color: #236ea8;
     }
   }
 }
+}
 
 .footer {
   background-color: #1f6599;
   color: #fff;
   font-size: 12px;
-  position: relative;
-  bottom: 0;
-  width: 100vw;
+  width: 100%;
+  opacity: 1;
 }
 
 .loader {
@@ -339,7 +371,7 @@ $link-hover-bg-color: #236ea8;
   width: 100%;
   height: 100%;
   background-color: #1f6599;
-  z-index: 5;
+  z-index: 100;
   display: none;
 
   img {

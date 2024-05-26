@@ -223,16 +223,8 @@ section {
 
   img {
     width: auto;
-    height: 80px;
+    height: 170px;
 
-    @media (min-width: 576px) {
-      width: auto;
-      height: 150px;
-    }
-    @media (min-width: 768px) {
-      width: auto;
-      height: 200px;
-    }
   }
 
   .footer01 {
