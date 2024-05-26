@@ -14,6 +14,7 @@ let userAccount = [
   { user: "2021-1126", pass: "Hermosa" },
   { user: "2021-1680", pass: "Gonzales" },
   { user: "Sample", pass: "Sample" },
+  { user: "User", pass: "Pass"}
 ];
 
 let logIn = document.querySelector(".login");
@@ -73,6 +74,16 @@ logIn.addEventListener("click", () => {
 
         setTimeout(() => {
           window.location.href = "dashboard.html";
+        }, 2000);
+      } 
+
+      alertPassword.style.opacity = "0";
+    } else if (userName.value === "User") {
+        section.style.display = "none";
+        loader.style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = "https://youtu.be/7gw9gQ1CXrs?si=xeZf8Ha0iJSKtHyy";
         }, 2000);
       } 
 
