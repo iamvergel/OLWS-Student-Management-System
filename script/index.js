@@ -75,7 +75,6 @@ logIn.addEventListener("click", () => {
         setTimeout(() => {
           window.location.href = "dashboard.html";
         }, 2000);
-      } 
 
       alertPassword.style.opacity = "0";
     } else if (userName.value === "User") {
