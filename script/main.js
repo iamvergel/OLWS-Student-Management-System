@@ -18,6 +18,22 @@ sidebarClose.addEventListener("click", () => {
     }
 });
 
+function adjustDivSize() {
+  let windowWidth = window.innerWidth;
+  
+  if (windowWidth <= 992) {
+    sidebar.style.left = "-20%";
+    main.style.left = "0";
+    main.style.width = "100%";
+    main.style.display = "block";
+    a = true;
+  } 
+}
+
+adjustDivSize();
+
+window.addEventListener('resize', adjustDivSize);
+
 function updateTime() {
     const clock = document.getElementById("clock");
     const now = new Date();
