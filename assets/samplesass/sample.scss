@@ -1,0 +1,272 @@
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+section {
+  overflow: hidden;
+  
+.header {
+
+  p {
+    color: #1f6599;
+  }
+
+  p:nth-child(3) {
+    font-size: 12px;
+  }
+
+  img {
+    width: auto;
+    height: 80px;
+
+    @media (min-width: 576px) {
+      width: auto;
+      height: 150px;
+    }
+    @media (min-width: 768px) {
+      width: auto;
+      height: 200px;
+    }
+  }
+}
+
+.form {
+
+  @media (min-width: 992px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 70%;
+  }
+  .loginForm {
+    p {
+      color: #1f6599;
+    }
+
+    p:nth-child(1) {
+      font-size: 15px;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 25px;
+      }
+    }
+
+    p:nth-child(2) {
+      font-size: 12px;
+
+      @media (min-width: 768px) {
+        font-size: 15px;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 15px;
+      }
+    }
+
+    .form-outline {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 80%;
+        height: 20px;
+        border: 1px solid #1f6599;
+        border-radius: 0;
+        font-size: 10px;
+        color: #1f6599;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        @media (min-width: 768px) {
+          width: 60%;
+          height: 40px;
+        }
+
+        @media (min-width: 992px) {
+          width: 80%;
+        }
+      }
+
+      .password-toggle {
+        user-select: none;
+        color: #1f6599;
+      }
+    }
+
+    .alert {
+      font-size: 10px;
+      color: #FF0000;
+      margin-left: 10px;
+      height: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button {
+      height: 10vh;
+      width: 80%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: 768px) {
+        width: 60%;
+      }
+
+      @media (min-width: 992px) {
+        width: 80%;
+      }
+
+      .form-check-input:checked {
+        background-color: #287fc2;
+        border-color: #1f6599; 
+      }
+      .form-check-input:focus {
+        box-shadow: 0 0 0 0.25rem rgba(31, 101, 153, 0.30);
+      }
+
+      label {
+        color: #1f6599;
+        font-size: 10px;
+      }
+
+      button {
+        font-weight: 700;
+        height: 30px;
+        width: 100px;
+        background-color: #1f6599;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 3px 5px #0000006e;
+
+        p {
+          letter-spacing: 2px;
+          font-size: 12px;
+          color: #fff;
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      button:active {
+        background-color: #287fc2;
+      }
+    }
+  }
+}
+.footer {
+  width: 100%;
+
+  p {
+    color: #1f6599;
+  }
+
+  p:nth-child(1) {
+    font-size: 8px;
+  }
+
+  p:nth-child(2) {
+    font-size: 8px;
+  }
+
+  p:nth-child(3) {
+    font-size: 8px;
+  }
+
+  i {
+    color: #1f6599;
+    font-size: 5px;
+  }
+}
+}
+
+.logoform {
+  background: rgb(31,101,144);
+  background: linear-gradient(277deg, rgba(31,101,144,0.7679446778711485) 0%, rgba(31,101,144,1) 50%, rgba(31,84,144,1) 100%);
+
+  p {
+    color: #fff;
+  }
+
+  p:nth-child(3) {
+    font-size: 20px;
+  }
+
+  img {
+    width: auto;
+    height: 170px;
+
+  }
+
+  .footer01 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    
+    p {
+      color: #fff;
+    }
+  
+    p:nth-child(1) {
+      font-size: 12px;
+    }
+  
+    p:nth-child(2) {
+      font-size: 12px;
+    }
+  
+    p:nth-child(3) {
+      font-size: 12px;
+    }
+  
+    i {
+      color: #fff;
+      font-size: 15px;
+    }
+  }
+}
+
+.loader {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1f6599;
+  display: none;
+
+  img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

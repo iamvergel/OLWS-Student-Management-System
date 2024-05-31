@@ -6,7 +6,7 @@
     <title>OLWS Inc.</title>
     <link rel="icon" type="image/png" href="assets\images\logo\olwsLogo.png" />
 
-    <link rel="stylesheet" href="sass\index.css" />
+    <link rel="stylesheet" href="assets\sass\index.css" />
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       rel="stylesheet"
@@ -31,178 +31,192 @@
     <style></style>
   </head>
   <body>
-
     <!--sidebar------------------------------------------------>
     <!--------------------------------------------------------------->
     <!--------------------------------------------------------------->
-    <nav class="sidebar d-sm-none d-md-none d-lg-block smsidenav">
-      <div class="offcanvas-header">
-        <img
-          src="assets\images\logo\olwsLogo.png"
-          class="img-fluid logo"
-          alt="school logo"
-        />
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-          Our Lady of Walsingham School, Inc.
-        </h5>
-      </div>
-
-      <div class="offcanvas-account">
-        <div class="container-Account">
-          <div class="card mt-5 mx-auto" style="max-width: 400px">
-            <div class="card-body">
-              <div class="userAccount">
-                <i class="bi bi-person-circle"></i>
-              </div>
-            </div>
-            <span
-              class="password-toggle position-absolute top-0 end-0 translate-middle-x me-1"
-            >
-              <i class="bi bi-bell-fill"></i>
-            </span>
-            <h5 class="Username mt-1">UserExample</h5>
-            <p class="gs">Grade / Section</p>
-          </div>
+    <nav class="sidebar d-sm-none d-md-none d-lg-block">
+      <div class="offcanvasSidebar">
+        <div class="offcanvas-header">
+          <img
+            src="assets\images\logo\olwsLogo.png"
+            class="img-fluid logo"
+            alt="school logo"
+          />
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            Our Lady of Walsingham School, Inc.
+          </h5>
         </div>
 
-        <div class="offcanvas-body">
-          <div class="list-group">
-            <a
-              href="#dashboard"
-              class="list-group-item list-group-item-action"
-              data-target="dashboard.xml"
-            >
-              <i class="bi bi-speedometer2 me-2"></i> Dashboard
-            </a>
-            <a
-              href="#profile"
-              class="list-group-item list-group-item-action"
-              data-target="src\xml\dashboard.xml3"
-            >
-              <i class="bi bi-person me-2"></i> Student Profile
-            </a>
-            <a
-              href="#grades"
-              class="list-group-item list-group-item-action"
-              data-target="grades.xml"
-            >
-              <i class="bi bi-book me-2"></i> Grades
-            </a>
-            <a
-              href="#enrollment"
-              class="list-group-item list-group-item-action"
-              data-target="enrollment.xml"
-            >
-              <i class="bi bi-person-plus me-2"></i> Enrollment
-            </a>
-            <a
-              href="#payment"
-              class="list-group-item list-group-item-action"
-              data-target="payment.xml"
-            >
-              <i class="bi bi-credit-card me-2"></i> Payment
-            </a>
-            <button class="list-group-item list-group-item-action mt-5 logout">
-              <i class="bi bi-box-arrow-right me-2"></i> Logout
-            </button>
+        <div class="offcanvas-account">
+          <div class="container-Account">
+            <div class="card mt-5 mb-3 mx-auto" style="max-width: 400px">
+              <div class="card-body">
+                <div class="userAccount">
+                  <i class="bi bi-person-circle"></i>
+                </div>
+              </div>
+              <span
+                class="password-toggle position-absolute top-0 end-0 translate-middle-x me-1"
+              >
+                <i class="bi bi-bell-fill"></i>
+              </span>
+              <h5 class="Username mt-1">UserExample</h5>
+              <p class="gs">Grade / Section</p>
+            </div>
+          </div>
+
+          <div class="offcanvas-body">
+            <div class="list-group">
+              <button
+                class="list-group-item list-group-item-action navBtn1"
+                id="dashboard"
+                onclick="toggleContent('dashboard')"
+              >
+                <i class="bi bi-speedometer2 me-2 pl-3"></i> Dashboard
+              </button>
+              <button
+                class="list-group-item list-group-item-action navBtn1"
+                id="studentProfile"
+                onclick="toggleContent('studentProfile')"
+              >
+                <i class="bi bi-person me-2 pl-3"></i> Student Profile
+              </button>
+              <button
+                class="list-group-item list-group-item-action navBtn1"
+                id="grades"
+                onclick="toggleContent('grades')"
+              >
+                <i class="bi bi-book me-2 pl-3"></i> Grades
+              </button>
+              <button
+                class="list-group-item list-group-item-action navBtn1"
+                id="enrollment"
+                onclick="toggleContent('enrollment')"
+              >
+                <i class="bi bi-person-plus me-2 pl-3"></i> Enrollment
+              </button>
+              <button
+                class="list-group-item list-group-item-action navBtn1"
+                id="payment"
+                onclick="toggleContent('payment')"
+              >
+                <i class="bi bi-credit-card me-2 pl-3"></i> Payment
+              </button>
+              <button
+                class="list-group-item list-group-item-action mt-3 logout"
+              >
+                <i class="bi bi-box-arrow-right me-2 pl-3"></i> Logout
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </nav>
-    
+
     <!--Offcanvas sidebar------------------------------------------------>
     <!--------------------------------------------------------------->
     <!--------------------------------------------------------------->
     <nav class="d-lg-none smsidenav">
       <div
-          class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <img
-              src="assets\images\logo\olwsLogo.png"
-              class="img-fluid logo"
-              alt="school logo"
-            />
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              Our Lady of Walsingham School, Inc.
-            </h5>
-          </div>
+        class="offcanvas offcanvas-start off"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <img
+            src="assets\images\logo\olwsLogo.png"
+            class="img-fluid logo"
+            alt="school logo"
+          />
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            Our Lady of Walsingham School, Inc.
+          </h5>
+        </div>
 
-          <!--User Account-->
-          <div class="offcanvas-account mb-lg-5 mb-4">
-            <div class="container-Account">
-              <div class="card mx-auto" style="max-width: 400px">
-                <div class="card-body">
-                  <div class="userAccount">
-                    <i class="bi bi-person-circle"></i>
-                  </div>
+        <div class="offcanvas-account">
+          <div class="container-Account">
+            <div class="card mt-5 mb-3 mx-auto" style="max-width: 400px">
+              <div class="card-body">
+                <div class="userAccount">
+                  <i class="bi bi-person-circle"></i>
                 </div>
-                <span
-                  class="password-toggle position-absolute top-0 end-0 translate-middle-x me-1"
-                >
-                  <i class="bi bi-bell-fill"></i>
-                </span>
-                <h5 class="Username mt-1">UserExample</h5>
-                <p class="gs ">Grade / Section</p>
               </div>
+              <span
+                class="password-toggle position-absolute top-0 end-0 translate-middle-x me-1"
+              >
+                <i class="bi bi-bell-fill"></i>
+              </span>
+              <h5 class="Username mt-1">UserExample</h5>
+              <p class="gs">Grade / Section</p>
             </div>
           </div>
 
-          <!--button-->
-            <div class="offcanvas-body">
-              <div class="list-group mt-lg-4">
-                <a
-                  href="#dashboard"
-                  class="list-group-item list-group-item-action ml-3 "
-                  data-target="dashboard.xml"
-                >
-                  <i class="bi bi-speedometer2 me-2"></i> Dashboard
-                </a>
-                <a
-                  href="#profile"
-                  class="list-group-item list-group-item-action ml-3"
-                  data-target="src\xml\dashboard.xml3"
-                >
-                  <i class="bi bi-person me-2"></i> Student Profile
-                </a>
-                <a
-                  href="#grades"
-                  class="list-group-item list-group-item-action ml-3"
-                  data-target="grades.xml"
-                >
-                  <i class="bi bi-book me-2"></i> Grades
-                </a>
-                <a
-                  href="#enrollment"
-                  class="list-group-item list-group-item-action ml-3"
-                  data-target="enrollment.xml"
-                >
-                  <i class="bi bi-person-plus me-2"></i> Enrollment
-                </a>
-                <a
-                  href="#payment"
-                  class="list-group-item list-group-item-action ml-3"
-                  data-target="payment.xml"
-                >
-                  <i class="bi bi-credit-card me-2"></i> Payment
-                </a>
-                <button
-                  class="list-group-item list-group-item-action ml-3 mt-3 logout2" data-bs-dismiss="offcanvas" aria-label="Close"
-                >
-                  <i class="bi bi-box-arrow-right me-2"></i> Logout
-                </button>
-              </div>
+          <div class="offcanvas-body">
+            <div class="list-group">
+              <button
+                class="list-group-item list-group-item-action navBtn"
+                id="dashboard1"
+                onclick="toggleContent('dashboard')"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              >
+                <i class="bi bi-speedometer2 me-2 pl-3"></i> Dashboard
+              </button>
+              <button
+                class="list-group-item list-group-item-action navBtn"
+                id="studentProfile1"
+                onclick="toggleContent('studentProfile')"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              >
+                <i class="bi bi-person me-2 pl-3"></i> Student Profile
+              </button>
+              <button
+                class="list-group-item list-group-item-action navBtn"
+                id="grades1"
+                onclick="toggleContent('grades')"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              >
+                <i class="bi bi-book me-2 pl-3"></i> Grades
+              </button>
+              <button
+                class="list-group-item list-group-item-action navBtn"
+                id="enrollment1"
+                onclick="toggleContent('enrollment')"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              >
+                <i class="bi bi-person-plus me-2 pl-3"></i> Enrollment
+              </button>
+              <button
+                class="list-group-item list-group-item-action navBtn"
+                id="payment1"
+                onclick="toggleContent('payment')"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              >
+                <i class="bi bi-credit-card me-2 pl-3"></i> Payment
+              </button>
+              <button
+                class="list-group-item list-group-item-action mt-3 logout1"
+              >
+                <i class="bi bi-box-arrow-right me-2 pl-3"></i> Logout
+              </button>
+            </div>
           </div>
         </div>
+      </div>
     </nav>
 
     <!--Content------------------------------------------------>
     <!--------------------------------------------------------------->
     <!--------------------------------------------------------------->
     <main class="main">
+      <!--headernav------------------------------------------------>
+      <!--------------------------------------------------------------->
+      <!--------------------------------------------------------------->
       <nav class="navbar sticky-top header">
         <button
           class="navbtn d-block d-lg-none"
@@ -215,7 +229,7 @@
         >
           <i class="bi bi-list"></i>
         </button>
-  
+
         <button
           class="navbtn d-sm-none d-md-none d-lg-block"
           id="sidebar-close"
@@ -234,87 +248,192 @@
 
       <!--------------------------------------------------------------->
       <!--------------------------------------------------------------->
+      <div class="content px-lg-5" id="dashboardContent">
+        <div class="row">
+          <div class="container-fluid col-sm-12 col-md-12 py-1 component">
+            <div class="position-relative container">
+              <ul class="list-unstyled">
+                <span id="currentDate" class="text-white fw-normal"></span>
+                <p class="text-white fw-bold welcome">WELCOME, User!</p>
+                <p class="text-white fw-normal always">
+                  Always stay updated in your student portal
+                </p>
+              </ul>
+            </div>
+          </div>
+
+          <!--Anouncement------------------------------------------------->
+          <!--------------------------------------------------------------->
+          <!--------------------------------------------------------------->
+          <div
+            class="container-fluid mb-md-5 col-sm-12 col-md-12 col-lg-7 col-xl-6 col-xxl-7 py-3 dashboard"
+          >
+            <div class="row">
+              <ul class="list-unstyled col-lg-12 col-xl-12">
+                <p class="fw-normal dash ml-4 ml-md-5 ml-sm-5">Dashboard</p>
+                <p class="fw-bold announcement ml-4 ml-md-5 ml-sm-5">
+                  Announcement
+                </p>
+              </ul>
+
+              <ul class="list-unstyled mt-5 mt-lg-0 col-lg-12 col-xl-12">
+                <p class="fw-normal daily ml-4 ml-sm-5 ml-md-5">Daily notice</p>
+                <p class="fw-bold activities ml-4 ml-sm-5 ml-md-5">
+                  Upcoming School Activities
+                </p>
+              </ul>
+            </div>
+          </div>
+
+          <!--Calendar------------------------------------------------->
+          <!--------------------------------------------------------------->
+          <!--------------------------------------------------------------->
+          <div
+            class="container-fluid my-0 mt-5 p-3 mt-sm-5 p-sm-3 p-lg-2 mb-lg-5 mt-lg-0 col-sm-12 col-md-12 col-lg-5 col-xl-5"
+            style="max-width: 350px"
+          >
+            <div class="calendar">
+              <div
+                class="calendar-header d-flex justify-content-between align-items-center"
+              >
+                <button id="prevMonth" class="btn">&lt;</button>
+                <h2 id="monthYear" class="m-0"></h2>
+                <button id="nextMonth" class="btn">&gt;</button>
+              </div>
+              <div class="calendar-body mt-0">
+                <div class="row fw-bold">
+                  <p class="col text-danger">Sun</p>
+                  <p class="col">Mon</p>
+                  <p class="col">Tue</p>
+                  <p class="col">Wed</p>
+                  <p class="col">Thu</p>
+                  <p class="col">Fri</p>
+                  <p class="col">Sat</p>
+                </div>
+                <div id="calendarDays"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!--------------------------------------------------------------->
-      <div class="row">
-        <div class="container-fluid col-sm-12 col-md-12 py-1 component">
-          <div class="position-relative container">
-            <ul class="list-unstyled">
-              <span id="currentDate" class="text-white fw-normal"></span>
-              <p class="text-white fw-bold welcome">WELCOME, User!</p>
-              <p class="text-white fw-normal always">
-                Always stay updated in your student portal
-              </p>
-            </ul>
-          </div>
-        </div>
-
-        <!--Anouncement------------------------------------------------->
-        <!--------------------------------------------------------------->
-        <!--------------------------------------------------------------->
-        <div class="container-fluid col-sm-12 col-md-12 col-lg-8 py-3 dashboard">
-          <ul class="list-unstyled">
-            <p class="fw-normal dash ml-4 ml-md-5 ml-sm-5">Dashboard</p>
-            <p class="fw-bold announcement ml-4 ml-md-5 ml-sm-5">Announcement</p>
-          </ul>
-        </div>
-          
-        <!--Dashboard------------------------------------------------->
-        <!--------------------------------------------------------------->
-        <!--------------------------------------------------------------->
-        <div class="container-fluid col-sm-12 col-md-12 col-lg-4 py-3 dailynotice">
-          <ul class="list-unstyled">
-            <p class="fw-normal daily ml-4 ml-sm-5 ml-md-5">Daily notice</p>
-            <p class="fw-bold activities ml-4 ml-sm-5 ml-md-5">Upcoming School Activities</p>
-          </ul>
-        </div>
-
-        <!--Calendar------------------------------------------------->
-        <!--------------------------------------------------------------->
-        <!--------------------------------------------------------------->
-        <div class="col-sm-12 col-md-12"></div>
-        <div class="container my-0 p-4 p-lg-5 col-sm-12 col-md-12 col-lg-8">
-          <div class="calendar">
-            <div
-              class="calendar-header d-flex justify-content-between align-items-center"
-            >
-              <button id="prevMonth" class="btn">&lt;</button>
-              <h2 id="monthYear" class="m-0"></h2>
-              <button id="nextMonth" class="btn">&gt;</button>
+      <!--------------------------------------------------------------->
+      <div
+        class="container-fluid content"
+        id="studentProfileContent"
+        style="display: none"
+      >
+        <div class="row">
+          <nav class="navbar d-xl-none">
+            <div class="container-fluid">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <h1 class="fs-4 fw-bold">Account</h1>
             </div>
-            <div class="calendar-body mt-0">
-              <div class="row fw-bold">
-                <div class="col text-danger">Sun</div>
-                <div class="col">Mon</div>
-                <div class="col">Tue</div>
-                <div class="col">Wed</div>
-                <div class="col">Thu</div>
-                <div class="col">Fri</div>
-                <div class="col">Sat</div>
-              </div>
-              <div id="calendarDays">
-                <div class="col empty"></div>
-                <div class="col">1</div>
-                <div class="col">2</div>
-                <div class="col">3</div>
-                <div class="col">4</div>
-                <div class="col">5</div>
-                <div class="col">6</div>
-              </div>
+          </nav>
+          <div
+            class="collapse d-xl-block col-md-12 col-lg-12 col-xl-3"
+            id="navbarToggleExternalContent"
+            data-bs-theme="light"
+          >
+            <div class="row mt-3">
+              <h1 class="fs-3 fw-bold">Settings</h1>
+              <button class="text-start">Account</button>
+              <button class="text-start">Security</button>
+              <button class="text-start">Student Additional Information</button>
             </div>
           </div>
+
+          <div class="col-lg-12 col-xl-9 userProfile">
+            <div class="row">
+              <div class="header col-12">
+                <p class="fs-6 fw-500 ml-3 mt-3">User Profile</p>
+              </div>
+              <div class="container-fluid profile">
+                <div class="text-start userPhoto my-5">
+                  <div class="img"><p class="mt-3 fw-bold">150 x 150</p></div>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong>Name:</strong> Kazi Fahimur Rahman
+                  </li>
+                  <li class="list-group-item"><strong>Gender:</strong> Male</li>
+                  <li class="list-group-item">
+                    <strong>Address:</strong> TA-107 Street, Banks Town, Sydney
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Phone:</strong> +00950680
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Email:</strong> kazifahim93@gmail.com
+                  </li>
+                  <li class="list-group-item">
+                    <strong>School Code:</strong> 2456464
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Session:</strong> 2017-2018
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Language:</strong> English
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Joining Date:</strong> 05/04/2016
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class=" col-sm-12 col-md-12 col-lg-3"></div>
 
-      <!--Content------------------------------------------------>
-    <!--------------------------------------------------------------->
-    <!--------------------------------------------------------------->
-    <footer class="text-left col-sm-12 py-4 footer sticky-bottom">
-      <div class="container">
-        <span>&copy; eLearning Commons @ 2024</span>
+      <!--------------------------------------------------------------->
+      <!--------------------------------------------------------------->
+      <div
+        class="row content"
+        style="height: 100vh; display: none"
+        id="gradesContent"
+      >
+        <h1>pakyu</h1>
       </div>
-    </footer>
+
+      <!--------------------------------------------------------------->
+      <!--------------------------------------------------------------->
+      <div
+        class="row content"
+        style="height: 100vh; display: none"
+        id="enrollmentContent"
+      >
+        <h1>siraulo</h1>
       </div>
+
+      <!--------------------------------------------------------------->
+      <!--------------------------------------------------------------->
+      <div
+        class="row content"
+        style="height: 100vh; display: none"
+        id="paymentContent"
+      >
+        <h1>baliw si marvin</h1>
+      </div>
+
+      <!--footer------------------------------------------------>
+      <!--------------------------------------------------------------->
+      <!--------------------------------------------------------------->
+      <footer class="text-start py-4 footer sticky-bottom">
+        <div class="container">
+          <span>&copy; eLearning Commons @ 2024</span>
+        </div>
+      </footer>
     </main>
 
     <!--Loader------------------------------------------------->
@@ -324,7 +443,7 @@
       <img src="assets\images\logo\olwsLogo.png" alt="..." />
     </div>
 
-    <script src="script\main.js"></script>
+    <script src="assets\script\main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta3/js/bootstrap.min.js"></script>
@@ -339,8 +458,6 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      
-
       // Function to check window size and toggle sidebar visibility
     </script>
   </body>

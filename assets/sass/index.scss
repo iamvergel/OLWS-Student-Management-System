@@ -1,0 +1,654 @@
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  overflow-y: hidden;
+}
+
+//LG, XL, XXL  SIDEBAR________________________________________________________________________________________
+.sidebar {
+  position: absolute;
+  height: 100vh;
+  width: 300px;
+  background: #1f6599;
+  z-index: 0;
+
+  .offcanvasSidebar {
+    left: -300px;
+    height: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
+  }
+
+  .offcanvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .offcanvas-header h5 {
+    color: #fff;
+    font-size: 10px;
+  }
+
+  .container-Account {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    width: 100%;
+    margin-top: 1rem;
+
+    .card {
+      background-color: transparent;
+      border: none;
+      align-items: center;
+
+      .card-body {
+        border: none;
+        border-radius: 10px;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+
+        .userAccount {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background-color: #1f6599;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .bi-person-circle {
+            color: #ffffff;
+            font-size: 80px;
+          }
+        }
+      }
+      .bi-bell-fill {
+        color: #fff;
+        font-size: 15px;
+      }
+
+      h5 {
+        letter-spacing: 2px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 0.5;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: 300;
+        color: #fff;
+      }
+    }
+  }
+
+  // OFFCANVAS VARIABLE_____________________________________________________________
+  $offcanvas-padding: 0;
+  $link-gap: 15px;
+  $link-bg-color: #1f6599;
+  $link-hover-bg-color: #287fc2;
+
+  .offcanvas-body {
+    padding: $offcanvas-padding;
+    width: 100%;
+
+    .list-group {
+      display: flex;
+      flex-direction: column;
+      gap: $link-gap;
+    }
+
+    .list-group-item {
+      border-radius: 0;
+      background-color: $link-bg-color;
+      color: #ffffffc5;
+      font-size: 12px;
+      border: none;
+
+      &:hover {
+        background-color: $link-hover-bg-color;
+        color: #fff;
+      }
+    }
+    #dashboard {
+      background-color: #287fc2;
+      color: #fff;
+    }
+
+    .dashboard:hover {
+      background-color: $link-hover-bg-color;
+      color: #fff;
+    }
+  }
+
+  @media (min-width: 0) {
+    display: none;
+  }
+
+  @media (min-width: 991px) {
+    left: -300px;
+  }
+}
+
+//SM, MD NAVBAR OFFCANVAS______________________________________________________________________________________
+.smsidenav {
+  display: block;
+
+  #offcanvasNavbar {
+    opacity: 1;
+    background-color: #1f6599;
+    max-width: 300px;
+  }
+
+  .offcanvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .offcanvas-header h5 {
+    color: #fff;
+    font-size: 10px;
+  }
+
+  .container-Account {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    width: 100%;
+
+    .card {
+      background-color: transparent;
+      border: none;
+      align-items: center;
+
+      .card-body {
+        border: none;
+        border-radius: 10px;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+
+        .userAccount {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background-color: #1f6599;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .bi-person-circle {
+            color: #ffffff;
+            font-size: 80px;
+          }
+        }
+      }
+      .bi-bell-fill {
+        color: #fff;
+        font-size: 15px;
+      }
+
+      h5 {
+        letter-spacing: 2px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 0.5;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: 300;
+        color: #fff;
+      }
+    }
+  }
+
+  // OFFCANVAS VARIABLE_____________________________________________________________
+  $offcanvas-padding: 0;
+  $link-gap: 15px;
+  $link-bg-color: #1f6599;
+  $link-hover-bg-color: #287fc2;
+
+  .offcanvas-body {
+    padding: $offcanvas-padding;
+    width: 100%;
+
+    .list-group {
+      display: flex;
+      flex-direction: column;
+      gap: $link-gap;
+    }
+
+    .list-group-item {
+      border-radius: 0;
+      background-color: $link-bg-color;
+      color: #ffffffc5;
+      font-size: 12px;
+      border: none;
+    }
+    .active {
+      background-color: $link-hover-bg-color;
+      color: #fff;
+    }
+  }
+}
+
+//MAIN CONTENT________________________________________________________________________________________
+.main {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  width: 100vh;
+  height: 100%;
+  background: #fff;
+
+  @media (min-width: 768px) {
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  @media (min-width: 0px) {
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  //NAVBAR_______________________________________________________________________________________________
+  .navbar {
+    background-color: #fff;
+    height: 80px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+
+    .navbtn {
+      background-color: #1f6599;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      margin-left: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+
+      i {
+        color: #fff;
+        font-size: 28px;
+      }
+    }
+
+    #sidebar-close {
+      @media (min-width: 0px) {
+        display: none;
+      }
+    }
+
+    .user {
+      width: 150px;
+      height: auto;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+    }
+
+    .clock {
+      font-size: 12px;
+      font-weight: 400;
+      color: #1f6599;
+      position: relative;
+      margin-right: 10px;
+    }
+
+    .usericoncontainer {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1f6599;
+      border-radius: 100%;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .usericon {
+      font-size: 40px;
+      color: #fff;
+    }
+  }
+
+  //DASHBOARD________________________________________________________________________________________________
+  #dashboardContent {
+    .component {
+      width: 90%;
+      display: flex;
+      height: 30vh;
+      justify-content: center;
+      align-items: center;
+
+      .container {
+        height: 20vh;
+        width: 100vw;
+        background-color: #fff;
+        background-image: linear-gradient(
+          to left,
+          #1f649938,
+          #1f6499c0,
+          #1f6599
+        );
+        border-radius: 10px;
+
+        #currentDate {
+          font-size: 12px;
+          position: relative;
+          top: 10px;
+          left: 5px;
+        }
+
+        .welcome {
+          font-size: 25px;
+          position: relative;
+          top: 20px;
+          left: 5px;
+        }
+
+        .always {
+          font-size: 14px;
+          position: relative;
+          top: 5px;
+          left: 5px;
+        }
+      }
+    }
+
+    .dashboard {
+      border-bottom: 1px solid #1f649938;
+      border-radius: 0.25rem;
+
+      @media (min-width: 991px) {
+        height: 400px;
+      }
+  
+      @media (min-width: 1200px) {
+        height: 500px;
+      }
+
+      .dash {
+        color: #1f6599;
+        font-size: 14px;
+      }
+
+      .announcement {
+        color: #1f6599;
+        font-size: 15px;
+      }
+
+      .daily {
+        color: #1f6599;
+        font-size: 14px;
+      }
+
+      .activities {
+        color: #1f6599;
+        font-size: 15px;
+      }
+    }
+
+    .calendar {
+      background-color: #fff;
+      border: 1px solid #1f649967;
+      border-radius: 0.25rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      justify-content: center;
+      align-items: center;
+      height: 350px;
+      margin-bottom: 0px;
+
+      @media (min-width: 768px) {
+        padding: 0;
+      }
+
+      .calendar-header {
+        background-color: #1f6599;
+        color: #fff;
+        padding: 1rem;
+
+        button {
+          background-color: #236ea8;
+          color: #ffffff;
+          font-weight: 900;
+          border: 1px solid #ffffff;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        h2 {
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+
+      .calendar-body {
+        .row {
+          text-align: center;
+          font-size: 12px;
+          color: #1f6599;
+          width: 100%;
+          margin-left: 0;
+
+          .col {
+            padding: 10px;
+
+            @media (min-width: 991px) {
+              padding: 7px;
+            }
+          }
+
+          .empty {
+            background-color: transparent;
+          }
+
+          .today {
+            background-color: #1f6599;
+            color: #fff;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  //STUDENTPROFILE_________________________________________________________________________________________
+  #studentProfileContent {
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+
+    @media (min-width: 991px) {
+      height: auto;
+    }
+
+    @media (min-width: 1200px) {
+      height: 900px;
+    }
+
+    .row {
+      height: auto;
+
+      .navbar {
+        background-color: #fff;
+        border: none;
+        box-shadow: none;
+        border-radius: none;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+        height: 80px;
+
+        .navbar-toggler {
+          background-color: #fff;
+          width: 40px;
+          height: 40px;
+          border-radius: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+
+          i {
+            color: #1f6599;
+            font-size: 30px;
+            font-weight: bold;
+          }
+        }
+
+        h1 {
+          color: #1f6599;
+          letter-spacing: 2px;
+          position: absolute;
+          left: 3.5rem;
+          margin-top: 0.5rem;
+        }
+      }
+
+      #navbarToggleExternalContent {
+        background-color: #fff;
+
+        h1 {
+          color: #1f6599;
+          letter-spacing: 2px;
+        }
+
+        button {
+          height: 100px;
+          border: none;
+          background-color: #fff;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            color: #1f6599;
+
+          &:active, &:hover {
+            background-color: #287fc29f;
+            color: #fff;
+          }
+        }
+      }
+
+      .userProfile {
+        height: auto;
+
+        .header {
+          background-color: #1f6599;
+          color: #fff;
+          padding: 0.5rem;
+          font-size: 20px;
+          letter-spacing: 1px;
+        }
+
+        .profile {
+          .userPhoto {
+            .img{
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            border: 2px solid #1f6599;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1f649963;
+
+            p{
+              color: #1f6599;
+              letter-spacing: 1px;
+            }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //GRADES________________________________________________________________________________________________
+  #gradesContent {
+    height: 100vh;
+    background-color: red;
+  }
+
+  //ENROLLMENT_____________________________________________________________________________________________
+  #enrollmentContent {
+    height: 100vh;
+    background-color: greenyellow;
+  }
+
+  //PAYMENT_____________________________________________________________________________________________
+  #paymentContent {
+    height: 100vh;
+    background-color: powderblue;
+  }
+
+  //FOOTER________________________________________________________________________________________
+  .footer {
+    background-color: #1f6599;
+    color: #fff;
+    font-size: 12px;
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+//LOADER______________________________________________________________________________________________________
+.loader {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1f6599;
+  z-index: 100;
+  display: none;
+
+  img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

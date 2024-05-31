@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="sass\index.css"?>
+
+<dashboard id="dashboard">
+  <container-fluid id="dashboard-content" class="py-3 component">
+    <position-relative-container>
+      <ul class="list-unstyled">
+        <li id="currentDate" class="text-white fw-normal"></li>
+        <li class="text-white fw-bold welcome">WELCOME, User!</li>
+        <li class="text-white fw-normal always">Always stay updated in your student portal</li>
+      </ul>
+    </position-relative-container>
+  </container-fluid>
+  <container-fluid id="announcement-section" class="py-3">
+    <ul class="list-unstyled">
+      <li class="fw-normal dash">Dashboard</li>
+      <li class="fw-bold announcement">Announcement</li>
+    </ul>
+  </container-fluid>
+  <container-fluid id="daily-notice-section" class="py-3">
+    <ul class="list-unstyled">
+      <li class="fw-normal daily">Daily notice</li>
+      <li class="fw-bold activities">Upcoming School Activities</li>
+    </ul>
+  </container-fluid>
+  <container class="my-3">
+    <calendar>
+      <calendar-header class="d-flex justify-content-between align-items-center">
+        <button id="prevMonth" class="btn">&lt;</button>
+        <h2 id="monthYear" class="m-0"></h2>
+        <button id="nextMonth" class="btn">&gt;</button>
+      </calendar-header>
+      <calendar-body class="mt-0">
+        <row class="fw-bold">
+          <div class="col text-danger">Sun</div>
+          <div class="col">Mon</div>
+          <div class="col">Tue</div>
+          <div class="col">Wed</div>
+          <div class="col">Thu</div>
+          <div class="col">Fri</div>
+          <div class="col">Sat</div>
+        </row>
+        <div id="calendarDays">
+          <div class="col empty"></div>
+          <div class="col">1</div>
+          <div class="col">2</div>
+          <div class="col">3</div>
+          <div class="col">4</div>
+          <div class="col">5</div>
+          <div class="col">6</div>
+        </div>
+      </calendar-body>
+    </calendar>
+  </container>
+</dashboard>
+
+<!-- JavaScript code -->
+<script type="text/javascript">
+  <![CDATA[
+    // Your JavaScript code goes here
+    // Note: The JavaScript code has been inserted here
+    function updateTime() {
+      const clock = document.getElementById("clock");
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = String(now.getMinutes()).padStart(2, "0");
+      const seconds = String(now.getSeconds()).padStart(2, "0");
+      const period = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12 || 12;
+      hours = String(hours).padStart(2, "0");
+      clock.innerHTML = `${hours}:${minutes}:${seconds} ${period}`;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const dateElement = document.getElementById("currentDate");
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      const today = new Date().toLocaleDateString("en-US", options);
+      dateElement.textContent = today;
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const monthNames = ["January", "February", "March", "April", "May", "June",
+                          "July", "August", "September", "October", "November", "December"];
+
+      const today = new Date();
+      let currentMonth = today.getMonth();
+      let currentYear = today.getFullYear();
+      const currentDate = today.getDate();
+
+      const monthYear = document.getElementById('monthYear');
+      const calendarDays = document.getElementById('calendarDays');
+      const prevMonthBtn = document.getElementById('prevMonth');
+      const nextMonthBtn = document.getElementById('nextMonth');
+
+      function renderCalendar(month, year) {
+        calendarDays.innerHTML = '';
+        monthYear.textContent = `${monthNames[month]} ${year}`;
+
+        const firstDay = (new Date(year, month)).getDay();
+        const daysInMonth = 32 - new Date(year, month, 32).getDate();
+
+        let date = 1;
+        for (let i = 0; i < 6; i++) {
+          let row = document.createElement('div');
+          row.className = 'row';
+
+          for (let j = 0; j < 7; j++) {
+            let cell = document.createElement('div');
+            cell.className = 'col';
+
+            if (i === 0 && j < firstDay) {
+              cell.classList.add('empty');
+              cell.innerHTML = '';
+            } else if (date > daysInMonth) {
+              cell.classList.add('empty');
+              cell.innerHTML = '';
+            } else {
+              if (date === currentDate && month === today.getMonth() && year === today.getFullYear()) {
+                cell.classList.add('today');
+              }
+              cell.innerHTML = date;
+              date++;
+            }
+            row.appendChild(cell);
+          }
+          calendarDays.appendChild(row);
+        }
+      }
+
+      function nextMonth() {
+        if (currentMonth === 11) {
+          currentMonth = 0;
+          currentYear++;
+        } else {
+          currentMonth++;
+        }
+        renderCalendar(currentMonth, currentYear);
+      }
+
+      function prevMonth() {
+        if (currentMonth === 0) {
+          currentMonth = 11;
+          currentYear--;
+        } else {
+          currentMonth--;
+        }
+        renderCalendar(currentMonth, currentYear);
+      }
+
+      prevMonthBtn.addEventListener('click', prevMonth);
+      nextMonthBtn.addEventListener('click', nextMonth);
+
+      renderCalendar(currentMonth, currentYear);
+    });
+  ]]>
+</script>
