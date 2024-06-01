@@ -15,7 +15,7 @@
 
 body {
   background-color: #fff;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 //LG, XL, XXL  SIDEBAR________________________________________________________________________________________
@@ -71,7 +71,7 @@ body {
         justify-content: center;
         align-items: center;
 
-        .userAccount {
+        .img1 {
           width: 80px;
           height: 80px;
           border-radius: 50%;
@@ -79,6 +79,10 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
+          object-fit: fill;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
 
           .bi-person-circle {
             color: #ffffff;
@@ -202,7 +206,7 @@ body {
         justify-content: center;
         align-items: center;
 
-        .userAccount {
+        .img2 {
           width: 80px;
           height: 80px;
           border-radius: 50%;
@@ -210,6 +214,10 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
+          object-fit: fill;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
 
           .bi-person-circle {
             color: #ffffff;
@@ -336,20 +344,33 @@ body {
     }
 
     .usericoncontainer {
-      height: 40px;
-      width: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: #1f6599;
       border-radius: 100%;
       box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+
+      .img3 {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: #1f6599;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: fill;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+  
+        .bi-person-circle {
+          font-size: 40px;
+        color: #fff;
+        }
+      }
     }
 
-    .usericon {
-      font-size: 40px;
-      color: #fff;
-    }
   }
 
   //DASHBOARD________________________________________________________________________________________________
@@ -397,15 +418,17 @@ body {
     }
 
     .dashboard {
+      .list-unstyled {
       border-bottom: 1px solid #1f649938;
       border-radius: 0.25rem;
+      }
 
       @media (min-width: 991px) {
-        height: 400px;
+        height: auto;
       }
-  
+
       @media (min-width: 1200px) {
-        height: 500px;
+        height: auto;
       }
 
       .dash {
@@ -441,6 +464,10 @@ body {
 
       @media (min-width: 768px) {
         padding: 0;
+      }
+
+      @media (min-width: 0) {
+        margin-bottom: 5rem;
       }
 
       .calendar-header {
@@ -508,7 +535,7 @@ body {
     }
 
     @media (min-width: 1200px) {
-      height: 900px;
+      height: auto;
     }
 
     .row {
@@ -560,12 +587,13 @@ body {
           height: 100px;
           border: none;
           background-color: #fff;
-            font-size: 15px;
-            letter-spacing: 1px;
-            font-weight: 500;
-            color: #1f6599;
+          font-size: 15px;
+          letter-spacing: 1px;
+          font-weight: 500;
+          color: #1f6599;
 
-          &:active, &:hover {
+          &:active,
+          &:hover {
             background-color: #287fc29f;
             color: #fff;
           }
@@ -585,20 +613,96 @@ body {
 
         .profile {
           .userPhoto {
-            .img{
-            width: 150px;
-            height: 150px;
-            border-radius: 100%;
-            border: 2px solid #1f6599;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #1f649963;
+            .img {
+              width: 150px;
+              height: 150px;
+              border-radius: 100%;
+              border: 2px solid #1f6599;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: #1f649963;
+              object-fit: cover;
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              box-shadow: 0 2px 10px #00000091;
+              position: relative;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -10%);
 
-            p{
+              p {
+                color: #1f6599;
+                letter-spacing: 1px;
+              }
+            }
+
+            p {
               color: #1f6599;
               letter-spacing: 1px;
             }
+
+            button {
+              background-color: #1f6599;
+              color: #fff;
+              border: none;
+              height: 30px;
+              letter-spacing: 1px;
+              position: relative;
+              top: 50%;
+              left: 50%;
+              transform: translate(-100%, -10%);
+
+              &:hover, &:active{
+                background-color: #287fc2;
+              }
+
+              @media (min-width: 0) {
+                width: 50%;
+              }
+
+              @media (min-width: 576px) {
+                width: 40%;
+                transform: translate(-125%, -10%);
+              }
+
+              @media (min-width: 768px) {
+                width: 25%;
+                transform: translate(-200%, -10%);
+              }
+
+              @media (min-width: 992px) {
+                width: 100%;
+                transform: translate(-50%, -10%);
+              }
+            }
+          }
+
+          .basicInfo {
+            margin-bottom: 5rem;
+
+            @media (min-width: 992px) {
+              margin-bottom: 0;
+            }
+            label {
+              color: #1f6599;
+              font-size: 15px;
+              letter-spacing: 1px;
+              line-height: 0.1;
+            }
+
+            input {
+              border: 1px solid #1f6599;
+              color: #1f6599;
+              background-color: #287fc25e;
+              padding: 0.5rem;
+              width: 100%;
+              font-weight: 500;
+              letter-spacing: 1px;
+              padding-left: 1rem;
+              border-radius: 5px;
+              margin-bottom: 0.5rem;
             }
           }
         }
@@ -631,6 +735,17 @@ body {
     font-size: 12px;
     width: 100%;
     opacity: 1;
+  }
+  .footer1 {
+    background-color: #1f6599;
+    color: #fff;
+    font-size: 12px;
+    width: 100%;
+    opacity: 1;
+
+    @media (min-width: 0) {
+      display: none;
+    }
   }
 }
 

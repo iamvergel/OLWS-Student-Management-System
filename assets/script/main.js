@@ -6,11 +6,12 @@ const sidenav = document.querySelector(".off");
 let a = false;
 
 //_______________________________________________________________________________________________________
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   sidebar.style.transition = "none";
   main.style.transition = "none";
 
-  if (window.innerWidth >= 991) { // Assuming "lg" size starts at 992px
+  if (window.innerWidth >= 991) {
+    // Assuming "lg" size starts at 992px
     sidebar.style.left = "0";
     main.style.left = "300px";
     main.style.width = "calc(100% - 300px)";
@@ -75,7 +76,7 @@ function adjustDivSize() {
 //________________________________________________________________________________________________________________
 adjustDivSize();
 //________________________________________________________________________________________________________________
-window.addEventListener('resize', adjustDivSize);
+window.addEventListener("resize", adjustDivSize);
 
 //________________________________________________________________________________________________________________
 function updateTime() {
@@ -201,6 +202,7 @@ let smsidenav = document.querySelector(".smsidenav");
 let loader = document.querySelector(".loader");
 let header = document.querySelector(".header");
 let footer = document.querySelector(".footer");
+let footer1 = document.querySelector(".footer1");
 logOut.addEventListener("click", () => {
   let result = confirm("Do you want to Logout ?");
 
@@ -208,61 +210,63 @@ logOut.addEventListener("click", () => {
   if (result) {
     loader.style.display = "block";
     footer.style.opacity = "0";
+    footer1.style.opacity = "0";
     header.style.opacity = "0";
 
     setTimeout(() => {
-      window.location.href = "index.html";
+      window.location.href = "http://127.0.0.1:5503/index.html";
     }, 2000);
-
-
   } else {
-
   }
 });
 
 logOut2.addEventListener("click", () => {
-
   let result = confirm("Do you want to Logout ?");
 
   // Check user's choice
   if (result) {
     loader.style.display = "block";
     footer.style.opacity = "0";
+    footer1.style.opacity = "0";
     header.style.opacity = "0";
     smsidenav.style.display = "none";
 
     setTimeout(() => {
-      window.location.href = "index.html";
+      window.location.href = "http://127.0.0.1:5503/index.html";
     }, 2000);
   } else {
-
   }
 });
 
 /*SIDEBAR BUTTONS*/
-const dashBoard = document.querySelector('#dashboard');
-const studentProfile = document.querySelector('#studentProfile');
-const Grades = document.querySelector('#grades');
-const Enrollment = document.querySelector('#enrollment');
-const payMent = document.querySelector('#payment');
+const dashBoard = document.querySelector("#dashboard");
+const studentProfile = document.querySelector("#studentProfile");
+const Grades = document.querySelector("#grades");
+const Enrollment = document.querySelector("#enrollment");
+const payMent = document.querySelector("#payment");
 
 /*SIDEBNAV BUTTONS*/
-const dashboardBtn = document.querySelector('#dashboard1');
-const studentProfileBtn = document.querySelector('#studentProfile1');
-const gradesBtn = document.querySelector('#grades1');
-const enrollmentBtn = document.querySelector('#enrollment1');
-const paymentBtn = document.querySelector('#payment1');
+const dashboardBtn = document.querySelector("#dashboard1");
+const studentProfileBtn = document.querySelector("#studentProfile1");
+const gradesBtn = document.querySelector("#grades1");
+const enrollmentBtn = document.querySelector("#enrollment1");
+const paymentBtn = document.querySelector("#payment1");
 
 // Function to set active state for sidebar buttons
 function setActiveButton(activeButton) {
-  const buttons = [dashboardBtn, studentProfileBtn, gradesBtn, enrollmentBtn, paymentBtn];
+  const buttons = [
+    dashboardBtn,
+    studentProfileBtn,
+    gradesBtn,
+    enrollmentBtn,
+    paymentBtn,
+  ];
 
-  buttons.forEach(button => {
+  buttons.forEach((button) => {
     if (button === activeButton) {
-      button.classList.add('active');
-      
+      button.classList.add("active");
     } else {
-      button.classList.remove('active');
+      button.classList.remove("active");
     }
   });
 }
@@ -272,16 +276,16 @@ function setActiveButton(activeButton) {
 function setActiveButton1(activeButton) {
   const buttons = [dashBoard, studentProfile, Grades, Enrollment, payMent];
 
-  buttons.forEach(button => {
+  buttons.forEach((button) => {
     if (button === activeButton) {
-      button.style.backgroundColor = '#287fc2';
-      button.style.color = '#fff';
+      button.style.backgroundColor = "#287fc2";
+      button.style.color = "#fff";
       sidebar.style.left = "-300px";
-    main.style.left = "0";
-    main.style.width = "100%";
+      main.style.left = "0";
+      main.style.width = "100%";
     } else {
-      button.style.backgroundColor = '#1f6599';
-      button.style.color = '#ffffffc5';
+      button.style.backgroundColor = "#1f6599";
+      button.style.color = "#ffffffc5";
     }
   });
 }
@@ -290,20 +294,20 @@ function setActiveButton1(activeButton) {
 //________________________________________________________________________________________________________________
 function toggleContent(page) {
   // Hide all content sections
-  document.querySelectorAll('.content').forEach(content => {
-    content.style.display = 'none';
+  document.querySelectorAll(".content").forEach((content) => {
+    content.style.display = "none";
   });
   // Show the content section for the selected page
-  document.getElementById(page + 'Content').style.display = 'block';
+  document.getElementById(page + "Content").style.display = "block";
 }
 
 // Click event listener for sidebar navigation buttons
 //________________________________________________________________________________________________________________
-document.querySelectorAll('.navBtn, .navBtn1').forEach(btn => {
-  btn.addEventListener('click', function () {
+document.querySelectorAll(".navBtn, .navBtn1").forEach((btn) => {
+  btn.addEventListener("click", function () {
     // Set active state for sidebar buttons
     setActiveButton(btn);
-    const id = btn.id.replace(/[0-9]/g, ''); // Remove numbers from button ID
+    const id = btn.id.replace(/[0-9]/g, ""); // Remove numbers from button ID
     const correspondingBtn = document.querySelector(`#${id}`);
     if (correspondingBtn) {
       setActiveButton1(correspondingBtn); // Set active state for corresponding sidebar button
@@ -318,5 +322,69 @@ const initialPage = "dashboard"; // or any other initial page
 toggleContent(initialPage);
 setActiveButton(document.querySelector(`#${initialPage}1`)); // Set active state for initial sidebar button
 
-//FOR STUDENT PORTAL SCRIPT____________________________________________________________________________________
+//FOR STUDENT INFORMATION SCRIPT____________________________________________________________________________________
 //START____________________________________________________________________________________________
+// Function to change avatar
+function changeAvatar() {
+  document.getElementById("avatarInput").click();
+}
+
+let saveButton = document.querySelector("#saveButton");
+
+saveButton.setAttribute("disabled", true);
+
+// Event listener for avatar input change
+document.getElementById("avatarInput").addEventListener("change", function () {
+  let file = this.files[0];
+  if (file) {
+    let reader = new FileReader();
+    reader.onload = function (e) {
+      let imgElement = document.querySelector(".img");
+      let size = document.querySelector(".img p");
+      imgElement.style.backgroundImage = `url('${e.target.result}')`;
+      imgElement.style.display = "block"; // Show the image after selecting
+      size.style.display = "none";
+      saveButton.removeAttribute("disabled");
+      saveButton.style.transform =  'translate(-50%, -10%)';
+      // Show the save button
+      document.getElementById("saveButton").style.display = "block";
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+// Function to save avatar
+function saveAvatar() {
+  let imgElement1 = document.querySelector(".img1");
+  let icon = document.querySelector(".img1 i");
+  let imgElement2 = document.querySelector(".img2");
+  let icon1 = document.querySelector(".img2 i");
+  let imgElement3 = document.querySelector(".img3");
+  let icon2 = document.querySelector(".img3 i");
+
+
+  let imageURL = document.querySelector(".img").style.backgroundImage;
+
+  let res = confirm("Are you sure to change Avatar?");
+
+  if (res) {
+    if (imageURL) {
+      imgElement1.style.backgroundImage = imageURL;
+      imgElement1.style.display = "block";
+      imgElement1.style.border = "2px solid #fff";
+      icon.style.display = "none";
+      imgElement2.style.backgroundImage = imageURL;
+      imgElement2.style.display = "block";
+      imgElement2.style.border = "2px solid #fff";
+      icon1.style.display = "none";
+      imgElement3.style.backgroundImage = imageURL;
+      imgElement3.style.display = "block";
+      imgElement3.style.border = "2px solid #fff";
+      icon2.style.display = "none";
+      saveButton.setAttribute("disabled", true);
+    } else {
+      imgElement1.style.display = "none";
+    }
+  } else {
+  }
+}

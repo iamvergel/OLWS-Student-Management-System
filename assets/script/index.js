@@ -29,7 +29,7 @@ logIn.addEventListener("click", () => {
         loader.style.display = "block";
 
         setTimeout(() => {
-          window.location.href = "/src/MacayanVergel.html";
+          window.location.href = "/assets/src/MacayanVergel.html";
         }, 2000);
       } else if (userName.value === "2021-0605") {
         section.style.display = "none";
@@ -72,7 +72,7 @@ logIn.addEventListener("click", () => {
         loader.style.display = "block";
 
         setTimeout(() => {
-          window.location.href = "dashboard.html";
+          window.location.href = "/assets/src/dashboard.html";
         }, 2000);
       } 
 
