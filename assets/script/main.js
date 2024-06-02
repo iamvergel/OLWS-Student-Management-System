@@ -1,3 +1,13 @@
+history.pushState(null, null, location.href);
+window.onpopstate = function () {
+    history.go(1);
+};
+
+// Intercept the reload event
+window.onbeforeunload = function() {
+  return false; // Prevent the page from reloading
+};
+
 const sidebar = document.querySelector(".sidebar");
 const sidebarClose = document.querySelector("#sidebar-close");
 const main = document.querySelector(".main");
@@ -324,7 +334,21 @@ setActiveButton(document.querySelector(`#${initialPage}1`)); // Set active state
 
 //FOR STUDENT INFORMATION SCRIPT____________________________________________________________________________________
 //START____________________________________________________________________________________________
-// Function to change avatar
+// Get all buttons inside the collapsible element
+const buttons = document.querySelectorAll('#navbarToggleExternalContent button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const collapsible = document.querySelector('#navbarToggleExternalContent');
+
+        const bootstrapCollapse = new bootstrap.Collapse(collapsible, {
+            toggle: false
+        });
+        bootstrapCollapse.hide();
+    });
+});
+
+//Function to change avatar _____________________________________________________________________
 function changeAvatar() {
   document.getElementById("avatarInput").click();
 }
@@ -333,7 +357,7 @@ let saveButton = document.querySelector("#saveButton");
 
 saveButton.setAttribute("disabled", true);
 
-// Event listener for avatar input change
+//for avatar input change_________________________________________________________________________________
 document.getElementById("avatarInput").addEventListener("change", function () {
   let file = this.files[0];
   if (file) {
@@ -342,18 +366,18 @@ document.getElementById("avatarInput").addEventListener("change", function () {
       let imgElement = document.querySelector(".img");
       let size = document.querySelector(".img p");
       imgElement.style.backgroundImage = `url('${e.target.result}')`;
-      imgElement.style.display = "block"; // Show the image after selecting
+      imgElement.style.display = "block";
       size.style.display = "none";
       saveButton.removeAttribute("disabled");
       saveButton.style.transform =  'translate(-50%, -10%)';
-      // Show the save button
+      
       document.getElementById("saveButton").style.display = "block";
     };
     reader.readAsDataURL(file);
   }
 });
 
-// Function to save avatar
+//Function for save avatar______________________________________________________________________________________
 function saveAvatar() {
   let imgElement1 = document.querySelector(".img1");
   let icon = document.querySelector(".img1 i");
@@ -388,3 +412,54 @@ function saveAvatar() {
   } else {
   }
 }
+//For Student Information content_____________________________________________________________________________________
+let userProfile = document.querySelector('.userProfile');
+let SecurityAcc = document.querySelector('.SecurityAcc');
+let studentAdditionalinformation = document.querySelector('.studentAdditionalinformation');
+
+//For Student Information buttons_____________________________________________________________________________________
+let Account = document.querySelector('.Account');
+let Security = document.querySelector('.Security');
+let additionalInformation = document.querySelector('.addInformation');
+
+//Function for Account Button________________________________________________________________________________
+Account.addEventListener('click', () => {
+  Account.style.backgroundColor = '#287fc29f';
+  Account.style.color = '#fff';
+  Security.style.backgroundColor = '#fff';
+  Security.style.color = '#1f6599';
+  additionalInformation.style.backgroundColor = '#fff';
+  additionalInformation.style.color = '#1f6599';
+
+  userProfile.style.display = 'block';
+  SecurityAcc.style.display = 'none';
+  studentAdditionalinformation.style.display = 'none';
+});
+
+//Function for Security Button________________________________________________________________________________
+Security.addEventListener('click', () => {
+  Security.style.backgroundColor = '#287fc29f';
+  Security.style.color = '#fff';
+  Account.style.backgroundColor = '#fff';
+  Account.style.color = '#1f6599';
+  additionalInformation.style.backgroundColor = '#fff';
+  additionalInformation.style.color = '#1f6599';
+
+  userProfile.style.display = 'none';
+  SecurityAcc.style.display = 'block';
+  studentAdditionalinformation.style.display = 'none';
+});
+
+//Function for Additional Information Button________________________________________________________________________________
+additionalInformation.addEventListener('click', () => {
+  additionalInformation.style.backgroundColor = '#287fc29f';
+  additionalInformation.style.color = '#fff';
+  Security.style.backgroundColor = '#fff';
+  Security.style.color = '#1f6599';
+  Account.style.backgroundColor = '#fff';
+  Account.style.color = '#1f6599';
+
+  userProfile.style.display = 'none';
+  SecurityAcc.style.display = 'none';
+  studentAdditionalinformation.style.display = 'block';
+});

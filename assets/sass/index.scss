@@ -601,6 +601,8 @@ body {
       }
 
       .userProfile {
+        overflow-y: scroll;
+        overflow-x: hidden;
         height: auto;
 
         .header {
@@ -704,6 +706,94 @@ body {
               border-radius: 5px;
               margin-bottom: 0.5rem;
             }
+          }
+        }
+      }
+
+      .SecurityAcc {
+        height: 100vh;
+
+        .header {
+          background-color: #1f6599;
+          color: #fff;
+          padding: 0.5rem;
+          font-size: 20px;
+          letter-spacing: 1px;
+        }
+        
+        .row {
+          margin-bottom: 5rem;
+
+          label {
+            color: #1f6599;
+            font-size: 15px;
+            letter-spacing: 1px;
+            line-height: 0.1;
+          }
+  
+          input {
+            border: 1px solid #1f6599;
+            color: #1f6599;
+            background-color: #287fc25e;
+            padding: 0.5rem;
+            width: 100%;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding-left: 1rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+          }
+
+          button {
+            border: none;
+            color: #fff;
+            background-color: #1f6599;
+            padding: 0.5rem;
+            width: 100%;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+
+            &:hover, &:active{
+              background-color: #287fc2;
+            }
+          }
+        }
+      }
+
+      .studentAdditionalinformation {
+        height: 100vh;
+
+        .header {
+          background-color: #1f6599;
+          color: #fff;
+          padding: 0.5rem;
+          font-size: 20px;
+          letter-spacing: 1px;
+        }
+        
+        .row {
+          margin-bottom: 5rem;
+
+          label {
+            color: #1f6599;
+            font-size: 15px;
+            letter-spacing: 1px;
+            line-height: 0.1;
+          }
+  
+          input {
+            border: 1px solid #1f6599;
+            color: #1f6599;
+            background-color: #287fc25e;
+            padding: 0.5rem;
+            width: 100%;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding-left: 1rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
           }
         }
       }

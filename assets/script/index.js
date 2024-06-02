@@ -1,3 +1,8 @@
+history.pushState(null, null, location.href);
+window.onpopstate = function () {
+    history.go(1);
+};
+
 let userName = document.querySelector("#username");
 let passWord = document.querySelector("#password");
 

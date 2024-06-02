@@ -11278,6 +11278,8 @@ body {
   color: #fff;
 }
 .main #studentProfileContent .row .userProfile {
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: auto;
 }
 .main #studentProfileContent .row .userProfile .header {
@@ -11367,6 +11369,82 @@ body {
   line-height: 0.1;
 }
 .main #studentProfileContent .row .userProfile .profile .basicInfo input {
+  border: 1px solid #1f6599;
+  color: #1f6599;
+  background-color: rgba(40, 127, 194, 0.368627451);
+  padding: 0.5rem;
+  width: 100%;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-left: 1rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+.main #studentProfileContent .row .SecurityAcc {
+  height: 100vh;
+}
+.main #studentProfileContent .row .SecurityAcc .header {
+  background-color: #1f6599;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.main #studentProfileContent .row .SecurityAcc .row {
+  margin-bottom: 5rem;
+}
+.main #studentProfileContent .row .SecurityAcc .row label {
+  color: #1f6599;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 0.1;
+}
+.main #studentProfileContent .row .SecurityAcc .row input {
+  border: 1px solid #1f6599;
+  color: #1f6599;
+  background-color: rgba(40, 127, 194, 0.368627451);
+  padding: 0.5rem;
+  width: 100%;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-left: 1rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+.main #studentProfileContent .row .SecurityAcc .row button {
+  border: none;
+  color: #fff;
+  background-color: #1f6599;
+  padding: 0.5rem;
+  width: 100%;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+.main #studentProfileContent .row .SecurityAcc .row button:hover, .main #studentProfileContent .row .SecurityAcc .row button:active {
+  background-color: #287fc2;
+}
+.main #studentProfileContent .row .studentAdditionalinformation {
+  height: 100vh;
+}
+.main #studentProfileContent .row .studentAdditionalinformation .header {
+  background-color: #1f6599;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.main #studentProfileContent .row .studentAdditionalinformation .row {
+  margin-bottom: 5rem;
+}
+.main #studentProfileContent .row .studentAdditionalinformation .row label {
+  color: #1f6599;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 0.1;
+}
+.main #studentProfileContent .row .studentAdditionalinformation .row input {
   border: 1px solid #1f6599;
   color: #1f6599;
   background-color: rgba(40, 127, 194, 0.368627451);

@@ -30,7 +30,11 @@
     />
     <style></style>
   </head>
-  <body>
+  <body
+    onLoad="noBack();"
+    onpageshow="if (event.persisted) noBack();"
+    onUnload=""
+  >
     <!--sidebar------------------------------------------------>
     <!--------------------------------------------------------------->
     <!--------------------------------------------------------------->
@@ -500,12 +504,15 @@
           >
             <div class="row mt-3">
               <h1 class="fs-3 fw-bold">Settings</h1>
-              <button class="text-start">Account</button>
-              <button class="text-start">Security</button>
-              <button class="text-start">Student Additional Information</button>
+              <button class="text-start Account">Account</button>
+              <button class="text-start Security">Security</button>
+              <button class="text-start addInformation">
+                Student Additional Information
+              </button>
             </div>
           </div>
 
+          <!--------------------------------------------------------------------------------------------------------------->
           <div class="col-lg-12 col-xl-9 userProfile">
             <div class="row">
               <div class="header col-12">
@@ -532,43 +539,258 @@
                   </button>
                 </div>
 
-                <h6 class="fs-6 fw-semibold mb-4 pb-2" style="color: #1f6599; letter-spacing: 1px; border-bottom: 1px solid #1f6599;">Basic Information</h6>
+                <!-------------------------------------------------------------------------------------------------------------------------------->
+                <h6
+                  class="fs-6 fw-semibold mb-4 pb-2"
+                  style="
+                    color: #1f6599;
+                    letter-spacing: 1px;
+                    border-bottom: 1px solid #1f6599;
+                  "
+                >
+                  Basic Information
+                </h6>
                 <div class="row basicInfo">
-                  <div class="container col-sm-12 col-md-6">
+                  <!-------------------------------------------------------------------------------------------------------------------------------->
+                  <div class="container col-sm-12 col-md-4">
                     <label class="fw-semibold">First name :</label><br />
                     <input type="text" value="Sample" disabled />
                   </div>
-                  <div class="container col-sm-12 col-md-6">
+                  <div class="container col-sm-12 col-md-4">
+                    <label class="fw-semibold">Middle name :</label><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-4">
                     <label class="fw-semibold">Last name :</label><br />
                     <input type="text" value="Sample" disabled />
                   </div>
-                  <div class="container col-sm-12 col-md-9">
-                    <label class="fw-semibold">Address :</label><br />
+                  <div class="container col-sm-12 col-md-12">
+                    <label class="fw-semibold">Home Address :</label><br />
                     <input type="text" value="Sample" disabled />
                   </div>
-                  <div class="container col-sm-3 col-md-3">
+                  <div class="container col-sm-3 col-md-2">
                     <label class="fw-semibold">Gender :</label><br />
                     <input type="text" value="Sample" disabled />
                   </div>
-                  <div class="container col-sm-9 col-md-6">
+                  <div class="container col-sm-9 col-md-5">
                     <label class="fw-semibold">Contact No. :</label><br />
                     <input type="text" value="Sample" disabled />
                   </div>
-                  <div class="container col-sm-12 col-md-6">
-                    <label class="fw-semibold">First name :</label><br />
+                  <div class="container col-sm-12 col-md-5">
+                    <label class="fw-semibold">Email :</label><br />
                     <input type="text" value="Sample" disabled />
                   </div>
                   <div class="container col-sm-12 col-md-6">
-                    <label class="fw-semibold">First name :</label><br />
+                    <label class="fw-semibold">Religion :</label><br />
                     <input type="text" value="Sample" disabled />
                   </div>
                   <div class="container col-sm-12 col-md-6">
-                    <label class="fw-semibold">First name :</label><br />
+                    <label class="fw-semibold">Nationality :</label><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                </div>
+
+                <!-------------------------------------------------------------------------------------------------------------------------------->
+                <h6
+                  class="fs-6 fw-semibold mb-4 pb-2 mt-5"
+                  style="
+                    color: #1f6599;
+                    letter-spacing: 1px;
+                    border-bottom: 1px solid #1f6599;
+                  "
+                >
+                  Additional Information
+                </h6>
+                <div class="row basicInfo">
+                  <!-------------------------------------------------------------------------------------------------------------------------------->
+                  <h6
+                    class="fs-6 fw-semibold mb-3 pb-2 mt-1"
+                    style="color: #1f6599; letter-spacing: 1px"
+                  >
+                    Guardian's Information :
+                  </h6>
+                  <div class="container col-sm-12 col-md-4">
+                    <label class="fw-semibold">Guardian's First Name :</label
+                    ><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-4">
+                    <label class="fw-semibold">Guardian's Middle Name :</label
+                    ><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-4">
+                    <label class="fw-semibold">Guardian's Last Name :</label
+                    ><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-12">
+                    <label class="fw-semibold">Home Address :</label><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-6">
+                    <label class="fw-semibold">Occupation :</label><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-6">
+                    <label class="fw-semibold">Contact No. :</label><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+
+                  <!-------------------------------------------------------------------------------------------------------------------------------->
+                  <h6
+                    class="fs-6 fw-semibold mb-3 pb-2 mt-4"
+                    style="color: #1f6599; letter-spacing: 1px"
+                  >
+                    Father's Information :
+                  </h6>
+                  <div class="container col-sm-12 col-md-4">
+                    <label class="fw-semibold">Father's First Name :</label
+                    ><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-4">
+                    <label class="fw-semibold">Father's Middle Name :</label
+                    ><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-4">
+                    <label class="fw-semibold">Father's Last Name :</label
+                    ><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-12">
+                    <label class="fw-semibold">Home Address :</label><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-6">
+                    <label class="fw-semibold">Occupation :</label><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-6">
+                    <label class="fw-semibold">Contact No. :</label><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+
+                  <!-------------------------------------------------------------------------------------------------------------------------------->
+                  <h6
+                    class="fs-6 fw-semibold mb-3 pb-2 mt-4"
+                    style="color: #1f6599; letter-spacing: 1px"
+                  >
+                    Mother's Information :
+                  </h6>
+                  <div class="container col-sm-12 col-md-4">
+                    <label class="fw-semibold">Mother's First Name :</label
+                    ><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-4">
+                    <label class="fw-semibold">Mother's Middle Name :</label
+                    ><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-4">
+                    <label class="fw-semibold">Mother's Last Name :</label
+                    ><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-12">
+                    <label class="fw-semibold">Home Address :</label><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-6">
+                    <label class="fw-semibold">Occupation :</label><br />
+                    <input type="text" value="Sample" disabled />
+                  </div>
+                  <div class="container col-sm-12 col-md-6">
+                    <label class="fw-semibold">Contact No. :</label><br />
                     <input type="text" value="Sample" disabled />
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <!----------------------------------------------------------------------------------------------------------------->
+          <div
+            class="col-lg-12 col-xl-9 mb-4 SecurityAcc"
+            style="display: none"
+          >
+            <div class="row">
+              <div class="header col-12 mb-5">
+                <p class="fs-6 fw-semibold ml-3 mt-3">Security</p>
+              </div>
+              <!-------------------------------------------------------------------------------------------------------------------------------->
+              <div class="col-sm-12 col-md-7">
+                <label class="fw-semibold">Username :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+              <div class="col-sm-12 col-md-7">
+                <label class="fw-semibold">password :</label><br />
+                <input type="Password" value="Sample" disabled />
+              </div>
+              <div class="container col-sm-12 col-md-12">
+                <label class="fw-semibold">Sample :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+              <div class="container col-sm-12 col-md-12">
+                <label class="fw-semibold">Sample :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+              <div class="container col-sm-12 col-md-6">
+                <label class="fw-semibold">Sample :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+              <div class="container col-sm-12 col-md-6">
+                <label class="fw-semibold">Sample :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+
+              <div class="conatiner mt-5 col-sm-6 col-md-4">
+                <button class=" fw-semibold">Change Password</button>
+              </div>
+            </div>
+          </div>
+
+          <!-------------------------------------------------------------------------------------------------------------------->
+          <div
+            class="col-lg-12 col-xl-9 studentAdditionalinformation"
+            style="display: none"
+          >
+            <div
+              class="row"
+            >
+            <div class="row">
+              <div class="header col-12 mb-5">
+                <p class="fs-6 fw-semibold ml-3 mt-3">Additional Information</p>
+              </div>
+              <!-------------------------------------------------------------------------------------------------------------------------------->
+              <div class="col-sm-12 col-md-4">
+                <label class="fw-semibold">Student No. :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+              <div class="col-sm-12 col-md-12">
+                <label class="fw-semibold">Sample :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+              <div class="container col-sm-12 col-md-12">
+                <label class="fw-semibold">Sample :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+              <div class="container col-sm-12 col-md-12">
+                <label class="fw-semibold">Sample :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+              <div class="container col-sm-12 col-md-6">
+                <label class="fw-semibold">Sample :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+              <div class="container col-sm-12 col-md-6">
+                <label class="fw-semibold">Sample :</label><br />
+                <input type="text" value="Sample" disabled />
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
