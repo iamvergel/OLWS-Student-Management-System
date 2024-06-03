@@ -10995,6 +10995,30 @@ body {
   color: #fff;
 }
 
+.modal .modal-dialog .modal-content .modal-body {
+  text-align: center;
+}
+.modal .modal-dialog .modal-content .modal-body p {
+  color: #1f6599;
+  font-weight: 400;
+}
+.modal .modal-dialog .modal-content .modal-footer {
+  border: none;
+}
+.modal .modal-dialog .modal-content .modal-footer button {
+  background-color: #1f6599;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 500;
+  width: 100px;
+  margin: 0.5rem;
+}
+.modal .modal-dialog .modal-content .modal-footer button:hover {
+  background-color: #287fc2;
+}
+
 .main {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -11289,33 +11313,36 @@ body {
   font-size: 20px;
   letter-spacing: 1px;
 }
+.main #studentProfileContent .row .userProfile .profile {
+  background-color: rgba(40, 141, 218, 0.2039215686);
+}
 .main #studentProfileContent .row .userProfile .profile .userPhoto .img {
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  border: 2px solid #1f6599;
+  border: 2px solid #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(31, 100, 153, 0.3882352941);
+  background-color: #1f6599;
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.568627451);
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -10%);
 }
 .main #studentProfileContent .row .userProfile .profile .userPhoto .img p {
-  color: #1f6599;
+  color: #fff;
   letter-spacing: 1px;
 }
 .main #studentProfileContent .row .userProfile .profile .userPhoto p {
   color: #1f6599;
   letter-spacing: 1px;
+  line-height: 0.5;
 }
 .main #studentProfileContent .row .userProfile .profile .userPhoto button {
   background-color: #1f6599;
@@ -11354,33 +11381,58 @@ body {
     transform: translate(-50%, -10%);
   }
 }
-.main #studentProfileContent .row .userProfile .profile .basicInfo {
-  margin-bottom: 5rem;
+.main #studentProfileContent .row .userProfile .profile .userPhoto #staticBackdrop button {
+  border-radius: 0;
+  text-align: center;
+  height: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
-@media (min-width: 992px) {
+@media (min-width: 0) {
   .main #studentProfileContent .row .userProfile .profile .basicInfo {
-    margin-bottom: 0;
+    margin-bottom: 4rem;
   }
+}
+.main #studentProfileContent .row .userProfile .profile .basicInfo span {
+  border: 1px solid rgba(31, 100, 153, 0.5254901961);
+  height: 50px;
+  border-right: none;
+  background-color: #fff;
+  border-radius: 3px 0 0 3px;
+}
+.main #studentProfileContent .row .userProfile .profile .basicInfo span i {
+  color: #1f6599;
+  font-size: 15px;
 }
 .main #studentProfileContent .row .userProfile .profile .basicInfo label {
   color: #1f6599;
   font-size: 15px;
   letter-spacing: 1px;
   line-height: 0.1;
+  margin-bottom: 1rem;
 }
 .main #studentProfileContent .row .userProfile .profile .basicInfo input {
-  border: 1px solid #1f6599;
-  color: #1f6599;
-  background-color: rgba(40, 127, 194, 0.368627451);
+  border: 1px solid rgba(31, 100, 153, 0.5254901961);
+  border-left: none;
+  color: rgba(31, 100, 153, 0.662745098);
+  background-color: #fff;
   padding: 0.5rem;
-  width: 100%;
+  width: 80%;
+  height: 50px;
   font-weight: 500;
   letter-spacing: 1px;
   padding-left: 1rem;
-  border-radius: 5px;
-  margin-bottom: 0.5rem;
+  border-radius: 0 3px 3px 0;
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+@media (min-width: 991px) {
+  .main #studentProfileContent .row .userProfile .profile .basicInfo input {
+    width: 70%;
+  }
 }
 .main #studentProfileContent .row .SecurityAcc {
+  background-color: rgba(40, 141, 218, 0.2039215686);
   height: 100vh;
 }
 .main #studentProfileContent .row .SecurityAcc .header {
@@ -11390,43 +11442,81 @@ body {
   font-size: 20px;
   letter-spacing: 1px;
 }
-.main #studentProfileContent .row .SecurityAcc .row {
-  margin-bottom: 5rem;
+@media (min-width: 0) {
+  .main #studentProfileContent .row .SecurityAcc .changePass {
+    margin-bottom: 4rem;
+  }
 }
-.main #studentProfileContent .row .SecurityAcc .row label {
+.main #studentProfileContent .row .SecurityAcc .changePass span {
+  border: 1px solid rgba(31, 100, 153, 0.5254901961);
+  height: 50px;
+  border-right: none;
+  background-color: #fff;
+  border-radius: 3px 0 0 3px;
+}
+.main #studentProfileContent .row .SecurityAcc .changePass span i {
+  color: #1f6599;
+  font-size: 15px;
+}
+.main #studentProfileContent .row .SecurityAcc .changePass label {
   color: #1f6599;
   font-size: 15px;
   letter-spacing: 1px;
   line-height: 0.1;
+  margin-bottom: 1rem;
 }
-.main #studentProfileContent .row .SecurityAcc .row input {
-  border: 1px solid #1f6599;
-  color: #1f6599;
-  background-color: rgba(40, 127, 194, 0.368627451);
+.main #studentProfileContent .row .SecurityAcc .changePass input {
+  border: 1px solid rgba(31, 100, 153, 0.5254901961);
+  border-left: none;
+  color: rgba(31, 100, 153, 0.662745098);
+  background-color: #fff;
   padding: 0.5rem;
-  width: 100%;
+  width: 70%;
+  height: 50px;
   font-weight: 500;
   letter-spacing: 1px;
   padding-left: 1rem;
-  border-radius: 5px;
-  margin-bottom: 0.5rem;
+  border-radius: 0 3px 3px 0;
+  margin-bottom: 2rem;
+  font-size: 14px;
 }
-.main #studentProfileContent .row .SecurityAcc .row button {
+@media (min-width: 991px) {
+  .main #studentProfileContent .row .SecurityAcc .changePass input {
+    width: 70%;
+  }
+}
+.main #studentProfileContent .row .SecurityAcc .changePass button {
   border: none;
-  color: #fff;
-  background-color: #1f6599;
-  padding: 0.5rem;
-  width: 100%;
-  font-weight: 500;
-  letter-spacing: 1px;
-  padding-left: 1rem;
-  margin-bottom: 0.5rem;
+  height: 50px;
+  border-right: none;
+  background-color: transparent;
+  border-radius: 3px 0 0 3px;
+  margin-left: 0;
 }
-.main #studentProfileContent .row .SecurityAcc .row button:hover, .main #studentProfileContent .row .SecurityAcc .row button:active {
+.main #studentProfileContent .row .SecurityAcc .changePass button i {
+  color: #1f6599;
+  font-size: 18px;
+}
+.main #studentProfileContent .row .SecurityAcc .save, .main #studentProfileContent .row .SecurityAcc .cancel {
+  border: none;
+  height: 40px;
+  width: 100px;
+  border-right: none;
+  background-color: #1f6599;
+  border-radius: 3px 0 0 3px;
+  color: #fff;
+  float: right;
+}
+.main #studentProfileContent .row .SecurityAcc .save i, .main #studentProfileContent .row .SecurityAcc .cancel i {
+  color: white;
+  font-size: 14px;
+}
+.main #studentProfileContent .row .SecurityAcc .save:hover, .main #studentProfileContent .row .SecurityAcc .save:active, .main #studentProfileContent .row .SecurityAcc .cancel:hover, .main #studentProfileContent .row .SecurityAcc .cancel:active {
   background-color: #287fc2;
 }
 .main #studentProfileContent .row .studentAdditionalinformation {
-  height: 100vh;
+  background-color: rgba(40, 141, 218, 0.2039215686);
+  height: auto;
 }
 .main #studentProfileContent .row .studentAdditionalinformation .header {
   background-color: #1f6599;
@@ -11435,26 +11525,48 @@ body {
   font-size: 20px;
   letter-spacing: 1px;
 }
-.main #studentProfileContent .row .studentAdditionalinformation .row {
-  margin-bottom: 5rem;
+@media (min-width: 0) {
+  .main #studentProfileContent .row .studentAdditionalinformation .additionalInformation {
+    margin-bottom: 4rem;
+  }
 }
-.main #studentProfileContent .row .studentAdditionalinformation .row label {
+.main #studentProfileContent .row .studentAdditionalinformation .additionalInformation label {
   color: #1f6599;
   font-size: 15px;
   letter-spacing: 1px;
   line-height: 0.1;
+  margin-bottom: 1rem;
 }
-.main #studentProfileContent .row .studentAdditionalinformation .row input {
-  border: 1px solid #1f6599;
-  color: #1f6599;
-  background-color: rgba(40, 127, 194, 0.368627451);
+.main #studentProfileContent .row .studentAdditionalinformation .additionalInformation input {
+  border: 1px solid rgba(31, 100, 153, 0.5254901961);
+  color: rgba(31, 100, 153, 0.662745098);
+  background-color: #fff;
   padding: 0.5rem;
   width: 100%;
+  height: 50px;
   font-weight: 500;
   letter-spacing: 1px;
   padding-left: 1rem;
-  border-radius: 5px;
-  margin-bottom: 0.5rem;
+  border-radius: 0 3px 3px 0;
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+@media (min-width: 991px) {
+  .main #studentProfileContent .row .studentAdditionalinformation .additionalInformation input {
+    width: 70%;
+  }
+}
+.main #studentProfileContent .row .studentAdditionalinformation .additionalInformation button {
+  border: none;
+  height: 50px;
+  border-right: none;
+  background-color: transparent;
+  border-radius: 3px 0 0 3px;
+  margin-left: 0;
+}
+.main #studentProfileContent .row .studentAdditionalinformation .additionalInformation button i {
+  color: #1f6599;
+  font-size: 18px;
 }
 .main #gradesContent {
   height: 100vh;

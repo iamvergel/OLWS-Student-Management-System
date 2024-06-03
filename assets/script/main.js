@@ -1,13 +1,3 @@
-history.pushState(null, null, location.href);
-window.onpopstate = function () {
-    history.go(1);
-};
-
-// Intercept the reload event
-window.onbeforeunload = function() {
-  return false; // Prevent the page from reloading
-};
-
 const sidebar = document.querySelector(".sidebar");
 const sidebarClose = document.querySelector("#sidebar-close");
 const main = document.querySelector(".main");
@@ -206,35 +196,16 @@ document.addEventListener("DOMContentLoaded", function () {
   renderCalendar(currentMonth, currentYear);
 });
 
-let logOut = document.querySelector(".logout");
+let logOut = document.querySelector(".logoutBtn");
 let logOut2 = document.querySelector(".logout1");
 let smsidenav = document.querySelector(".smsidenav");
 let loader = document.querySelector(".loader");
 let header = document.querySelector(".header");
 let footer = document.querySelector(".footer");
 let footer1 = document.querySelector(".footer1");
+
 logOut.addEventListener("click", () => {
-  let result = confirm("Do you want to Logout ?");
-
-  // Check user's choice
-  if (result) {
-    loader.style.display = "block";
-    footer.style.opacity = "0";
-    footer1.style.opacity = "0";
-    header.style.opacity = "0";
-
-    setTimeout(() => {
-      window.location.href = "http://127.0.0.1:5503/index.html";
-    }, 2000);
-  } else {
-  }
-});
-
-logOut2.addEventListener("click", () => {
-  let result = confirm("Do you want to Logout ?");
-
-  // Check user's choice
-  if (result) {
+  setTimeout(() => {
     loader.style.display = "block";
     footer.style.opacity = "0";
     footer1.style.opacity = "0";
@@ -242,10 +213,9 @@ logOut2.addEventListener("click", () => {
     smsidenav.style.display = "none";
 
     setTimeout(() => {
-      window.location.href = "http://127.0.0.1:5503/index.html";
+      window.location.href = "/index.html";
     }, 2000);
-  } else {
-  }
+  }, 300);
 });
 
 /*SIDEBAR BUTTONS*/
@@ -353,7 +323,9 @@ function changeAvatar() {
   document.getElementById("avatarInput").click();
 }
 
+//Save Button_________________________________________________________________________________________________
 let saveButton = document.querySelector("#saveButton");
+let okatBtbn = document.querySelector(".btn");
 
 saveButton.setAttribute("disabled", true);
 
@@ -389,9 +361,6 @@ function saveAvatar() {
 
   let imageURL = document.querySelector(".img").style.backgroundImage;
 
-  let res = confirm("Are you sure to change Avatar?");
-
-  if (res) {
     if (imageURL) {
       imgElement1.style.backgroundImage = imageURL;
       imgElement1.style.display = "block";
@@ -409,9 +378,8 @@ function saveAvatar() {
     } else {
       imgElement1.style.display = "none";
     }
-  } else {
-  }
 }
+
 //For Student Information content_____________________________________________________________________________________
 let userProfile = document.querySelector('.userProfile');
 let SecurityAcc = document.querySelector('.SecurityAcc');

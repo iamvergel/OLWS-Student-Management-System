@@ -90,6 +90,7 @@ body {
           }
         }
       }
+
       .bi-bell-fill {
         color: #fff;
         font-size: 15px;
@@ -139,6 +140,7 @@ body {
         color: #fff;
       }
     }
+
     #dashboard {
       background-color: #287fc2;
       color: #fff;
@@ -225,6 +227,7 @@ body {
           }
         }
       }
+
       .bi-bell-fill {
         color: #fff;
         font-size: 15px;
@@ -269,9 +272,45 @@ body {
       font-size: 12px;
       border: none;
     }
+
     .active {
       background-color: $link-hover-bg-color;
       color: #fff;
+    }
+  }
+}
+
+//LOGOUT MODAL
+.modal {
+  .modal-dialog {
+    .modal-content {
+      .modal-body {
+        text-align: center;
+
+        p {
+          color: #1f6599;
+          font-weight: 400;
+        }
+      }
+
+      .modal-footer {
+        border: none;
+
+        button {
+          background-color: #1f6599;
+          border: none;
+          border-radius: 0;
+          color: #fff;
+          letter-spacing: 1px;
+          font-weight: 500;
+          width: 100px;
+          margin: 0.5rem;
+
+          &:hover {
+            background-color: #287fc2;
+          }
+        }
+      }
     }
   }
 }
@@ -363,14 +402,13 @@ body {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-  
+
         .bi-person-circle {
           font-size: 40px;
-        color: #fff;
+          color: #fff;
         }
       }
     }
-
   }
 
   //DASHBOARD________________________________________________________________________________________________
@@ -386,12 +424,10 @@ body {
         height: 20vh;
         width: 100vw;
         background-color: #fff;
-        background-image: linear-gradient(
-          to left,
-          #1f649938,
-          #1f6499c0,
-          #1f6599
-        );
+        background-image: linear-gradient(to left,
+            #1f649938,
+            #1f6499c0,
+            #1f6599);
         border-radius: 10px;
 
         #currentDate {
@@ -419,8 +455,8 @@ body {
 
     .dashboard {
       .list-unstyled {
-      border-bottom: 1px solid #1f649938;
-      border-radius: 0.25rem;
+        border-bottom: 1px solid #1f649938;
+        border-radius: 0.25rem;
       }
 
       @media (min-width: 991px) {
@@ -614,28 +650,29 @@ body {
         }
 
         .profile {
+          background-color: #288dda34;
+
           .userPhoto {
             .img {
               width: 150px;
               height: 150px;
               border-radius: 100%;
-              border: 2px solid #1f6599;
+              border: 2px solid #fff;
               display: flex;
               justify-content: center;
               align-items: center;
-              background-color: #1f649963;
+              background-color: #1f6599;
               object-fit: cover;
               background-size: cover;
               background-position: center;
               background-repeat: no-repeat;
-              box-shadow: 0 2px 10px #00000091;
               position: relative;
               top: 50%;
               left: 50%;
               transform: translate(-50%, -10%);
 
               p {
-                color: #1f6599;
+                color: #fff;
                 letter-spacing: 1px;
               }
             }
@@ -643,6 +680,7 @@ body {
             p {
               color: #1f6599;
               letter-spacing: 1px;
+              line-height: 0.5;
             }
 
             button {
@@ -656,7 +694,8 @@ body {
               left: 50%;
               transform: translate(-100%, -10%);
 
-              &:hover, &:active{
+              &:hover,
+              &:active {
                 background-color: #287fc2;
               }
 
@@ -679,38 +718,69 @@ body {
                 transform: translate(-50%, -10%);
               }
             }
+
+            #staticBackdrop {
+              button {
+                border-radius: 0;
+                text-align: center;
+                height: 40px;
+                font-weight: 700;
+                letter-spacing: 1px;
+              }
+            }
           }
 
           .basicInfo {
-            margin-bottom: 5rem;
-
-            @media (min-width: 992px) {
-              margin-bottom: 0;
+            @media (min-width: 0) {
+              margin-bottom: 4rem;
             }
+
+            span {
+              border: 1px solid #1f649986;
+              height: 50px;
+              border-right: none;
+              background-color: #fff;
+              border-radius: 3px 0 0 3px;
+
+              i {
+                color: #1f6599;
+                font-size: 15px;
+              }
+            }
+
             label {
               color: #1f6599;
               font-size: 15px;
               letter-spacing: 1px;
               line-height: 0.1;
+              margin-bottom: 1rem;
             }
 
             input {
-              border: 1px solid #1f6599;
-              color: #1f6599;
-              background-color: #287fc25e;
+              border: 1px solid #1f649986;
+              border-left: none;
+              color: #1f6499a9;
+              background-color: #fff;
               padding: 0.5rem;
-              width: 100%;
+              width: 80%;
+              height: 50px;
               font-weight: 500;
               letter-spacing: 1px;
               padding-left: 1rem;
-              border-radius: 5px;
-              margin-bottom: 0.5rem;
+              border-radius: 0 3px 3px 0;
+              margin-bottom: 2rem;
+              font-size: 14px;
+
+              @media (min-width: 991px) {
+                width: 70%;
+              }
             }
           }
         }
       }
 
       .SecurityAcc {
+        background-color: #288dda34;
         height: 100vh;
 
         .header {
@@ -720,50 +790,93 @@ body {
           font-size: 20px;
           letter-spacing: 1px;
         }
-        
-        .row {
-          margin-bottom: 5rem;
+
+        .changePass {
+          @media (min-width: 0) {
+            margin-bottom: 4rem;
+          }
+
+          span {
+            border: 1px solid #1f649986;
+            height: 50px;
+            border-right: none;
+            background-color: #fff;
+            border-radius: 3px 0 0 3px;
+
+            i {
+              color: #1f6599;
+              font-size: 15px;
+            }
+          }
 
           label {
             color: #1f6599;
             font-size: 15px;
             letter-spacing: 1px;
             line-height: 0.1;
+            margin-bottom: 1rem;
           }
-  
+
           input {
-            border: 1px solid #1f6599;
-            color: #1f6599;
-            background-color: #287fc25e;
+            border: 1px solid #1f649986;
+            border-left: none;
+            color: #1f6499a9;
+            background-color: #fff;
             padding: 0.5rem;
-            width: 100%;
+            width: 70%;
+            height: 50px;
             font-weight: 500;
             letter-spacing: 1px;
             padding-left: 1rem;
-            border-radius: 5px;
-            margin-bottom: 0.5rem;
+            border-radius: 0 3px 3px 0;
+            margin-bottom: 2rem;
+            font-size: 14px;
+
+            @media (min-width: 991px) {
+              width: 70%;
+            }
           }
 
           button {
             border: none;
-            color: #fff;
-            background-color: #1f6599;
-            padding: 0.5rem;
-            width: 100%;
-            font-weight: 500;
-            letter-spacing: 1px;
-            padding-left: 1rem;
-            margin-bottom: 0.5rem;
+            height: 50px;
+            border-right: none;
+            background-color: transparent;
+            border-radius: 3px 0 0 3px;
+            margin-left: 0;
 
-            &:hover, &:active{
-              background-color: #287fc2;
+            i {
+              color: #1f6599;
+              font-size: 18px;
             }
+          }
+        }
+
+        .save, .cancel {
+          border: none;
+          height: 40px;
+          width: 100px;
+          border-right: none;
+          background-color: #1f6599;
+          border-radius: 3px 0 0 3px;
+          color: #fff;
+          float: right;
+
+          i{
+            color: white;
+            font-size: 14px;
+          }
+
+          &:hover,
+          &:active {
+            background-color: #287fc2;
           }
         }
       }
 
       .studentAdditionalinformation {
-        height: 100vh;
+        background-color: #288dda34;
+        height: auto;
 
         .header {
           background-color: #1f6599;
@@ -772,28 +885,51 @@ body {
           font-size: 20px;
           letter-spacing: 1px;
         }
-        
-        .row {
-          margin-bottom: 5rem;
+
+        .additionalInformation {
+          @media (min-width: 0) {
+            margin-bottom: 4rem;
+          }
 
           label {
             color: #1f6599;
             font-size: 15px;
             letter-spacing: 1px;
             line-height: 0.1;
+            margin-bottom: 1rem;
           }
-  
+
           input {
-            border: 1px solid #1f6599;
-            color: #1f6599;
-            background-color: #287fc25e;
+            border: 1px solid #1f649986;
+            color: #1f6499a9;
+            background-color: #fff;
             padding: 0.5rem;
             width: 100%;
+            height: 50px;
             font-weight: 500;
             letter-spacing: 1px;
             padding-left: 1rem;
-            border-radius: 5px;
-            margin-bottom: 0.5rem;
+            border-radius: 0 3px 3px 0;
+            margin-bottom: 2rem;
+            font-size: 14px;
+
+            @media (min-width: 991px) {
+              width: 70%;
+            }
+          }
+
+          button {
+            border: none;
+            height: 50px;
+            border-right: none;
+            background-color: transparent;
+            border-radius: 3px 0 0 3px;
+            margin-left: 0;
+
+            i {
+              color: #1f6599;
+              font-size: 18px;
+            }
           }
         }
       }
@@ -826,6 +962,7 @@ body {
     width: 100%;
     opacity: 1;
   }
+
   .footer1 {
     background-color: #1f6599;
     color: #fff;
