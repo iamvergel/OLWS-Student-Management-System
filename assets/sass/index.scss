@@ -637,8 +637,6 @@ body {
       }
 
       .userProfile {
-        overflow-y: scroll;
-        overflow-x: hidden;
         height: auto;
 
         .header {
@@ -781,7 +779,7 @@ body {
 
       .SecurityAcc {
         background-color: #288dda34;
-        height: 100vh;
+        height: auto;
 
         .header {
           background-color: #1f6599;
@@ -861,6 +859,15 @@ body {
           border-radius: 3px 0 0 3px;
           color: #fff;
           float: right;
+          margin-bottom: 5rem;
+
+          @media (min-width: 992px) {
+            margin-bottom: 2rem;
+          }
+
+          @media (min-width: 1200px) {
+            margin-bottom: 2rem;
+          }
 
           i{
             color: white;
@@ -891,6 +898,10 @@ body {
             margin-bottom: 4rem;
           }
 
+          @media (min-width: 992px) {
+            margin-bottom: 0;
+          }
+
           label {
             color: #1f6599;
             font-size: 15px;
@@ -904,7 +915,7 @@ body {
             color: #1f6499a9;
             background-color: #fff;
             padding: 0.5rem;
-            width: 100%;
+            width: 50%;
             height: 50px;
             font-weight: 500;
             letter-spacing: 1px;
@@ -912,24 +923,6 @@ body {
             border-radius: 0 3px 3px 0;
             margin-bottom: 2rem;
             font-size: 14px;
-
-            @media (min-width: 991px) {
-              width: 70%;
-            }
-          }
-
-          button {
-            border: none;
-            height: 50px;
-            border-right: none;
-            background-color: transparent;
-            border-radius: 3px 0 0 3px;
-            margin-left: 0;
-
-            i {
-              color: #1f6599;
-              font-size: 18px;
-            }
           }
         }
       }
@@ -939,7 +932,7 @@ body {
   //GRADES________________________________________________________________________________________________
   #gradesContent {
     height: 100vh;
-    background-color: red;
+    display: none;
   }
 
   //ENROLLMENT_____________________________________________________________________________________________
