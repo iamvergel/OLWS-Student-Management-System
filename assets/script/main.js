@@ -1,17 +1,20 @@
-const sidebar = document.querySelector(".sidebar");
-const sidebarClose = document.querySelector("#sidebar-close");
-const main = document.querySelector(".main");
-const sidenav = document.querySelector(".off");
+/*_____ FOR SIDEBAR ____________________________________________________________________________________________________*/
+/*_____ START __________________________________________________________________________________________________________*/
+//VARIABLE FOR SIDEBAR
+let sidebar = document.querySelector(".sidebar");
+let sidebarClose = document.querySelector("#sidebar-close");
+let main = document.querySelector(".main");
+let sidenav = document.querySelector(".off");
 
+//VARIABLE FOR SIDEBAR CLOSE TRUE / FALSE
 let a = false;
 
-//_______________________________________________________________________________________________________
+/*_______________________________________________________________________________*/
 window.addEventListener("load", () => {
   sidebar.style.transition = "none";
   main.style.transition = "none";
 
   if (window.innerWidth >= 991) {
-    // Assuming "lg" size starts at 992px
     sidebar.style.left = "0";
     main.style.left = "300px";
     main.style.width = "calc(100% - 300px)";
@@ -25,10 +28,10 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     sidebar.style.transition = "left 0.3s ease, width 0.3s ease";
     main.style.transition = "left 0.3s ease, width 0.3s ease";
-  }, 0); // Delay to ensure that the transition is applied after style changes
+  }, 0);
 });
 
-//________________________________________________________________________________________________________________
+/*_______________________________________________________________________________*/
 sidebarClose.addEventListener("click", () => {
   sidebar.style.transition = "left 0.3s ease, width 0.3s ease";
   main.style.transition = "left 0.3s ease, width 0.3s ease";
@@ -45,11 +48,10 @@ sidebarClose.addEventListener("click", () => {
   }
 });
 
-//________________________________________________________________________________________________________________
+/*_______________________________________________________________________________*/
 function adjustDivSize() {
   let windowWidth = window.innerWidth;
 
-  // Disable transition animation
   sidebar.style.transition = "none";
   main.style.transition = "none";
 
@@ -66,77 +68,100 @@ function adjustDivSize() {
     main.style.width = "calc(100% - 300px)";
     a = false;
   }
-  // Re-enable transition animation after style changes
+
   setTimeout(() => {
     sidebar.style.transition = "left 0.5s ease, width 0.5s ease";
     main.style.transition = "left 0.5s ease, width 0.5s ease";
-  }, 0); // Delay to ensure that the transition is applied after style changes
+  }, 0);
 }
 
-//________________________________________________________________________________________________________________
+/*_______________________________________________________________________________*/
 adjustDivSize();
-//________________________________________________________________________________________________________________
-window.addEventListener("resize", adjustDivSize);
 
-//________________________________________________________________________________________________________________
+/*_______________________________________________________________________________*/
+window.addEventListener("resize", adjustDivSize);
+/*____ END ______________________________________________________________________________________________________________*/
+
+/*_____ FOR CLOCK _______________________________________________________________________________________________________*/
+/*_____ START ___________________________________________________________________________________________________________*/
+/*_______________________________________________________________________________*/
 function updateTime() {
-  const clock = document.getElementById("clock");
-  const now = new Date();
+  //VARIABLE FOR CLOCK
+  let clock = document.getElementById("clock");
+  let now = new Date();
   let hours = now.getHours();
-  const minutes = String(now.getMinutes()).padStart(2, "0");
-  const seconds = String(now.getSeconds()).padStart(2, "0");
-  const period = hours >= 12 ? "PM" : "AM";
+  let minutes = String(now.getMinutes()).padStart(2, "0");
+  let seconds = String(now.getSeconds()).padStart(2, "0");
+  let period = hours >= 12 ? "PM" : "AM";
+
   hours = hours % 12 || 12;
   hours = String(hours).padStart(2, "0");
   clock.innerHTML = `${hours}:${minutes}:${seconds} ${period}`;
 }
+/*_______________________________________________________________________________*/
 setInterval(updateTime, 1000);
+/*_______________________________________________________________________________*/
 updateTime();
+/*____ END ______________________________________________________________________________________________________________*/
 
-//________________________________________________________________________________________________________________
+/*_____ FOR DATE WELCOME ________________________________________________________________________________________________*/
+/*_____ START ___________________________________________________________________________________________________________*/
+//VARIAVLE FOR CURENT DATE WELCOME
+const dateElement = document.getElementById("currentDate");
+
+/*_______________________________________________________________________________*/
 document.addEventListener("DOMContentLoaded", function () {
-  const dateElement = document.getElementById("currentDate");
+  //VARIABLE FOR DATE WELCOME
   const options = { year: "numeric", month: "long", day: "numeric" };
   const today = new Date().toLocaleDateString("en-US", options);
+
   dateElement.textContent = today;
 });
+/*____ END ______________________________________________________________________________________________________________*/
 
-//________________________________________________________________________________________________________________
+/*_____ FOR CALENDAR ____________________________________________________________________________________________________*/
+/*_____ START ___________________________________________________________________________________________________________*/
+//VARIABLE FOR MONTHS
+let monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+//VARIABLE FOR CURRENT DATE
+let today = new Date();
+let currentMonth = today.getMonth();
+let currentYear = today.getFullYear();
+let currentDate = today.getDate();
+
+//VARIABLE FOR HEADER OF CALENDAR
+let monthYear = document.getElementById("monthYear");
+let calendarDays = document.getElementById("calendarDays");
+let prevMonthBtn = document.getElementById("prevMonth");
+let nextMonthBtn = document.getElementById("nextMonth");
+
+/*_______________________________________________________________________________*/
 document.addEventListener("DOMContentLoaded", function () {
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  const today = new Date();
-  let currentMonth = today.getMonth();
-  let currentYear = today.getFullYear();
-  const currentDate = today.getDate();
-
-  const monthYear = document.getElementById("monthYear");
-  const calendarDays = document.getElementById("calendarDays");
-  const prevMonthBtn = document.getElementById("prevMonth");
-  const nextMonthBtn = document.getElementById("nextMonth");
-
-  //________________________________________________________________________________________________________________
+  /*_______________________________________________________________________________*/
   function renderCalendar(month, year) {
     calendarDays.innerHTML = "";
     monthYear.textContent = `${monthNames[month]} ${year}`;
 
+    //VARIABLE FOR DAYS IN A MONTH
     const firstDay = new Date(year, month).getDay();
     const daysInMonth = 32 - new Date(year, month, 32).getDate();
 
     let date = 1;
+
     for (let i = 0; i < 6; i++) {
       let row = document.createElement("div");
       row.className = "row";
@@ -168,8 +193,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  //________________________________________________________________________________________________________________
-  function nextMonth() {
+  /*_______________________________________________________________________________*/
+  nextMonthBtn.addEventListener("click", function () {
     if (currentMonth === 11) {
       currentMonth = 0;
       currentYear++;
@@ -177,10 +202,10 @@ document.addEventListener("DOMContentLoaded", function () {
       currentMonth++;
     }
     renderCalendar(currentMonth, currentYear);
-  }
+  });
 
-  //________________________________________________________________________________________________________________
-  function prevMonth() {
+  /*_______________________________________________________________________________*/
+  prevMonthBtn.addEventListener("click", function () {
     if (currentMonth === 0) {
       currentMonth = 11;
       currentYear--;
@@ -188,51 +213,29 @@ document.addEventListener("DOMContentLoaded", function () {
       currentMonth--;
     }
     renderCalendar(currentMonth, currentYear);
-  }
-
-  prevMonthBtn.addEventListener("click", prevMonth);
-  nextMonthBtn.addEventListener("click", nextMonth);
+  });
 
   renderCalendar(currentMonth, currentYear);
 });
+/*____ END ______________________________________________________________________________________________________________*/
 
-let logOut = document.querySelector(".logoutBtn");
-let logOut2 = document.querySelector(".logout1");
-let smsidenav = document.querySelector(".smsidenav");
-let loader = document.querySelector(".loader");
-let header = document.querySelector(".header");
-let footer = document.querySelector(".footer");
-let footer1 = document.querySelector(".footer1");
-
-logOut.addEventListener("click", () => {
-  setTimeout(() => {
-    loader.style.display = "block";
-    footer.style.opacity = "0";
-    footer1.style.opacity = "0";
-    header.style.opacity = "0";
-    smsidenav.style.display = "none";
-
-    setTimeout(() => {
-      window.location.href = "/index.html";
-    }, 2000);
-  }, 300);
-});
-
-/*SIDEBAR BUTTONS*/
+/*_____ FOR MAIN CONTENT SIDEBAR BUTTON__________________________________________________________________________________*/
+/*_____ START ___________________________________________________________________________________________________________*/
+//VARIABLE FOR BUTTON LG, XL, SIDEBAR BUTTON
 const dashBoard = document.querySelector("#dashboard");
 const studentProfile = document.querySelector("#studentProfile");
 const Grades = document.querySelector("#grades");
 const Enrollment = document.querySelector("#enrollment");
 const payMent = document.querySelector("#payment");
 
-/*SIDEBNAV BUTTONS*/
+//VARIABLE FOR BUTTON SM, MD OFFCANVAS SIDEBAR BUTTON
 const dashboardBtn = document.querySelector("#dashboard1");
 const studentProfileBtn = document.querySelector("#studentProfile1");
 const gradesBtn = document.querySelector("#grades1");
 const enrollmentBtn = document.querySelector("#enrollment1");
 const paymentBtn = document.querySelector("#payment1");
 
-// Function to set active state for sidebar buttons
+/*_______________________________________________________________________________*/
 function setActiveButton(activeButton) {
   const buttons = [
     dashboardBtn,
@@ -251,8 +254,7 @@ function setActiveButton(activeButton) {
   });
 }
 
-// Function to handle styling changes for sidebar buttons
-//________________________________________________________________________________________________________________
+/*_______________________________________________________________________________*/
 function setActiveButton1(activeButton) {
   const buttons = [dashBoard, studentProfile, Grades, Enrollment, payMent];
 
@@ -270,8 +272,7 @@ function setActiveButton1(activeButton) {
   });
 }
 
-// Function to toggle content based on selected page
-//________________________________________________________________________________________________________________
+/*_______________________________________________________________________________*/
 function toggleContent(page) {
   // Hide all content sections
   document.querySelectorAll(".content").forEach((content) => {
@@ -281,8 +282,7 @@ function toggleContent(page) {
   document.getElementById(page + "Content").style.display = "block";
 }
 
-// Click event listener for sidebar navigation buttons
-//________________________________________________________________________________________________________________
+/*_______________________________________________________________________________*/
 document.querySelectorAll(".navBtn, .navBtn1").forEach((btn) => {
   btn.addEventListener("click", function () {
     // Set active state for sidebar buttons
@@ -297,40 +297,46 @@ document.querySelectorAll(".navBtn, .navBtn1").forEach((btn) => {
   });
 });
 
-// Initial page/content to display
-const initialPage = "dashboard"; // or any other initial page
+/*_______________________________________________________________________________*/
+const initialPage = "dashboard";
 toggleContent(initialPage);
-setActiveButton(document.querySelector(`#${initialPage}1`)); // Set active state for initial sidebar button
+setActiveButton(document.querySelector(`#${initialPage}1`));
+/*____ END ______________________________________________________________________________________________________________*/
 
-//FOR STUDENT INFORMATION SCRIPT____________________________________________________________________________________
-//START____________________________________________________________________________________________
-// Get all buttons inside the collapsible element
-const buttons = document.querySelectorAll('#navbarToggleExternalContent button');
+/*_____ FOR STUDENT INFORMATIOMN CONTENT ________________________________________________________________________________*/
+/*_____ START ___________________________________________________________________________________________________________*/
+//VARIABLE FOR STUDENT INFORMATION NAVIGATION
+const siButton = document.querySelectorAll(
+  "#navbarToggleExternalContent button"
+);
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        const collapsible = document.querySelector('#navbarToggleExternalContent');
+/*_______________________________________________________________________________*/
+siButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    const collapsible = document.querySelector("#navbarToggleExternalContent");
 
-        const bootstrapCollapse = new bootstrap.Collapse(collapsible, {
-            toggle: false
-        });
-        bootstrapCollapse.hide();
+    const bootstrapCollapse = new bootstrap.Collapse(collapsible, {
+      toggle: false,
     });
+    bootstrapCollapse.hide();
+  });
 });
 
-//Function to change avatar _____________________________________________________________________
-function changeAvatar() {
+//VARIABLE FOR CHANGE AVATAR
+let changeAvatar = document.querySelector(".changeAvatar");
+let avatarInput = document.querySelector("#avatarInput");
+
+/*_______________________________________________________________________________*/
+changeAvatar.addEventListener("click", () => {
   document.getElementById("avatarInput").click();
-}
+});
 
-//Save Button_________________________________________________________________________________________________
+//VARIABLE FOR SAVE AVATAR
 let saveButton = document.querySelector("#saveButton");
-let okatBtbn = document.querySelector(".btn");
-
 saveButton.setAttribute("disabled", true);
 
-//for avatar input change_________________________________________________________________________________
-document.getElementById("avatarInput").addEventListener("change", function () {
+/*_______________________________________________________________________________*/
+avatarInput.addEventListener("change", function () {
   let file = this.files[0];
   if (file) {
     let reader = new FileReader();
@@ -341,16 +347,20 @@ document.getElementById("avatarInput").addEventListener("change", function () {
       imgElement.style.display = "block";
       size.style.display = "none";
       saveButton.removeAttribute("disabled");
-      saveButton.style.transform =  'translate(-50%, -10%)';
-      
+      saveButton.style.transform = "translate(-50%, -10%)";
+
       document.getElementById("saveButton").style.display = "block";
     };
     reader.readAsDataURL(file);
   }
 });
 
-//Function for save avatar______________________________________________________________________________________
-function saveAvatar() {
+//VARIABLE FOR SAVE AVATAR ALL
+let saveAvatar = document.querySelector(".saveButton");
+
+/*_______________________________________________________________________________*/
+saveAvatar.addEventListener("click", () => {
+  //VARIABLE CHANGE ALL AVATAR
   let imgElement1 = document.querySelector(".img1");
   let icon = document.querySelector(".img1 i");
   let imgElement2 = document.querySelector(".img2");
@@ -358,76 +368,102 @@ function saveAvatar() {
   let imgElement3 = document.querySelector(".img3");
   let icon2 = document.querySelector(".img3 i");
 
-
+  //VARIABLE IMAGE URL
   let imageURL = document.querySelector(".img").style.backgroundImage;
 
-    if (imageURL) {
-      imgElement1.style.backgroundImage = imageURL;
-      imgElement1.style.display = "block";
-      imgElement1.style.border = "2px solid #fff";
-      icon.style.display = "none";
-      imgElement2.style.backgroundImage = imageURL;
-      imgElement2.style.display = "block";
-      imgElement2.style.border = "2px solid #fff";
-      icon1.style.display = "none";
-      imgElement3.style.backgroundImage = imageURL;
-      imgElement3.style.display = "block";
-      imgElement3.style.border = "2px solid #fff";
-      icon2.style.display = "none";
-      saveButton.setAttribute("disabled", true);
-    } else {
-      imgElement1.style.display = "none";
-    }
-}
+  if (imageURL) {
+    imgElement1.style.backgroundImage = imageURL;
+    imgElement1.style.display = "block";
+    imgElement1.style.border = "2px solid #fff";
+    icon.style.display = "none";
+    imgElement2.style.backgroundImage = imageURL;
+    imgElement2.style.display = "block";
+    imgElement2.style.border = "2px solid #fff";
+    icon1.style.display = "none";
+    imgElement3.style.backgroundImage = imageURL;
+    imgElement3.style.display = "block";
+    imgElement3.style.border = "2px solid #fff";
+    icon2.style.display = "none";
+    saveButton.setAttribute("disabled", true);
+  } else {
+    imgElement1.style.display = "none";
+  }
+});
+/*____ END ______________________________________________________________________________________________________________*/
 
-//For Student Information content_____________________________________________________________________________________
-let userProfile = document.querySelector('.userProfile');
-let SecurityAcc = document.querySelector('.SecurityAcc');
-let studentAdditionalinformation = document.querySelector('.studentAdditionalinformation');
+/*_____ FOR DATE LOGOUT _________________________________________________________________________________________________*/
+/*_____ START ___________________________________________________________________________________________________________*/
+let userProfile = document.querySelector(".userProfile");
+let SecurityAcc = document.querySelector(".SecurityAcc");
+let studentAdditionalinformation = document.querySelector(
+  ".studentAdditionalinformation"
+);
 
-//For Student Information buttons_____________________________________________________________________________________
-let Account = document.querySelector('.Account');
-let Security = document.querySelector('.Security');
-let additionalInformation = document.querySelector('.addInformation');
+let Account = document.querySelector(".Account");
+let Security = document.querySelector(".Security");
+let additionalInformation = document.querySelector(".addInformation");
 
-//Function for Account Button________________________________________________________________________________
-Account.addEventListener('click', () => {
-  Account.style.backgroundColor = '#287fc29f';
-  Account.style.color = '#fff';
-  Security.style.backgroundColor = '#fff';
-  Security.style.color = '#1f6599';
-  additionalInformation.style.backgroundColor = '#fff';
-  additionalInformation.style.color = '#1f6599';
+Account.addEventListener("click", () => {
+  Account.style.backgroundColor = "#287fc29f";
+  Account.style.color = "#fff";
+  Security.style.backgroundColor = "#fff";
+  Security.style.color = "#1f6599";
+  additionalInformation.style.backgroundColor = "#fff";
+  additionalInformation.style.color = "#1f6599";
 
-  userProfile.style.display = 'block';
-  SecurityAcc.style.display = 'none';
-  studentAdditionalinformation.style.display = 'none';
+  userProfile.style.display = "block";
+  SecurityAcc.style.display = "none";
+  studentAdditionalinformation.style.display = "none";
 });
 
-//Function for Security Button________________________________________________________________________________
-Security.addEventListener('click', () => {
-  Security.style.backgroundColor = '#287fc29f';
-  Security.style.color = '#fff';
-  Account.style.backgroundColor = '#fff';
-  Account.style.color = '#1f6599';
-  additionalInformation.style.backgroundColor = '#fff';
-  additionalInformation.style.color = '#1f6599';
+Security.addEventListener("click", () => {
+  Security.style.backgroundColor = "#287fc29f";
+  Security.style.color = "#fff";
+  Account.style.backgroundColor = "#fff";
+  Account.style.color = "#1f6599";
+  additionalInformation.style.backgroundColor = "#fff";
+  additionalInformation.style.color = "#1f6599";
 
-  userProfile.style.display = 'none';
-  SecurityAcc.style.display = 'block';
-  studentAdditionalinformation.style.display = 'none';
+  userProfile.style.display = "none";
+  SecurityAcc.style.display = "block";
+  studentAdditionalinformation.style.display = "none";
 });
 
-//Function for Additional Information Button________________________________________________________________________________
-additionalInformation.addEventListener('click', () => {
-  additionalInformation.style.backgroundColor = '#287fc29f';
-  additionalInformation.style.color = '#fff';
-  Security.style.backgroundColor = '#fff';
-  Security.style.color = '#1f6599';
-  Account.style.backgroundColor = '#fff';
-  Account.style.color = '#1f6599';
+additionalInformation.addEventListener("click", () => {
+  additionalInformation.style.backgroundColor = "#287fc29f";
+  additionalInformation.style.color = "#fff";
+  Security.style.backgroundColor = "#fff";
+  Security.style.color = "#1f6599";
+  Account.style.backgroundColor = "#fff";
+  Account.style.color = "#1f6599";
 
-  userProfile.style.display = 'none';
-  SecurityAcc.style.display = 'none';
-  studentAdditionalinformation.style.display = 'block';
+  userProfile.style.display = "none";
+  SecurityAcc.style.display = "none";
+  studentAdditionalinformation.style.display = "block";
 });
+
+/*_____ FOR DATE LOGOUT _________________________________________________________________________________________________*/
+/*_____ START ___________________________________________________________________________________________________________*/
+//VARIABLE FOR LOG OUT
+let logOut = document.querySelector(".logoutBtn");
+let smsidenav = document.querySelector(".smsidenav");
+let loader = document.querySelector(".loader");
+let header = document.querySelector(".header");
+let footer = document.querySelector(".footer");
+let footer1 = document.querySelector(".footer1");
+
+/*_______________________________________________________________________________*/
+logOut.addEventListener("click", () => {
+  setTimeout(() => {
+    loader.style.display = "block";
+    footer.style.opacity = "0";
+    footer1.style.opacity = "0";
+    header.style.opacity = "0";
+    smsidenav.style.display = "none";
+
+    setTimeout(() => {
+      window.location.href = "/index.html";
+    }, 2000);
+  }, 300);
+});
+/*____ END ______________________________________________________________________________________________________________*/

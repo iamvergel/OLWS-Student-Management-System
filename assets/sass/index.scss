@@ -1,11 +1,6 @@
-// Option A: Include all of Bootstrap
-
-// Include any default variable overrides here (though functions won't be available)
-
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Then add additional custom code here
-
+//_____________________________________________________________________________________________________________
 * {
   margin: 0;
   padding: 0;
@@ -13,12 +8,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+//_____________________________________________________________________________________________________________
 body {
   background-color: #fff;
   overflow: hidden;
 }
 
-//LG, XL, XXL  SIDEBAR________________________________________________________________________________________
+//STYLE FOR LG, XL, XXL  SIDEBAR_______________________________________________________________________________
 .sidebar {
   position: absolute;
   height: 100vh;
@@ -161,7 +157,7 @@ body {
   }
 }
 
-//SM, MD NAVBAR OFFCANVAS______________________________________________________________________________________
+//STYLE FOR SM, MD NAVBAR OFFCANVAS____________________________________________________________________________
 .smsidenav {
   display: block;
 
@@ -280,7 +276,7 @@ body {
   }
 }
 
-//LOGOUT MODAL
+//STYLE FOR LOGOUT MODAL_______________________________________________________________________________________
 .modal {
   .modal-dialog {
     .modal-content {
@@ -315,7 +311,8 @@ body {
   }
 }
 
-//MAIN CONTENT________________________________________________________________________________________
+//STYLE FOR MAIN CONTENT_______________________________________________________________________________________
+
 .main {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -336,7 +333,7 @@ body {
     height: 100vh;
   }
 
-  //NAVBAR_______________________________________________________________________________________________
+  //STYLE FOR NAVBAR CONTENT____________________________________________________________________________________
   .navbar {
     background-color: #fff;
     height: 80px;
@@ -411,7 +408,7 @@ body {
     }
   }
 
-  //DASHBOARD________________________________________________________________________________________________
+  //STYLE FOR DASHBOARD CONTENT_________________________________________________________________________________
   #dashboardContent {
     .component {
       width: 90%;
@@ -560,7 +557,7 @@ body {
     }
   }
 
-  //STUDENTPROFILE_________________________________________________________________________________________
+  //STYLE FOR STUDENTPROFILE CONTENT____________________________________________________________________________
   #studentProfileContent {
     height: auto;
     width: 100%;
@@ -574,9 +571,11 @@ body {
       height: auto;
     }
 
+    //_________________________________________________________________________________________________________
     .row {
       height: auto;
 
+      //STYLE FOR NAVBAR STUDENTPROFILE________________________________________________________________________
       .navbar {
         background-color: #fff;
         border: none;
@@ -636,6 +635,7 @@ body {
         }
       }
 
+      //STYLE FOR USER PROFILE_________________________________________________________________________________
       .userProfile {
         height: auto;
 
@@ -777,9 +777,14 @@ body {
         }
       }
 
+      //STYLE FOR ACCOUNT SECURITY_____________________________________________________________________________
       .SecurityAcc {
         background-color: #288dda34;
         height: auto;
+
+        @media (min-width: 1200px) {
+          height: calc(100vh - 146px);
+        }
 
         .header {
           background-color: #1f6599;
@@ -850,7 +855,8 @@ body {
           }
         }
 
-        .save, .cancel {
+        .save,
+        .cancel {
           border: none;
           height: 40px;
           width: 100px;
@@ -869,7 +875,7 @@ body {
             margin-bottom: 2rem;
           }
 
-          i{
+          i {
             color: white;
             font-size: 14px;
           }
@@ -881,6 +887,7 @@ body {
         }
       }
 
+      //STYLE FOR ADDITIONAL INFORMATION________________________________________________________________________
       .studentAdditionalinformation {
         background-color: #288dda34;
         height: auto;
@@ -929,25 +936,25 @@ body {
     }
   }
 
-  //GRADES________________________________________________________________________________________________
+  //STYLE FOR GRADES CONTENT____________________________________________________________________________________
   #gradesContent {
     height: 100vh;
     display: none;
   }
 
-  //ENROLLMENT_____________________________________________________________________________________________
+  //STYLE FOR ENROLLMENT CONTENT________________________________________________________________________________
   #enrollmentContent {
     height: 100vh;
     background-color: greenyellow;
   }
 
-  //PAYMENT_____________________________________________________________________________________________
+  //STYLE FOR PAYMENT CONTENT___________________________________________________________________________________
   #paymentContent {
     height: 100vh;
     background-color: powderblue;
   }
 
-  //FOOTER________________________________________________________________________________________
+  //STYLE FOR FOOTER____________________________________________________________________________________________
   .footer {
     background-color: #1f6599;
     color: #fff;
@@ -969,7 +976,7 @@ body {
   }
 }
 
-//LOADER______________________________________________________________________________________________________
+//STYLE FOR LOADER_____________________________________________________________________________________________
 .loader {
   top: 0;
   width: 100%;

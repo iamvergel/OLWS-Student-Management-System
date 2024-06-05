@@ -11433,6 +11433,11 @@ body {
   background-color: rgba(40, 141, 218, 0.2039215686);
   height: auto;
 }
+@media (min-width: 1200px) {
+  .main #studentProfileContent .row .SecurityAcc {
+    height: calc(100vh - 146px);
+  }
+}
 .main #studentProfileContent .row .SecurityAcc .header {
   background-color: #1f6599;
   color: #fff;
@@ -11495,7 +11500,8 @@ body {
   color: #1f6599;
   font-size: 18px;
 }
-.main #studentProfileContent .row .SecurityAcc .save, .main #studentProfileContent .row .SecurityAcc .cancel {
+.main #studentProfileContent .row .SecurityAcc .save,
+.main #studentProfileContent .row .SecurityAcc .cancel {
   border: none;
   height: 40px;
   width: 100px;
@@ -11507,20 +11513,25 @@ body {
   margin-bottom: 5rem;
 }
 @media (min-width: 992px) {
-  .main #studentProfileContent .row .SecurityAcc .save, .main #studentProfileContent .row .SecurityAcc .cancel {
+  .main #studentProfileContent .row .SecurityAcc .save,
+  .main #studentProfileContent .row .SecurityAcc .cancel {
     margin-bottom: 2rem;
   }
 }
 @media (min-width: 1200px) {
-  .main #studentProfileContent .row .SecurityAcc .save, .main #studentProfileContent .row .SecurityAcc .cancel {
+  .main #studentProfileContent .row .SecurityAcc .save,
+  .main #studentProfileContent .row .SecurityAcc .cancel {
     margin-bottom: 2rem;
   }
 }
-.main #studentProfileContent .row .SecurityAcc .save i, .main #studentProfileContent .row .SecurityAcc .cancel i {
+.main #studentProfileContent .row .SecurityAcc .save i,
+.main #studentProfileContent .row .SecurityAcc .cancel i {
   color: white;
   font-size: 14px;
 }
-.main #studentProfileContent .row .SecurityAcc .save:hover, .main #studentProfileContent .row .SecurityAcc .save:active, .main #studentProfileContent .row .SecurityAcc .cancel:hover, .main #studentProfileContent .row .SecurityAcc .cancel:active {
+.main #studentProfileContent .row .SecurityAcc .save:hover, .main #studentProfileContent .row .SecurityAcc .save:active,
+.main #studentProfileContent .row .SecurityAcc .cancel:hover,
+.main #studentProfileContent .row .SecurityAcc .cancel:active {
   background-color: #287fc2;
 }
 .main #studentProfileContent .row .studentAdditionalinformation {
